@@ -18,6 +18,9 @@ def about():
 def game():
     return render_template("game.html", page_title="Game")
 
+@app.route('/login')
+def login():
+    return render_template("login.html",page_title="Login")
 
 @app.route('/contact')
 def contact():
