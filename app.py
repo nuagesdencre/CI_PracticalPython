@@ -32,19 +32,9 @@ def play():
     return render_template("play.html", page_title="Play")
 
 
-@app.route('/rules')
-def rules():
-    return render_template("rules.html", page_title="Rules")
-
-
 @app.route('/leaderboard')
 def leaderboard():
     return render_template("leaderboard.html", page_title="Leaderboard")
-
-
-@app.route('/login')
-def login():
-    return render_template("login.html", page_title="Login")
 
 
 @app.route('/logged')
@@ -52,11 +42,6 @@ def login():
 def logged():
     username = request.args.get('username')
     return render_template("logged.html", page_title="Logged", username=username)
-
-
-@app.route('/contact')
-def contact():
-    return render_template("contact.html", page_title="Contact")
 
 
 @app.errorhandler(404)

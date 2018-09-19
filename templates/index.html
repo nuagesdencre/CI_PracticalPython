@@ -2,5 +2,13 @@
     <div>
     <h1>This is the Home page</h1>
     <h2> Welcome, {{ username }}!</h2>
+        <p>Introduce yourself.</p>
+     <form action="{{ url_for('logged') }}">
+       <p><label for="username">Username: </label>
+        <input type="text" name="username"></p> <p>
+        <label for="color">Favorite color: </label>
+        <input type="text" name="color"></p>
+        <input type="submit" value="Submit!">
+    </form>
     </div>
 {% endblock %}
