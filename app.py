@@ -13,6 +13,7 @@ def write_to_file(filename, data):
 @app.route('/')
 def index():
     username = 'Visitor'
+    # to be updated once live session username provided!
     return render_template("index.html", page_title="Home", username=username)
 
 
