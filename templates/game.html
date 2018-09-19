@@ -2,16 +2,17 @@
 {% block content %}
 
 
-    <div class="container">
+    <div>
 
         <p>This is the python game.
-            <select>
-            <option value="" disabled="disabled" selected="selected">Insert coin</option>
-            <option value="play">Play</option>
-            <option value="leaderboard">Leaderboard</option>
-            <option value="rules">Rules</option>
-        </select></p>
-
+            <select name="options"
+                    onchange="document.getElementById('game_iframe').src = this.options[this.selectedIndex].value">
+                <option value="" disabled="disabled" selected="selected">Insert coin</option>
+                <option value="play">Play</option>
+                <option value="leaderboard">Leaderboard</option>
+                <option value="rules">Rules</option>
+            </select></p>
+        <iframe name="game" id="game_iframe"></iframe>
     </div>
 
 {% endblock %}
