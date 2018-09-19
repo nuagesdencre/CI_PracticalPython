@@ -1,10 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    <h2>"Over here, dear {{ username }}!"</h2>
+
+    <p> You hear your next door neighbour from the street.</p>
+    <p>You are the best investigator in town. You have solved more cases than you can even count - maths was never your
+        forte anyways. Your trusty {{ color }} umbrella in hand, you have braved spittle and deluge whenever called.
+        Really, you would be right in thinking that you have been a {{ mystical }} for everyone troubled by
+        an unexpected puzzle in this particular part of the world.</p>
+
+        <p>One day, you're approached by a couple who you have known all your life. They ask you for help regarding the
+        most unusual of situations.</p>
+    <hr>
+    <p>// internal check to see if right or wrong</p>
+    <p> //if wrong:
+        <strong> WANT AN EXTRA CLUE?</strong> or 'RUN AWAAAAY' (record current score)</p>
 
     <p>
-        This is the logged page, thanks for submitting your details <h2>{{ username }}!</h2>
-    </p>
+        //if right:
+        <strong>CONTINUE FURTHER INTO THE SPOOKY HOUSE</strong></p>
+
 
 
 {% endblock %}

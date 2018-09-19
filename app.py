@@ -41,7 +41,9 @@ def leaderboard():
 # live session
 def logged():
     username = request.args.get('username')
-    return render_template("logged.html", page_title="Logged", username=username)
+    color = request.args.get('color')
+    mystical=request.args.get('mystical')
+    return render_template("logged.html", page_title="Logged", username=username, color=color, mystical=mystical)
 
 
 @app.errorhandler(404)
