@@ -25,6 +25,7 @@ def about():
 def game():
     return render_template("game.html", page_title="Game")
 
+
 @app.route('/play')
 def play():
     return render_template("play.html", page_title="Play")

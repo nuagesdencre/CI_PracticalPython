@@ -5,9 +5,9 @@
             <select name="options"
                     onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                 <option value="" disabled="disabled" selected="selected">Insert coin</option>
-                <option value="play">Play</option>
-                <option value="leaderboard">Leaderboard</option>
-                <option value="rules">Rules</option>
+                <option value="{{ url_for('play') }}">Play</option>
+                <option value="{{ url_for('leaderboard') }}">Leaderboard</option>
+                <option value="{{ url_for('rules') }}">Rules</option>
             </select></p>
 
 {% endblock %}

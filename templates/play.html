@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Play</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div>
 Play
 
 
 <h2>Story about mysterious events</h2>
 <strong>QUESTION requiring input</strong>
 <hr>
-<p>// internal check to see if right or wrong
-    //if wrong:
-    <strong> WANT AN EXTRA CLUE?</strong></p>
+<p>// internal check to see if right or wrong</p>
+    <p> //if wrong:
+        <strong> WANT AN EXTRA CLUE?</strong> or 'RUN AWAAAAY' (record current score)</p>
+
 <p>
     //if right:
     <strong>CONTINUE FURTHER INTO THE SPOOKY HOUSE</strong></p>
-</body>
-</html>
+</div>
+
+{% endblock %}
+
+
