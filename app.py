@@ -47,9 +47,21 @@ def login():
     return render_template("login.html", page_title="Login")
 
 
+@app.route('/logged')
+# live session
+def logged():
+    username = request.args.get('username')
+    return render_template("logged.html", page_title="Logged", username=username)
+
+
 @app.route('/contact')
 def contact():
     return render_template("contact.html", page_title="Contact")
+
+
+@app.errorhandler(404)
+def page_not_found(err):
+    return render_template("404.html"),404
 
 
 if __name__ == '__main__':
