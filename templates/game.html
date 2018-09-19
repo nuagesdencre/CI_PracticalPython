@@ -1,10 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-    <div>
-
-        <p>This is the python game.
+<p>This is the python game.
             <select name="options"
                     onchange="document.getElementById('game_iframe').src = this.options[this.selectedIndex].value">
                 <option value="" disabled="disabled" selected="selected">Insert coin</option>
@@ -12,6 +9,9 @@
                 <option value="leaderboard">Leaderboard</option>
                 <option value="rules">Rules</option>
             </select></p>
+    <div>
+
+
         <iframe name="game" id="game_iframe"></iframe>
     </div>
 

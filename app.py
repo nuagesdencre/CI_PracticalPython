@@ -25,7 +25,19 @@ def about():
 def game():
     return render_template("game.html", page_title="Game")
 
-# include game, rules, leaderboard
+@app.route('/play')
+def play():
+    return render_template("play.html", page_title="Play")
+
+
+@app.route('/rules')
+def rules():
+    return render_template("rules.html", page_title="Rules")
+
+
+@app.route('/leaderboard')
+def leaderboard():
+    return render_template("leaderboard.html", page_title="Leaderboard")
 
 
 @app.route('/login')
