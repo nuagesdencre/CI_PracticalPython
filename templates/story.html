@@ -1,14 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
-    <div id="intro">
+    <div id="intro" class="wrap">
         <h1>Introduction</h1>
-        <button id="btn_p_one">Paragraph One</button>
-        <button id="btn_p_two">Paragraph Two</button>
-        <button id="btn_riddle">Riddle</button>
+        <button id="btn_p_one" class="btns">Paragraph One</button>
+        <button id="btn_p_two" class="btns">Paragraph Two</button>
+        <button id="btn_riddle" class="btns">Riddle</button>
         <hr>
         <div id="paragraph_one">
-            <h2>"Over here, dear {{ username }}!"</h2>
-            <p> You hear your next door neighbour from the street.</p>
+            <h2>"Thanks again, dear {{ username }}!"</h2>
+            <p> You see a neighbour waving from the street. You just helped her find her son's rattle under a pile of dead leaves.</p>
             <p>You are the best investigator in town. You have solved more cases than you can even count - maths was
                 never your forte anyways. Your trusty {{ color }} umbrella in hand, you have braved spittle and deluge
                 whenever called. Really, you would be
@@ -29,8 +29,8 @@
 
         <div id="riddle">
             <h3>
-                I left you a surprise, my love, to find when you miss me. My patriotic obligations won't keep me away
-                from you too long, I dare hope. Here is a riddle:
+                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
+                from you too long, I dare hope. You will find a treasure where:
                 <strong>
                     <ul>
                         <li>Time stops for our battles of wit.</li>
@@ -45,7 +45,7 @@
             </h3>
         </div>
         <p class="next_action">
-            You decide to help them and tag along to look at the house.
+            You decide to help them with the riddle and tag along to look at the house.
         <form class="next_action" action="{{ url_for('part1') }}">
             <input type="submit" value="Let's go!">
         </form>
