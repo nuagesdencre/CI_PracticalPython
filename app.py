@@ -37,13 +37,18 @@ def leaderboard():
     return render_template("leaderboard.html", page_title="Leaderboard")
 
 
-@app.route('/logged')
-# live session
-def logged():
+# story path
+@app.route('/story')
+def story():
     username = request.args.get('username')
     color = request.args.get('color')
     mystical=request.args.get('mystical')
-    return render_template("logged.html", page_title="Logged", username=username, color=color, mystical=mystical)
+    return render_template("story.html", page_title="story", username=username, color=color, mystical=mystical)
+
+
+@app.route('/part1')
+def part1():
+    return render_template("part1.html", page_title="Entering the house")
 
 
 @app.errorhandler(404)
