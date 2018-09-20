@@ -11,9 +11,18 @@ ul, ul li {
     border: 1px solid black;
     width: 80vw;
     height: 70vh;
-    flex-wrap: wrap;
+    display:flex;
+    flex-direction: column;
     margin: auto;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    overflow:auto;
+}
+.wrap{
+padding:10px;
+}
+#paragraph_two, #riddle, .next_action, .btns{
+    display:none;
+}
+
+.next_action{
+    background-color:yellow;
 }
