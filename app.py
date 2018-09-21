@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect, flash, session, url_for
 
-
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
@@ -29,32 +28,45 @@ def leaderboard():
 
 
 @app.route('/play')
-# , methods=['POST', 'GET']
 def play():
-    # if request.method == 'POST':
-    #     session['username'] = request.form['username']
-    #     session['color'] = request.form['color']
-    #     session['mystical_beast'] = request.form['mystical_beast']
     return render_template("play.html", page_title="Play")
 
 
 # story path
-@app.route('/story/story')
+@app.route('/story/story', methods=['GET', 'POST'])
 def story():
-    username = request.args.get('username')
-    color = request.args.get('color')
-    mystical_beast = request.args.get('mystical')
-    return render_template("story/story.html", page_title="story", username=username, color=color, mystical=mystical_beast)
+    if request.method == 'POST':
+        if 'username' in session:
+            username = session['username']
+        else:
+            username = request.form['username']
+            session['username'] = username
+        color = request.form['color']
+        mystical_beast = request.form['mystical']
+        return render_template("story/story.html", page_title="story", username=username, color=color,
+                               mystical=mystical_beast)
 
 
 @app.route('/story/part1')
 def part1():
     return render_template("story/part1.html", page_title="Entering the house")
 
-#
-# @app.route('/part2')
-# def part2():
-#     return render_template("part2.html", page_title="First glance")
+
+@app.route('/story/part2')
+def part2():
+    if request.method == 'POST':
+        if request.form['part1_opt1'] == 'Do Something':
+            pass  # do something
+        elif request.form['part1_opt2'] == 'Do Something Else':
+            pass  # do something else
+        elif request.form['part1_opt3'] == 'Do Another Thing':
+            pass  # do another thing
+        else:
+            pass  # unknown
+    elif request.method == 'GET':
+        return render_template("story/part2.html", page_title="First glance")
+
+
 # @app.route('/part3')
 # def part3():
 #     return render_template("part3.html", page_title="Further in")
@@ -64,7 +76,7 @@ def part1():
 
 @app.errorhandler(404)
 def page_not_found(err):
-    return render_template("404.html"),404
+    return render_template("404.html"), 404
 
 
 if __name__ == '__main__':
