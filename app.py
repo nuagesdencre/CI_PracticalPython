@@ -1,20 +1,16 @@
 import os
-import json
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash, session, url_for
+
 
 app = Flask(__name__)
-
-
-def write_to_file(filename, data):
-    with open(filename, "a") as file:
-        file.writelines(data)
+app.secret_key = os.urandom(24)
 
 
 @app.route('/')
 def index():
-    username = 'Visitor'
-    # to be updated once live session username provided!
-    return render_template("index.html", page_title="Home", username=username)
+    if 'username' in session:
+        return render_template("index.html", page_title="Home", username=session['username'])
+    return render_template("index.html", page_title="Home", username="...whoever you are")
 
 
 @app.route('/about')
@@ -27,29 +23,44 @@ def game():
     return render_template("game.html", page_title="Game")
 
 
-@app.route('/play')
-def play():
-    return render_template("play.html", page_title="Play")
-
-
 @app.route('/leaderboard')
 def leaderboard():
     return render_template("leaderboard.html", page_title="Leaderboard")
 
 
+@app.route('/play')
+# , methods=['POST', 'GET']
+def play():
+    # if request.method == 'POST':
+    #     session['username'] = request.form['username']
+    #     session['color'] = request.form['color']
+    #     session['mystical_beast'] = request.form['mystical_beast']
+    return render_template("play.html", page_title="Play")
+
+
 # story path
-@app.route('/story')
+@app.route('/story/story')
 def story():
     username = request.args.get('username')
     color = request.args.get('color')
-    mystical=request.args.get('mystical')
-    return render_template("story.html", page_title="story", username=username, color=color, mystical=mystical)
+    mystical_beast = request.args.get('mystical')
+    return render_template("story/story.html", page_title="story", username=username, color=color, mystical=mystical_beast)
 
 
-@app.route('/part1')
+@app.route('/story/part1')
 def part1():
-    return render_template("part1.html", page_title="Entering the house")
+    return render_template("story/part1.html", page_title="Entering the house")
 
+#
+# @app.route('/part2')
+# def part2():
+#     return render_template("part2.html", page_title="First glance")
+# @app.route('/part3')
+# def part3():
+#     return render_template("part3.html", page_title="Further in")
+# @app.route('/final')
+# def final():
+#     return render_template("final.html", page_title="Elementary")
 
 @app.errorhandler(404)
 def page_not_found(err):
