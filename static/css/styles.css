@@ -19,9 +19,6 @@ ul, ul li {
 .wrap{
 padding:10px;
 }
-#paragraph_two, #riddle, .next_action, .btns{
-    display:none;
-}
 
 .next_action{
     background-color:yellow;
