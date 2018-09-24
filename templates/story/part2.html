@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="wrap">
+
+
+<h1> PART2</h1>
+    <p>if opt_1 show paragraph xyz</p>
+<p>if opt_2 show paragraph xyz</p>
+...
+
+common text
+
+next choice
+ <form name="part2" action="{{ url_for('part3') }}">
+            <input type="submit" name="part2_opt1" value="Do Something">
+            <input type="submit" name="part2_opt2" value="Do Something Else">
+            <input type="submit" name="part2_opt3" value="Do Another Thing">
+        </form>
+
+</div>
+
+{% endblock %}
+
+

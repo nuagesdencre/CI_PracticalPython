@@ -1,7 +1,19 @@
 {% extends 'base.html' %} {% block content %}
     <div class="wrap">
-    <h1>This is the Home page</h1>
-    <h2> Welcome, {{ username }}!</h2>
+        <h1>This is the Home page</h1>
+
+        <h2> Welcome, {{ username }}!</h2>
+        {% if session['username'] %}
+            <h4> Oh, you're someone else? C'mere.</h4>
+
+            {#            drop session#}
+        {% else %}
+            <p>Come along.</p>
+            <form action="{{ url_for('play') }}">
+                <input type="submit" value="Start!">
+            </form>
+        {% endif %}
+
 
     </div>
 {% endblock %}
