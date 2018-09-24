@@ -2,22 +2,27 @@
 {% block content %}
 
 
-<div class="wrap">
+    <div class="wrap">
         <p>Introduce yourself.</p>
-     <form action="{{ url_for('story') }}">
-       <p><label for="username">Username: </label>
-        <input type="text" name="username"></p> <p>
-        <label for="color">Favorite color: </label>
-        <input type="text" name="color"></p>
-         <p>
-        <label for="mystical">Something mystical: </label>
-        <input type="text" name="mystical"></p>
-        <input type="submit" value="Submit!">
-    </form>
+        <form method="POST" action="{{ url_for('story') }}">
+            {% if session['username'] %}
+                <h2> Username: {{ session['username'] }}</h2>
+            {% else %}
+                <p><label for="username">Username: </label>
+                <input type="text" name="username">
+            {% endif %}
+            </p>
+            <p>
+                <label for="color">Favorite color: </label>
+                <input type="text" name="color"></p>
+            <p>
+                <label for="mystical">Mystical creature: </label>
+                <input type="text" name="mystical"></p>
+            <input type="submit" value="Submit!">
+        </form>
+        <p> when clicking on submit, save timestamp as 'time.start'</p>
 
-
-
-</div>
+    </div>
 
 {% endblock %}
 
