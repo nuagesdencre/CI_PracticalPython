@@ -5,6 +5,12 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 
+@app.before_request
+def session_status():
+    # makes the session last unless requested otherwise
+    session.permanent = True
+
+
 @app.route('/')
 def index():
     if 'username' in session:
