@@ -5,10 +5,6 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 
-#
-# session ={}
-
-
 @app.route('/')
 def index():
     if 'username' in session:
@@ -31,6 +27,8 @@ def game():
 
 @app.route('/leaderboard')
 def leaderboard():
+    # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out
+    # username, color, mystical_beast, riddle_solved, (duration)
     return render_template("leaderboard.html", page_title="Leaderboard")
 
 
@@ -73,18 +71,16 @@ def part3():
 
 @app.route('/final', methods=['GET', 'POST'])
 def final():
-    answer_to_riddle = ''
+    answer_to_riddle = str(request.args['answer_to_riddle']) if 'answer_to_riddle' in request.args else None
     if request.method == 'POST':
-        if answer_to_riddle == session['answer']:
-            session['riddle_solved'] = 'Solved'
-            return render_template('story/final.html', status='Spot on.')
-        elif answer_to_riddle != session['answer']:
-            session['riddle_solved'] = 'Unsolved'
-            session['attempts'] += 1
-            return render_template('story/final.html', status='Not quite.')
-        else:
-            session['riddle_solved'] = 'Unsolved'
-            return render_template('story/final.html', status='Go back and take another look.')
+        if request.args.get('guess'):
+            if answer_to_riddle == session['answer']:
+                session['riddle_solved'] = 'Solved'
+                return render_template('story/final.html', status='Spot on.')
+            else:
+                session['riddle_solved'] = 'Unsolved'
+                session['attempts'] += 1
+                return render_template('story/final.html', status='Not quite.')
     return render_template("story/final.html", attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
                            page_title="Elementary")
 
