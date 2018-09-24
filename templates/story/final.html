@@ -11,14 +11,14 @@
 
         {% if attempts == 1 %}
         <p>I think I know where the secret surprise is hidden. It is: </p>
-            <form action="POST" name="final_answer">
+            <form method="POST" name="final_answer">
             Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
             <input type="submit">
         </form>
         {% elif attempts < 3 %}
         <p>Sorry, {{ answer_to_riddle }} is incorrect. Try again!</p>
 
-        <form action="POST" name="final_answer">
+        <form method="POST" name="final_answer">
             Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
             <input type="submit">
         </form>
