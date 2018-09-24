@@ -1,13 +1,20 @@
 import os
-from flask import Flask, render_template, request, redirect, flash, session, url_for
+from flask import Flask, render_template, request, redirect, flash, session
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 
+#
+# session ={}
+
+
 @app.route('/')
 def index():
     if 'username' in session:
+        # logout??
+        # def dropsession():
+        #     session.pop('username', None)
         return render_template("index.html", page_title="Home", username=session['username'])
     return render_template("index.html", page_title="Home", username="...whoever you are")
 
@@ -33,7 +40,7 @@ def play():
 
 
 # story path
-@app.route('/story/story', methods=['GET', 'POST'])
+@app.route('/story', methods=['GET', 'POST'])
 def story():
     if request.method == 'POST':
         if 'username' in session:
@@ -47,32 +54,40 @@ def story():
                                mystical=mystical_beast)
 
 
-@app.route('/story/part1')
+@app.route('/part1')
 def part1():
     return render_template("story/part1.html", page_title="Entering the house")
 
 
-@app.route('/story/part2')
+@app.route('/part2')
 def part2():
+    return render_template("story/part2.html", page_title="First glance")
+
+
+@app.route('/part3')
+def part3():
+    session['answer'] = 'chessboard'
+    session['attempts'] = 1
+    return render_template("story/part3.html", page_title="Further in")
+
+
+@app.route('/final', methods=['GET', 'POST'])
+def final():
+    answer_to_riddle = ''
     if request.method == 'POST':
-        if request.form['part1_opt1'] == 'Do Something':
-            pass  # do something
-        elif request.form['part1_opt2'] == 'Do Something Else':
-            pass  # do something else
-        elif request.form['part1_opt3'] == 'Do Another Thing':
-            pass  # do another thing
+        if answer_to_riddle == session['answer']:
+            session['riddle_solved'] = 'Solved'
+            return render_template('story/final.html', status='Spot on.')
+        elif answer_to_riddle != session['answer']:
+            session['riddle_solved'] = 'Unsolved'
+            session['attempts'] += 1
+            return render_template('story/final.html', status='Not quite.')
         else:
-            pass  # unknown
-    elif request.method == 'GET':
-        return render_template("story/part2.html", page_title="First glance")
+            session['riddle_solved'] = 'Unsolved'
+            return render_template('story/final.html', status='Go back and take another look.')
+    return render_template("story/final.html", attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
+                           page_title="Elementary")
 
-
-# @app.route('/part3')
-# def part3():
-#     return render_template("part3.html", page_title="Further in")
-# @app.route('/final')
-# def final():
-#     return render_template("final.html", page_title="Elementary")
 
 @app.errorhandler(404)
 def page_not_found(err):
