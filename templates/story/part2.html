@@ -6,19 +6,31 @@
 
 
 <h1> PART2</h1>
-    <p>if opt_1 show paragraph xyz</p>
-<p>if opt_2 show paragraph xyz</p>
-...
 
-common text
-
-next choice
+    TEXT
+    
  <form name="part2" action="{{ url_for('part3') }}">
-            <input type="submit" name="part2_opt1" value="Do Something">
-            <input type="submit" name="part2_opt2" value="Do Something Else">
-            <input type="submit" name="part2_opt3" value="Do Another Thing">
+            <input type="submit" name="part2_opt1" value="Do Something Else">
         </form>
-
+  <hr>
+        <button id="btn_riddle" class="btns">Toggle the riddle</button>
+        <div class="riddle">
+            <h4>
+                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
+                from you too long, I dare hope. You will find a treasure where:
+                <strong>
+                    <ul>
+                        <li>Time stops for our battles of wit.</li>
+                        <li>White clad or not, you are a queen.</li>
+                        <li>You inspire my every action.</li>
+                        <li>I move brazenly towards you.</li>
+                        <li>But you know how to stop my foolish plans.</li>
+                        <li>I kneel in front of your beauty.</li>
+                        <li>And carry the image of you with me.</li>
+                    </ul>
+                </strong>
+            </h4>
+        </div>
 </div>
 
 {% endblock %}

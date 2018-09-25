@@ -4,15 +4,39 @@
 
     <div class="wrap">
 
-        <p> TEXT</p>
+        <p> You approach the house, led by the couple. They have told you on the way this house used to be owned by the
+            woman's great-grand-parents. She presumes the riddle was left by the husband before he left on a trip
+            abroad... from which he never returned.</p>
+        <p> You come in by the front door, which is quite low. Thankfully, the house has electric lighting, so a flick
+            of the hand is that is needed to illuminate the main room, even if it is a bit dimly.</p>
+        <p> From the door, you can see the house is separated in three distinct areas. The first one would be the sitting
+            area, close to the stove, where is a library along with a few couches and a coffee table. The second one
+            would be the kitchen area, where a small counter space is set under a few small windows. A small round table
+            with two chairs sits between the areas. The last area you can define is the sleeping area, partially hidden
+            behind a wall and a door left ajar. You assume that the privvy is adjacent to the house, considering it small size.</p>
 
         <form name="part1" action="{{ url_for('part2') }}">
             <input type="submit" name="part1_opt1" value="Do Something">
-            <input type="submit" name="part1_opt2" value="Do Something Else">
-            <input type="submit" name="part1_opt3" value="Do Another Thing">
         </form>
         <hr>
-
+        <button id="btn_riddle" class="btns">Toggle the riddle</button>
+        <div class="riddle">
+            <h4>
+                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
+                from you too long, I dare hope. You will find a treasure where:
+                <strong>
+                    <ul>
+                        <li>Time stops for our battles of wit.</li>
+                        <li>White clad or not, you are a queen.</li>
+                        <li>You inspire my every action.</li>
+                        <li>I move brazenly towards you.</li>
+                        <li>But you know how to stop my foolish plans.</li>
+                        <li>I kneel in front of your beauty.</li>
+                        <li>And carry the image of you with me.</li>
+                    </ul>
+                </strong>
+            </h4>
+        </div>
 
     </div>
 
