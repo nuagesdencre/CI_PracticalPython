@@ -20,6 +20,10 @@ ul, ul li {
 padding:10px;
 }
 
+.riddle{
+    display:none;
+}
+
 .next_action{
     background-color:yellow;
 }
