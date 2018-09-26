@@ -3,7 +3,9 @@
 
 
     <div>
-        LEADERBOARD
+        {% filter upper %}
+            <p>Leaderboard</p>
+        {% endfilter %}
 
         # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out
         # username, color, mystical_beast, riddle_solved, (duration)
@@ -11,7 +13,7 @@
             <th>Username</th>
             <th>Owns ____ underwear</th>
             <th>Has a secret tattoo of</th>
-            <th>Guessed correct answer (Y/N)</th>
+            <th>Riddle status</th>
             <th>Time Start</th>
             <th>Time End</th>
             <tr>
@@ -19,14 +21,14 @@
                 <td>{{ color }}</td>
                 <td>{{ mystical }}</td>
                 <td>{{ riddle_solved }}</td>
-                <td>13:11</td>
-                <td>13:22</td>
+                <td>{{ time_start }}</td>
+                <td>{{ time_stop }}</td>
             </tr>
             <tr>
                 <td>AAA</td>
                 <td>Blue</td>
                 <td>Toad</td>
-                <td>NO</td>
+                <td>Unsolved</td>
                 <td>10:11</td>
                 <td>10:22</td>
             </tr>
@@ -34,7 +36,7 @@
                 <td>BBB</td>
                 <td>Yellow</td>
                 <td>Unicorn</td>
-                <td>NO</td>
+                <td>Unsolved</td>
                 <td>10:11</td>
                 <td>10:22</td>
             </tr>
@@ -42,7 +44,7 @@
                 <td>CCC</td>
                 <td>Red</td>
                 <td>Dragon</td>
-                <td>Yes</td>
+                <td>Unsolved</td>
                 <td>12:11</td>
                 <td>16:22</td>
             </tr>
@@ -50,7 +52,7 @@
                 <td>AAA</td>
                 <td>Blue</td>
                 <td>Selkie</td>
-                <td>NO</td>
+                <td>Solved</td>
                 <td>13:11</td>
                 <td>13:22</td>
             </tr>
