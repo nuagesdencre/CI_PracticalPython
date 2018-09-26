@@ -4,9 +4,11 @@
 
         <h2> Welcome, {{ username }}!</h2>
         {% if session['username'] %}
-            <h4> Oh, you're someone else? C'mere.</h4>
-
-            {#            drop session#}
+            <h4> Go back to the 'Game' screen to continue to play.</h4>
+            <p> Oh, you're someone else?</p>
+            <form action="{{ url_for('drop') }}">
+                <input type="submit" value=" C'mere.">
+            </form>
         {% else %}
             <p>Come along.</p>
             <form action="{{ url_for('play') }}">
