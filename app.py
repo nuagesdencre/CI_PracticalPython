@@ -31,11 +31,21 @@ def game():
     return render_template("game.html", page_title="Game")
 
 
-@app.route('/leaderboard')
+@app.route('/leaderboard', methods=['GET', 'POST'])
 def leaderboard():
+    if request.method == 'GET':
+        username = session['username'] if 'username' in session else 'Potato'
+        color = session['color'] if 'color' in session else 'Magenta'
+        mystical_beast = session['mystical'] if 'mystical' in session else 'Porcupine'
+        riddle_solved = session['riddle_solved'] if 'riddle_solved' in session else 'Unsolved'
+        return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
+                                   mystical=mystical_beast, riddle_solved=riddle_solved)
+
+    # return render_template("leaderboard.html", page_title="Leaderboard", username='Nobody', color='green',
+    #                                mystical='bear', riddle_solved='solved')
     # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out
     # username, color, mystical_beast, riddle_solved, (duration)
-    return render_template("leaderboard.html", page_title="Leaderboard")
+
 
 
 @app.route('/play')
@@ -53,7 +63,9 @@ def story():
             username = request.form['username']
             session['username'] = username
         color = request.form['color']
+        session['color'] = color
         mystical_beast = request.form['mystical']
+        session['mystical'] = mystical_beast
         return render_template("story/story.html", page_title="story", username=username, color=color,
                                mystical=mystical_beast)
 

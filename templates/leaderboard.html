@@ -2,14 +2,59 @@
 {% block content %}
 
 
-<div>
-    LEADERBOARD
+    <div>
+        LEADERBOARD
 
-<table>
-    <th>Username</th><th>Guessed correct answer (Y/N)</th><th>Time Start</th><th>Time End</th>
-    <tr><td>AAA</td><td>NO</td><td>10:11</td><td>10:22</td></tr>
-    <tr><td>BBB</td><td>NO</td><td>08:31</td><td>10:11</td></tr>
-</table>
-</div>
+        # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out
+        # username, color, mystical_beast, riddle_solved, (duration)
+        <table>
+            <th>Username</th>
+            <th>Owns ____ underwear</th>
+            <th>Has a secret tattoo of</th>
+            <th>Guessed correct answer (Y/N)</th>
+            <th>Time Start</th>
+            <th>Time End</th>
+            <tr>
+                <td>{{ username }}</td>
+                <td>{{ color }}</td>
+                <td>{{ mystical }}</td>
+                <td>{{ riddle_solved }}</td>
+                <td>13:11</td>
+                <td>13:22</td>
+            </tr>
+            <tr>
+                <td>AAA</td>
+                <td>Blue</td>
+                <td>Toad</td>
+                <td>NO</td>
+                <td>10:11</td>
+                <td>10:22</td>
+            </tr>
+            <tr>
+                <td>BBB</td>
+                <td>Yellow</td>
+                <td>Unicorn</td>
+                <td>NO</td>
+                <td>10:11</td>
+                <td>10:22</td>
+            </tr>
+            <tr>
+                <td>CCC</td>
+                <td>Red</td>
+                <td>Dragon</td>
+                <td>Yes</td>
+                <td>12:11</td>
+                <td>16:22</td>
+            </tr>
+            <tr>
+                <td>AAA</td>
+                <td>Blue</td>
+                <td>Selkie</td>
+                <td>NO</td>
+                <td>13:11</td>
+                <td>13:22</td>
+            </tr>
+        </table>
+    </div>
 
 {% endblock %}
