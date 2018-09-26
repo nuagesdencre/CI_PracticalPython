@@ -3,20 +3,23 @@
 
 
     <div class="wrap">
-
+<img src="{{ url_for('static', filename='img/houseplan1.jpg') }}" alt="Approaching the cottage... it looks old"
+             style="max-width:250px"'/>
         <p> You approach the house, led by the couple. They have told you on the way this house used to be owned by the
             woman's great-grand-parents. She presumes the riddle was left by the husband before he left on a trip
             abroad... from which he never returned.</p>
-        <p> You come in by the front door, which is quite low. Thankfully, the house has electric lighting, so a flick
+        <p> You come in by the front door, which is quite low. Surprisingly, the house has electric lighting, so a flick
             of the hand is that is needed to illuminate the main room, even if it is a bit dimly.</p>
-        <p> From the door, you can see the house is separated in three distinct areas. The first one would be the sitting
-            area, close to the stove, where is a library along with a few couches and a coffee table. The second one
-            would be the kitchen area, where a small counter space is set under a few small windows. A small round table
-            with two chairs sits between the areas. The last area you can define is the sleeping area, partially hidden
-            behind a wall and a door left ajar. You assume that the privvy is adjacent to the house, considering it small size.</p>
+        <p> From the door, you can see the house's only room is divided three unofficial areas. The first one would be the
+            sitting
+            area, close to the stove, where is a library along with a few couches and a small table. The second one
+            would be the kitchen area, closest to the entrance's wall, where a small counter space is set under a few small windows. A dining table
+            with two chairs sits between the areas. The last area you notice, farthest from the door, is the sleeping area, partially hidden
+            behind a curtain and a chest of drawers. You understand that the privvy is adjacent to the house, considering its
+            small size.</p>
 
         <form name="part1" action="{{ url_for('part2') }}">
-            <input type="submit" name="part1_opt1" value="Do Something">
+            <input type="submit" name="part1_opt1" value="Walk in and look at the kitchen area">
         </form>
         <hr>
         <button id="btn_riddle" class="btns">Toggle the riddle</button>
