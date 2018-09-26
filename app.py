@@ -22,6 +22,10 @@ def index():
 @app.route('/drop')
 def drop():
     session.pop('username', None)
+    session.pop('color', None)
+    session.pop('mystical', None)
+    session.pop('time_start', None)
+    session.pop('time_stop', None)
     return redirect(url_for('index'))
 
 
@@ -102,13 +106,12 @@ def final():
     session['time_stop'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     answer_to_riddle = str(request.form['answer_to_riddle']).lower() if 'answer_to_riddle' in request.form else None
     if request.method == 'POST':
+        session['attempts'] += 1
         if answer_to_riddle == session['answer']:
-            session['attempts'] += 1
             session['riddle_solved'] = 'Solved'
             return render_template('story/final.html', attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
                                    status="Spot on.")
         else:
-            session['attempts'] += 1
             session['riddle_solved'] = 'Unsolved'
             return render_template('story/final.html', attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
                                    status='Not quite.')
