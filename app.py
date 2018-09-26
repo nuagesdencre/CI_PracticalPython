@@ -20,6 +20,11 @@ def index():
         return render_template("index.html", page_title="Home", username=session['username'])
     return render_template("index.html", page_title="Home", username="...whoever you are")
 
+#
+# @app.route('/drop')
+# def drop():
+#     return render_template("drop.html", page_title="Drop session")
+#
 
 @app.route('/about')
 def about():
