@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, flash, session
+from flask import Flask, render_template, request, redirect, flash, session, url_for
 from datetime import datetime
 
 app = Flask(__name__)
@@ -15,18 +15,15 @@ def session_status():
 @app.route('/')
 def index():
     if 'username' in session:
-        # logout??
-        # def dropsession():
-        #     session.pop('username', None)
         return render_template("index.html", page_title="Home", username=session['username'])
     return render_template("index.html", page_title="Home", username="...whoever you are")
 
 
-#
-# @app.route('/drop')
-# def drop():
-#     return render_template("drop.html", page_title="Drop session")
-#
+@app.route('/drop')
+def drop():
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
 
 @app.route('/about')
 def about():
