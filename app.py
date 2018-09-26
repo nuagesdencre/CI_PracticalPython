@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect, flash, session
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -19,6 +20,7 @@ def index():
         #     session.pop('username', None)
         return render_template("index.html", page_title="Home", username=session['username'])
     return render_template("index.html", page_title="Home", username="...whoever you are")
+
 
 #
 # @app.route('/drop')
@@ -43,14 +45,16 @@ def leaderboard():
         color = session['color'] if 'color' in session else 'Magenta'
         mystical_beast = session['mystical'] if 'mystical' in session else 'Porcupine'
         riddle_solved = session['riddle_solved'] if 'riddle_solved' in session else 'Unsolved'
+        time_start = session['time_start'] if 'time_start' in session else '00.00'
+        time_stop = session['time_stop'] if 'time_stop' in session else '00.00'
         return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
-                                   mystical=mystical_beast, riddle_solved=riddle_solved)
+                               mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
+                               time_stop=time_stop)
 
     # return render_template("leaderboard.html", page_title="Leaderboard", username='Nobody', color='green',
     #                                mystical='bear', riddle_solved='solved')
     # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out
     # username, color, mystical_beast, riddle_solved, (duration)
-
 
 
 @app.route('/play')
@@ -67,6 +71,10 @@ def story():
         else:
             username = request.form['username']
             session['username'] = username
+        if 'time_start' in session:
+            time_start = session['time_start']
+        else:
+            session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
         color = request.form['color']
         session['color'] = color
         mystical_beast = request.form['mystical']
@@ -87,27 +95,29 @@ def part2():
 
 @app.route('/part3')
 def part3():
+    session['attempts'] = 1
     return render_template("story/part3.html", page_title="Further in")
 
 
 @app.route('/final', methods=['GET', 'POST'])
 def final():
     session['answer'] = 'chessboard'
-    session['attempts'] = 1
+    session['time_stop'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     answer_to_riddle = str(request.form['answer_to_riddle']).lower() if 'answer_to_riddle' in request.form else None
     if request.method == 'POST':
         if answer_to_riddle == session['answer']:
-            session['riddle_solved'] = 'Solved'
             session['attempts'] += 1
-            return render_template('story/final.html',
-                                       status="Spot on.")
+            session['riddle_solved'] = 'Solved'
+            return render_template('story/final.html', attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
+                                   status="Spot on.")
         else:
             session['attempts'] += 1
             session['riddle_solved'] = 'Unsolved'
-            return render_template('story/final.html', status='Not quite.')
+            return render_template('story/final.html', attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
+                                   status='Not quite.')
 
-    return render_template("story/final.html", attempts=session['attempts'], status="What do you think?", answer_to_riddle=answer_to_riddle,
-                           page_title="Elementary")
+    return render_template("story/final.html", attempts=session['attempts'], status="What do you think?",
+                           answer_to_riddle=answer_to_riddle, page_title="Elementary")
 
 
 @app.errorhandler(404)
