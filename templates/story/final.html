@@ -9,20 +9,12 @@
         <p>
         <h2>What was the riddle referring to?</h2>
 
-        {% if session['attempts'] < 3 %}
-            <p> I think I know where the secret surprise is hidden. It is: </p>
-        {% else %}
-            <p>Sorry, {{ answer_to_riddle }} is incorrect. Try again!</p>
-
-
-        {% endif %}
-
         <form method="POST" action="{{ url_for('final') }}" name="final_answer">
             Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
             <input type="submit">
         </form>
-        <h2> {{ time_total }}</h2>
         <h1>{{ status }}</h1>
+
         {% if session['riddle_solved'] == 'Solved' %}
             <p>Last blurb:(missing queen piece on the chessboard)
                 (looking under the chessboard reveals a little paper packet - in which there is a pendant. The pendant
@@ -30,6 +22,8 @@
                 picture of the man on the left, and the woman on the right). </p>
             <p>if correct: final text A</p>
         {% elif session['riddle_solved'] == 'Unsolved' %}
+            <p>Sorry, your answer : "{{ answer_to_riddle }}" is incorrect. Try again!
+            We are looking for a single word, containing only letters from the alphabet - no special characters.</p>
             <p>You should probably go back and have another look.</p>
             <p>if wrong: final text b</p>
             <p><h3><a href="{{ url_for('index') }}">Start over</a></h3></p>
