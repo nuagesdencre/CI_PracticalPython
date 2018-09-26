@@ -70,24 +70,26 @@ def part2():
 
 @app.route('/part3')
 def part3():
-    session['answer'] = 'chessboard'
-    session['attempts'] = 1
     return render_template("story/part3.html", page_title="Further in")
 
 
 @app.route('/final', methods=['GET', 'POST'])
 def final():
-    answer_to_riddle = str(request.args['answer_to_riddle']) if 'answer_to_riddle' in request.args else None
+    session['answer'] = 'chessboard'
+    session['attempts'] = 1
+    answer_to_riddle = str(request.form['answer_to_riddle']).lower() if 'answer_to_riddle' in request.form else None
     if request.method == 'POST':
-        if request.args.get('guess'):
-            if answer_to_riddle == session['answer']:
-                session['riddle_solved'] = 'Solved'
-                return render_template('story/final.html', status='Spot on.')
-            else:
-                session['riddle_solved'] = 'Unsolved'
-                session['attempts'] += 1
-                return render_template('story/final.html', status='Not quite.')
-    return render_template("story/final.html", attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
+        if answer_to_riddle == session['answer']:
+            session['riddle_solved'] = 'Solved'
+            session['attempts'] += 1
+            return render_template('story/final.html',
+                                       status="Spot on.")
+        else:
+            session['attempts'] += 1
+            session['riddle_solved'] = 'Unsolved'
+            return render_template('story/final.html', status='Not quite.')
+
+    return render_template("story/final.html", attempts=session['attempts'], status="What do you think?", answer_to_riddle=answer_to_riddle,
                            page_title="Elementary")
 
 
