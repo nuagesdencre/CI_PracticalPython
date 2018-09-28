@@ -46,8 +46,8 @@ def leaderboard():
         color = session['color'] if 'color' in session else 'Magenta'
         mystical_beast = session['mystical'] if 'mystical' in session else 'Porcupine'
         riddle_solved = session['riddle_solved'] if 'riddle_solved' in session else 'Unsolved'
-        time_start = session['time_start'] if 'time_start' in session else '00.00'
-        time_stop = session['time_stop'] if 'time_stop' in session else '00.00'
+        time_start = session['time_start'] if 'time_start' in session else '2018/09/18, 12:11:09'
+        time_stop = session['time_stop'] if 'time_stop' in session else '2018/09/18, 12:21:59'
         return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
                                mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
                                time_stop=time_stop)
