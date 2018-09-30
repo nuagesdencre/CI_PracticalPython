@@ -4,73 +4,122 @@
 
     <div class="wrap">
 
-        <h1> PART3 -- You've done the round</h1>
+        <h1> PART3 -- You have done your round</h1>
 
-        <p>You walk to the side of the bed. You look under it and find a chest. There are also some hat boxes under the bed.
-         </p>
-        <p> At the head and feet of the bed, the chests of drawers stand tall. The bookshelf, adjacent to the bed, is filled up with books. Some mathematical tomes seem particularly worn.
-        A globe and an atlas are stored side by side. The atlas has a few newspapers clippings inserted. More newspapers are piled up neatly alongside various tomes. </p>
-<p>Over the bookshelves, there are picture frames with annotations.</p>
-        <p>Within range of the bookshelves, the comfortable cushioned chairs show a lot of wear and tear. They are closely positioned to the low table. This table has a recognizable pattern on it.</p>
-        <ul>
+        <p>Happy with your observations so far, you walk to the side of the house closest to the kitchen stove. The only
+            bed of the house is isolated not only by a curtain, but by two tall chests of drawers.The curtain is heavy
+            with dust and you make the mistake of opening it brusquely.
+        </p>
+        <p>
+            Against the northern wall are two bookshelves crammed with books and papers.Three annotated picture frames
+            hang over the bookshelves.
+            A globe and an atlas are stored side by side on the bookshelf closest to the stove. The atlas seems brand
+            new.
+            The other bookshelf contains newspapers piled up neatly alongside various tomes. They seem particularly
+            worn. </p>
+        <p>Within hands' reach of the bookshelves, two comfortable-looking chairs show a lot of wear and tear. They
+            are
+            closely positioned to the low table. There are tracks on the floor showing the table and chairs were moved
+            often.</p>
 
-            <li>Open the chest<p>
-                A bouquet of dried up red roses is laid on a carefully folded wedding dress. Its white lace has been yellowed over time.
-            Under the dress, there is a pair of gloves and some fancy shoes. Being a gardener, you do not know much about fashion, but you think this was a very trendy outfit for a Victorian wedding.
-            </p></li>
-            <li>
-                <button id="btn_paintings" class="btns">Observe the paintings</button>
-            </li>
-            <div class="paintings">
-                <p><img src="{{ url_for('static', filename='img/picture2.png') }}" alt="How pretty."> <img
-                        src="{{ url_for('static', filename='img/picture1.png') }}" alt="Who is this?"> <img
-                        src="{{ url_for('static', filename='img/picture3.png') }}" alt="Who is this?"></p>
-                <p>The picture frames are as follows: a,b,chess champion vera.
-                The notes identify each image accordingly: a,b,chess champion vera. You recognise that the two people sitting in the last picture are the same as the ones on the wedding portrait. More accurately, the picture seems to have been taken in this very room, and you see the low table by the stove remains unchanged.</p>
-            </div>
-            <li>
-                <button id="btn_chessboard" class="btns">Come closer to the small table in front of the stove</button>
-            </li>
-            <div class="chessboard">
-                <p><img src="{{ url_for('static', filename='img/chessboard.png') }}" alt="It is missing a piece?"></p>
-                <p>You identify the pattern on the low table as a chessboard. As a gardener, you know very little of chess, beside for the basic pieces and their starting positions. There is a piece missing and the queen is in the wrong position on the white side.</p>
-            </div>
-            <li>
-                <button id="btn_bookshelf" class="btns">Check the bookshelf</button>
-            </li>
-            <div class="bookshelf">
-                <p><img src="{{ url_for('static', filename='img/library.png') }}" alt="So many books"></p>
-                <p>There are various chess-related books. You find that an article clipping regarding Vera Menchik's latest championship. There are more than one article piled up where you can find her name.</p>
-                <p>You see there is a chesspiece in the bookshelf, it is a white knight. </p>
-            </div>
-            <li>
-                <form name="part3" action="{{ url_for('final') }}">
-                    <input type="submit" class="btns" name="part3_opt1" value="Do Another Thing">
-                </form>
-            </li>
-        </ul>
+        <p>
+            <button id="btn_under_the_bed" class="btns">You look under the bed</button>
+        </p>
+        <div class="under_the_bed">Coughing heavily and cursing
+            your impatience, you look under the bedframe and spot a
+            wooden chest. There are also some hat boxes and plenty of dust bunnies rolling about.
 
+            <ul>
+                <li>
+                    <button id="btn_chest" class="btns">Open the chest</button>
 
-        <hr>
-        <button id="btn_riddle" class="btns">Toggle the riddle</button>
-        <div class="riddle">
-            <h4>
-                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
-                from you too long, I dare hope. You will find a treasure where:
-                <strong>
-                    <ul>
-                        <li>Time stops for our battles of wit.</li>
-                        <li>White clad or not, you are a queen.</li>
-                        <li>You inspire my every action.</li>
-                        <li>I move brazenly towards you.</li>
-                        <li>But you know how to stop my foolish plans.</li>
-                        <li>I kneel in front of your beauty.</li>
-                        <li>And carry the image of you with me.</li>
-                    </ul>
-                </strong>
-            </h4>
+                    <div class="chest">
+                        <p>A bouquet of dried up red roses is laid on a carefully folded wedding dress. Its
+                            white lace
+                            has been yellowed over time.
+                            Under the dress, there is a pair of gloves and some fancy shoes. Being a down-to-earth,
+                            simple
+                            gardener, you
+                            do not know much
+                            about fashion, but you think this was a very respectable garment for a wedding a century
+                            ago.</p>
+                    </div>
+                </li>
+            </ul>
 
         </div>
+
+        <p>
+            <button id="btn_paintings" class="btns">Observe the paintings</button>
+        </p>
+        <div class="paintings">
+            <p><img src="{{ url_for('static', filename='img/picture2.png') }}" alt="Vera Menchik Club"> <img
+                    src="{{ url_for('static', filename='img/picture1.png') }}" alt="My Queen"> <img
+                    src="{{ url_for('static', filename='img/picture3.png') }}" alt="Battle in Black and White"></p>
+            <p>The picture frames are identified as follows: Vera Menchik Club; My Queen; Battle in Black and White.
+                You recognise that the two people
+                sitting in the last picture are the same as the ones on the wedding portrait. More accurately, the
+                picture seems to have been taken in this very room, and you see the low table by the kitchen stove
+                matches
+                the picture as well.</p>
+        </div>
+        <p>
+            <button id="btn_chessboard" class="btns">Sit by the kitchen stove</button>
+        </p>
+        <div class="chessboard">
+            <p><img src="{{ url_for('static', filename='img/chessboard.png') }}" alt="It is missing a piece?"></p>
+            <p>Carefully in case the chair's cushions are filled with dust, you sit down by the stove. You quickly
+                identify the pattern on the low table in front of you. Of course! It is a chessboard table, with drawers where to store its pieces
+                on each side. You admit to know very little of chess,
+                but you recognize the basic pieces and you know how to set the board.
+                <ul>
+                    <li>
+                        <button id="btn_missing" class="btns">Something is amiss</button>
+
+                        <div class="missing">
+            <p>The board is already set in this case. However, there is a piece missing on the white player' side -- a knight. Additionally, the white queen is
+                misplaced in its stead.</p>
+        </div>
+        </li></ul>
+
+
+    </div>
+    <p>
+        <button id="btn_bookshelf" class="btns">Check the bookshelf</button>
+    </p>
+    <div class="bookshelf">
+        <p><img src="{{ url_for('static', filename='img/library.png') }}" alt="So many books"></p>
+        <p>You kneel by the bookshelf to review the available titles. There are various chess-related books and a few hourglasses. There are copies of the <strong>British Chess Magazine</strong>
+            and an article clipping from <strong>the New York Times</strong> regarding the Carlsbad 1929 chess tournament. There are more than one article piled up where you can find interviews of famous chessmasters.</p>
+        <p>There is also a white knight sitting atop a handwritten note. The note has a few mathematical-looking formula and the sentence 'try to counter this! look into the drawer' </p>
+    </div>
+    <p>
+    <form name="part3" action="{{ url_for('final') }}">
+        <input type="submit" class="btns" name="part3_opt1" value="You have a good idea where to find the 'treasure'">
+    </form>
+    </p>
+
+
+    <hr>
+    <button id="btn_riddle" class="btns">Toggle the riddle</button>
+    <div class="riddle">
+        <h4>
+            I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
+            from you too long, I dare hope. You will find a treasure where:
+            <strong>
+                <ul>
+                    <li>Time stops for our battles of wit.</li>
+                    <li>White clad or not, you are a queen.</li>
+                    <li>You inspire my every action.</li>
+                    <li>I move brazenly towards you.</li>
+                    <li>But you know how to stop my foolish plans.</li>
+                    <li>I kneel in front of your beauty.</li>
+                    <li>And carry the image of you with me.</li>
+                </ul>
+            </strong>
+        </h4>
+
+    </div>
     </div>
 
 {% endblock %}
