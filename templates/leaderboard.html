@@ -2,56 +2,64 @@
 {% block content %}
 
 
-    <div class="wrap">
-        {% filter upper %}
-            <p>Leaderboard</p>
-        {% endfilter %}
+    <div class="wrap center">
+        <h2>Leaderboard</h2>
 
-{#        # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out#}
-{#        # username, color, mystical_beast, riddle_solved, (duration)#}
+
+        {#        # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out#}
+        {#        # username, color, mystical_beast, riddle_solved, (duration)#}
 
         <div id="player" class="leaderboard_entry">
-            Game start: {{ time_start }}; game end:{{ time_stop }}. Riddle status: <h4>{{ riddle_solved }}</h4>.
+            Game start: {{ time_start }}; game end:{{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.
             <div class="leaderboard_content">
-                Our courageous <h4 id="test">{{ username }}</h4>, who secretly favors <h4>{{ color }}</h4> underwear, called upon
-                their <h4>{{ mystical }}</h4> spirit and attempted to solve the riddle.
-                {% if session['riddle_solved'] == 'Solved' %}
-                    <p> text A</p>
-                {% elif session['riddle_solved'] == 'Unsolved' %}
-                    <p>text b</p>
-                {% endif %}
+                <p>Our courageous <span id="leaderboard_check">{{ username }}</span>, who secretly favors
+                    <span>{{ color }}</span> underwear, called upon
+                    their <span>{{ mystical }}</span> spirit and attempted to solve the riddle.
+                    {% if session['riddle_solved'] == 'Solved' %}
+                        <p> Well done! You have proven once again that you are wasted as a gardener.. although a superhero always hides under a erm... less visible, lamer alter ego!</p>
+                    {% elif session['riddle_solved'] == 'Unsolved' %}
+                        <p>Don't quit your day job yet, friend.</p>
+                    {% endif %}
+
             </div>
         </div>
 
         <div class="leaderboard_entry">
-            Game start: 2018/09/26, 21:06:34; game end: 2018/09/26, 21:46:34. Riddle status: <h4>Unsolved</h4>.
+            Game start: 2018/09/26, 21:06:34; game end: 2018/09/26, 21:46:34. Riddle status: <span>Unsolved</span>.
             <div class="leaderboard_content">
-                Our courageous <h4>Alphonso</h4>, who secretly favors <h4>blue</h4> underwear, called upon their <h4>
-                toad</h4> spirit and attempted to solve the riddle.
+                <p>Our courageous <span>Alphonso</span>, who secretly favors <span>blue</span> underwear, called upon
+                    their <span>
+                toad</span> spirit and attempted to solve the riddle.</p>
             </div>
         </div>
 
         <div class="leaderboard_entry">
-            Game start: 2018/09/16, 20:06:34; game end: 2018/09/16, 21:12:34. Riddle status: <h4>Unsolved</h4>.
+            Game start: 2018/09/16, 20:06:34; game end: 2018/09/16, 21:12:34. Riddle status: <span>Unsolved</span>.
             <div class="leaderboard_content">
-                Our courageous <h4>Butterfly</h4>, who secretly favors <h4>polkadot</h4> underwear, called upon their
-                <h4>unicorn</h4> spirit and attempted to solve the riddle.
+                <p>
+                    Our courageous <span>Butterfly</span>, who secretly favors <span>polkadot</span> underwear, called
+                    upon their
+                    <span>unicorn</span> spirit and attempted to solve the riddle.</p>
             </div>
         </div>
 
         <div class="leaderboard_entry">
-            Game start: 2018/09/22, 20:06:34; game end: 2018/09/26, 22:34:13. Riddle status: <h4>Unsolved</h4>.
+            Game start: 2018/09/22, 20:06:34; game end: 2018/09/26, 22:34:13. Riddle status: <span>Unsolved</span>.
             <div class="leaderboard_content">
-                Our courageous <h4>Carmen</h4>, who secretly favors <h4>silver</h4> underwear, called upon their <h4>
-                giant chicken</h4> spirit and attempted to solve the riddle.
+                <p>
+                    Our courageous <span>Carmen</span>, who secretly favors <span>silver</span> underwear, called upon
+                    their <span>
+                giant chicken</span> spirit and attempted to solve the riddle.</p>
             </div>
         </div>
 
         <div class="leaderboard_entry">
-            Game start: 2018/09/24, 10:06:34; game end: 2018/09/24, 12:04:44. Riddle status: <h4>Unsolved</h4>.
+            Game start: 2018/09/24, 10:06:34; game end: 2018/09/24, 12:04:44. Riddle status: <span>Unsolved</span>.
             <div class="leaderboard_content">
-                Our courageous <h4>Delphine</h4>, who secretly favors <h4>yellow</h4> underwear, called upon their <h4>
-                selkie</h4> spirit and attempted to solve the riddle.
+                <p>
+                    Our courageous <span>Delphine</span>, who secretly favors <span>yellow</span> underwear, called upon
+                    their <span>
+                selkie</span> spirit and attempted to solve the riddle.</p>
             </div>
         </div>
 
