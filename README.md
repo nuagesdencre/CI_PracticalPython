@@ -28,7 +28,7 @@ In addition, you may also use this section to discuss plans for additional featu
 - [Python version 3]()
     - Lorem.
 - [Flask]()
-    - Lorem.
+    - [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/)
     - Flask plugins? (requirements...)
 - [Jinja2]()
     - Lorem.
@@ -46,6 +46,15 @@ For any scenarios that have not been automated, test the user stories manually a
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
+
 ## Deployment
 >This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
@@ -54,8 +63,13 @@ In particular, you should provide all details of the differences between the dep
 - Separate git branch?
 In addition, if it is not obvious, you should also describe how to run your code locally.
 ## Credits
+### Disclosure
 ### Content
-> - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- Information about 
+FIDE - World Chess Federation: [(Source)](https://www.chess.com/article/view/fide-world-chess-federation-), [(Source)](https://www.fide.com/fide.html)
+- The general information about Victorian households: [(Source)](http://starcraftcustombuilders.com/Architectural.Styles.VictorianKitchen.htm), [(Source)](http://www.victorian-era.org/victorian-era-last-names2.html)
+- Private Investigator trivia: [(Source)](http://www.thrillingdetective.com/trivia/triv289.html)
+- Information about Vera Menchik: [(FIDE)](https://www.fide.com/fide.html), [(Mir Sultan Khan vs Vera Menchik Game)](http://www.chessgames.com/perl/chessgame?gid=1258409), [(Wiki Page)](https://en.wikipedia.org/wiki/Vera_Menchik), [(Internet Archive Wayback Machine)](https://web.archive.org/web/20091028034414/http://www.geocities.com/siliconvalley/lab/7378/menchik.htm)
 ### Media
 >- The photos used in this site were obtained from ...
 ### Acknowledgements
