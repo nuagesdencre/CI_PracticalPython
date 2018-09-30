@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-    <div class="wrap">
+    <div class="wrap center">
         <h1>This is the Home page</h1>
 
         <h2> Welcome, {{ username }}!</h2>
@@ -7,12 +7,12 @@
             <h4> Go back to the 'Game' screen to continue to play.</h4>
             <p> Oh, you're someone else?</p>
             <form action="{{ url_for('drop') }}">
-                <input type="submit" value=" C'mere.">
+                <input type="submit" class="btns" value=" C'mere.">
             </form>
         {% else %}
             <p>Come along.</p>
             <form action="{{ url_for('play') }}">
-                <input type="submit" value="Start!">
+                <input type="submit" class="btns" value="Start!">
             </form>
         {% endif %}
 

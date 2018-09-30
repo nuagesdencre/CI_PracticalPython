@@ -2,7 +2,7 @@
 {% block content %}
 
 
-    <div class="wrap">
+    <div class="wrap center">
         <p>Introduce yourself.</p>
         <form method="POST" action="{{ url_for('story') }}">
             {% if session['username'] %}
@@ -16,11 +16,10 @@
                 <label for="color">Favorite color: </label>
                 <input type="text" name="color"></p>
             <p>
-                <label for="mystical">Mystical creature: </label>
+                <label for="mystical">Name a mystical creature: </label>
                 <input type="text" name="mystical"></p>
-            <input type="submit" value="Submit!">
+            <input type="submit" class="btns" value="Submit!">
         </form>
-        <p> when clicking on submit, save timestamp as 'time.start'</p>
 
     </div>
 

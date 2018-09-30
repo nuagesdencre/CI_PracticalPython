@@ -3,43 +3,91 @@
 
 
     <div class="wrap">
-<img src="{{ url_for('static', filename='img/houseplan1.jpg') }}" alt="Approaching the cottage... it looks old"
-             style="max-width:250px"'/>
-        <p> You approach the house, led by the couple. They have told you on the way this house used to be owned by the
-            woman's great-grand-parents. She presumes the riddle was left by the husband before he left on a trip
-            abroad... from which he never returned.</p>
-        <p> You come in by the front door, which is quite low. Surprisingly, the house has electric lighting, so a flick
-            of the hand is that is needed to illuminate the main room, even if it is a bit dimly.</p>
-        <p> From the door, you can see the house's only room is divided three unofficial areas. The first one would be the
-            sitting
-            area, close to the stove, where is a library along with a few couches and a small table. The second one
-            would be the kitchen area, closest to the entrance's wall, where a small counter space is set under a few small windows. A dining table
-            with two chairs sits between the areas. The last area you notice, farthest from the door, is the sleeping area, partially hidden
-            behind a curtain and a chest of drawers. You understand that the privvy is adjacent to the house, considering its
-            small size.</p>
+        <img src="{{ url_for('static', filename='img/houseplan1.jpg') }}" alt="Approaching the cottage... it looks old">
+        <p> You approach the house, led by the McMillans. They have told you on the way the cottage was home to
+            Mrs. McMillan's great-grandparents in the early 1930s. She presumes the riddle was left by her
+            great-grandfather, a journalist.
+        <p> Apparently, he had an assignment requiring his presence in America, for which he left Europe and never
+            returned.
+            His wife would have followed him not too long after.</p>
+        <p> You step into the house through the front door, which is quite low, while the McMillans wait outside.
+            To your surprise, the house has electric
+            lighting, so a flick
+            of the hand is all that is needed to illuminate the room. The light is still a bit dim.</p>
+        <p> You take in the cottage's antique charm. Its roof's wooden beams are exposed and are higher than you would
+            have thought.
+            From your position by the entrance, you can see the only room of the house is divided in three sections.</p>
+        <ul>
+            <li>A sitting area at the back of the room surrounds the kitchen stove, and consists of bookshelves with a
+                few
+                couches and a low table.
+            </li>
+            <li> A kitchen area, closest to the entrance's wall, is set under a few
+                small windows with a narrow counter space. The dining table and its two chairs sit between the sections.
+            </li>
+            <li>Farthest from the door is the sleeping
+                area, partially hidden behind a curtain and a chest of drawers. You assume that the privy is adjacent to
+                the
+                house
+                considering the room's
+                small size.
+            </li>
+        </ul>
 
-        <form name="part1" action="{{ url_for('part2') }}">
-            <input type="submit" name="part1_opt1" value="Walk in and look at the kitchen area">
-        </form>
-        <hr>
-        <button id="btn_riddle" class="btns">Toggle the riddle</button>
-        <div class="riddle">
-            <h4>
-                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
-                from you too long, I dare hope. You will find a treasure where:
-                <strong>
-                    <ul>
-                        <li>Time stops for our battles of wit.</li>
-                        <li>White clad or not, you are a queen.</li>
-                        <li>You inspire my every action.</li>
-                        <li>I move brazenly towards you.</li>
-                        <li>But you know how to stop my foolish plans.</li>
-                        <li>I kneel in front of your beauty.</li>
-                        <li>And carry the image of you with me.</li>
-                    </ul>
-                </strong>
-            </h4>
-        </div>
+        <p>
+            <button id="btn_dining" class="btns">You approach the dining table</button>
+            <div class="dining">
+        <p>The dining table has a tablecloth with a strange pattern. There is a bump under the cloth.</p>
+
+        <ul>
+            <li>
+                <button id="btn_tablecloth" class="btns">Lift the tablecloth</button>
+            </li>
+            <div class="tablecloth">
+                <p>There is a bundle of sewing patterns. You can see one of them is meant for a wedding dress. There is an
+                    handwritten note on it: 'must be red, not white'.</p>
+            </div>
+        </ul>
+
+    </div>
+
+
+    <p>
+        <button id="btn_room" class="btns">Take note of the room's main elements</button>
+        <div class="room_view">
+            <img src="{{ url_for('static', filename='img/houseplan2.jpg') }}" alt="Having a gander inside">
+            <img src="{{ url_for('static', filename='img/houseplan3.jpg') }}" alt="One last close glance">
+    <p>
+        You are impressed by the well-organised room in front of you. Clearly, the inhabitants had set up their
+        sleeping and rest areas as to benefit from the heat of the stove. Everything within easy
+        reach of the front door is related to the kitchen, and to the storage of goods and houseware. All items are
+        arranged impeccably under a layer of dust.
+    </p>
+    </div>
+
+    <form name="part1" action="{{ url_for('part2') }}">
+        <input type="submit" class="btns" name="part1_opt1" value="Walk further in">
+    </form>
+    </p>
+    <hr>
+    <button id="btn_riddle" class="btns">Toggle the riddle</button>
+    <div class="riddle">
+        <h4>
+            I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
+            from you too long, I dare hope. You will find a treasure where:
+            <strong>
+                <ul>
+                    <li>Time stops for our battles of wit.</li>
+                    <li>White clad or not, you are a queen.</li>
+                    <li>You inspire my every action.</li>
+                    <li>I move brazenly towards you.</li>
+                    <li>But you know how to stop my foolish plans.</li>
+                    <li>I kneel in front of your beauty.</li>
+                    <li>And carry the image of you with me.</li>
+                </ul>
+            </strong>
+        </h4>
+    </div>
 
     </div>
 
