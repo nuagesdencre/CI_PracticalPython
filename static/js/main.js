@@ -4,11 +4,19 @@ $(function () {
     $('#btn_riddle').click(function () {
         $('.riddle').toggle();
     });
-
+        $('#btn_dining').click(function () {
+        $('.dining').toggle();
+    });
+    $('#btn_tablecloth').click(function () {
+        $('.tablecloth').toggle();
+    });
     $('#btn_painting_couple').click(function () {
         $('.painting_couple').toggle();
     });
 
+    $('#btn_painting_check').click(function () {
+        $('.painting_check').toggle();
+    });
     $('#btn_room').click(function () {
         $('.room_view').toggle();
     });
