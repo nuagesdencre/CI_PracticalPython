@@ -4,7 +4,7 @@
 
     <div class="wrap">
 
-        <h1> PART3 -- You have done your round</h1>
+        <h1> 3.</h1>
 
         <p>Happy with your observations so far, you walk to the side of the house closest to the kitchen stove. The only
             bed of the house is isolated not only by a curtain, but by two tall chests of drawers.The curtain is heavy
@@ -13,8 +13,7 @@
         <p>
             Against the northern wall are two bookshelves crammed with books and papers.Three annotated picture frames
             hang over the bookshelves.
-            A globe and an atlas are stored side by side on the bookshelf closest to the stove. The atlas seems brand
-            new.
+            A globe and an atlas are stored side by side on the bookshelf closest to the kitchen stove. The atlas pages are open on the American continent section.
             The other bookshelf contains newspapers piled up neatly alongside various tomes. They seem particularly
             worn. </p>
         <p>Within hands' reach of the bookshelves, two comfortable-looking chairs show a lot of wear and tear. They
@@ -26,7 +25,7 @@
             <button id="btn_under_the_bed" class="btns">You look under the bed</button>
         </p>
         <div class="under_the_bed">Coughing heavily and cursing
-            your impatience, you look under the bedframe and spot a
+            your impatience, you look under the bed frame and spot a
             wooden chest. There are also some hat boxes and plenty of dust bunnies rolling about.
 
             <ul>
@@ -38,7 +37,7 @@
                             white lace
                             has been yellowed over time.
                             Under the dress, there is a pair of gloves and some fancy shoes. Being a down-to-earth,
-                            simple
+                            unprivileged
                             gardener, you
                             do not know much
                             about fashion, but you think this was a very respectable garment for a wedding a century
@@ -64,12 +63,13 @@
                 the picture as well.</p>
         </div>
         <p>
-            <button id="btn_chessboard" class="btns">Sit by the kitchen stove</button>
+            <button id="btn_chessboard" class="btns">Sit in a cushy chair</button>
         </p>
         <div class="chessboard">
             <p><img src="{{ url_for('static', filename='img/chessboard.png') }}" alt="It is missing a piece?"></p>
             <p>Carefully in case the chair's cushions are filled with dust, you sit down by the stove. You quickly
-                identify the pattern on the low table in front of you. Of course! It is a chessboard table, with drawers where to store its pieces
+                identify the pattern on the low table in front of you. Of course! It is a chessboard table, with drawers
+                where to store its pieces
                 on each side. You admit to know very little of chess,
                 but you recognize the basic pieces and you know how to set the board.
                 <ul>
@@ -77,8 +77,8 @@
                         <button id="btn_missing" class="btns">Something is amiss</button>
 
                         <div class="missing">
-            <p>The board is already set in this case. However, there is a piece missing on the white player' side -- a knight. Additionally, the white queen is
-                misplaced in its stead.</p>
+            <p>The board is already set in this case. However, there is a piece missing on the white player' side -- a
+                knight. The white queen is occupying its spot.</p>
         </div>
         </li></ul>
 
@@ -89,9 +89,14 @@
     </p>
     <div class="bookshelf">
         <p><img src="{{ url_for('static', filename='img/library.png') }}" alt="So many books"></p>
-        <p>You kneel by the bookshelf to review the available titles. There are various chess-related books and a few hourglasses. There are copies of the <strong>British Chess Magazine</strong>
-            and an article clipping from <strong>the New York Times</strong> regarding the Carlsbad 1929 chess tournament. There are more than one article piled up where you can find interviews of famous chessmasters.</p>
-        <p>There is also a white knight sitting atop a handwritten note. The note has a few mathematical-looking formula and the sentence 'try to counter this! look into the drawer' </p>
+        <p>You kneel by the bookshelf to review the available titles. There are various chess-related books and a few
+            hourglasses. There are copies of the <strong>British Chess Magazine</strong>
+            and an article clipping from the<strong> New York Times</strong> regarding the Carlsbad 1929 chess
+            tournament. There are numerous articles piled up captioning interviews of famous chessmasters.
+        </p>
+        <p>There is also a white knight sitting atop a newspaper clipping. The clipping has been scribbled over. </p>
+        <p><img src="{{ url_for('static', filename='img/note2.png') }}" alt="How tricky"></p>
+
     </div>
     <p>
     <form name="part3" action="{{ url_for('final') }}">
