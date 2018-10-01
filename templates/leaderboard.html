@@ -2,7 +2,7 @@
 {% block content %}
 
 
-    <div class="wrap center">
+    <div class="wrap center lace">
         <h2>Leaderboard</h2>
 
 
@@ -10,12 +10,12 @@
         {#        # username, color, mystical_beast, riddle_solved, (duration)#}
 
         <div id="player" class="leaderboard_entry">
-            Game start: {{ time_start }}; game end:{{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.
+            Game start: {{ time_start }}; game end: {{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.
             <div class="leaderboard_content">
                 <p>Our courageous <span id="leaderboard_check">{{ username }}</span>, who secretly favors
                     <span>{{ color }}</span> socks with a pattern of <span>{{ mystical }}s</span> attempted to solve the riddle.
                     {% if session['riddle_solved'] == 'Solved' %}
-                        <p> Well done! You have proven once again that you are wasted as a gardener.. although a superhero always hides under a erm... less visible, lamer alter ego!</p>
+                        <p> Well done! You have proven once again that you are wasted as a gardener. Go buy a fedora, you serve it.</p>
                     {% elif session['riddle_solved'] == 'Unsolved' %}
                         <p>Don't quit your day job yet, friend.</p>
                     {% endif %}
