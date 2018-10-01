@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, flash, session, url_for
+from flask import Flask, render_template, request, redirect, session, url_for
 from datetime import datetime
 
 app = Flask(__name__)
@@ -52,11 +52,6 @@ def leaderboard():
         return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
                                mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
                                time_stop=time_stop)
-
-    # return render_template("leaderboard.html", page_title="Leaderboard", username='Nobody', color='green',
-    #                                mystical='bear', riddle_solved='solved')
-    # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out
-    # username, color, mystical_beast, riddle_solved, (duration)
 
 
 @app.route('/play')
