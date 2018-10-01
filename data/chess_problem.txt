@@ -1,0 +1,5 @@
+https://www.chess.com/article/view/the-knights-moves
+
+1. Nh5+ Kh8If the king takes the pawn, then 2.Nf6+ immediately captures the rook.
+(1... Kxh7 2. Nf6+)
+2. Nf6 Rf8 3. Nd7 Re8 4. Nf6 Re7 5. Nd5 Rd7 6. Nb6 Rd6 7. Nc4 Rd5 8. Nb6 Rd6 9. Nc4 Rd7 10. Nb6 Rc7 11. Nd5 Rc8 12. Nb6 Rb8 13. Nd7 Ra8 14. Nb6 Ra7 15. Nc8The rook can never escape the non-stop attacks by the knight, and therefore the game is a draw, despite White being down a rook.
