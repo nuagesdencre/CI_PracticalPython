@@ -103,7 +103,7 @@ def part3():
 
 @app.route('/final', methods=['GET', 'POST'])
 def final():
-    session['answer'] = 'chessboard'
+    session['answer'] = 'chessboard table'
     session['time_stop'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     answer_to_riddle = str(request.form['answer_to_riddle']).lower() if 'answer_to_riddle' in request.form else None
     if request.method == 'POST':
