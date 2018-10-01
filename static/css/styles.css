@@ -106,7 +106,7 @@ nav {
 
 .riddle, .chest, .tablecloth,
 .under_the_bed, .missing, .dining,
-.painting_couple, .painting_check,
+.picture_couple, .painting_check,
 .room_view, .chessboard, .bookshelf,
 .clock_view, .paintings, .clock_inside {
     display: none;
@@ -123,16 +123,19 @@ div > img {
 .btns {
     margin: 2px;
     display: inline-block;
-    border: 1px solid #fff;
+    border: 1px solid #6f675e;
     padding: 0 15px;
     line-height: 34px;
   word-wrap:normal;
     font-weight: bold;
     white-space: pre-wrap;
 }
+.btns:hover{
+    color:#DC143C;
+}
 
 #btn_riddle {
-    background-color: crimson;
+    background-color: #dc143c;
     color: white;
 }
 
@@ -148,17 +151,11 @@ div > img {
 }
 
 .leaderboard_top {
-    background-color: #ffd0b3;
+    background-color: rgb(255, 184, 190);
 
 }
 
-/*!* Extra small devices (phones, 600px and down) *!*/
-/*@media only screen and (max-width: 600px) {...} */
 
-/*!* Small devices (portrait tablets and large phones, 600px and up) *!*/
-/*@media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .paintings img {
         display: inline-block;
@@ -174,5 +171,3 @@ div > img {
     }
 }
 
-/*!* Extra large devices (large laptops and desktops, 1200px and up) *!*/
-/*@media only screen and (min-width: 1200px) {...}*/
