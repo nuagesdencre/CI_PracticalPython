@@ -1,6 +1,5 @@
 # A century-old riddle
 For this project, I decided to combine my affection for games and novels. I am working on a little interactive short story set in an old, dusty cottage.
- Project deployed using Github pages: https://nuagesdencre.github.io/CI_PracticalPython/.
 ## UX
  
 - This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
