@@ -13,6 +13,8 @@ def session_status():
 
 
 @app.route('/')
+# home page
+# where the visitor is invited to start the game or to return to the current playthrough
 def index():
     if 'username' in session:
         return render_template("index.html", page_title="Home", username=session['username'])
@@ -40,7 +42,7 @@ def game():
     return render_template("game.html", page_title="Game")
 
 
-@app.route('/leaderboard', methods=['GET'])
+@app.route('/leaderboard')
 def leaderboard():
     username = session.get('username', 'Potato')
     color = session.get('color', 'purple')
@@ -55,31 +57,31 @@ def leaderboard():
 
 @app.route('/play')
 def play():
-    return render_template("play.html", page_title="Play")
+    if 'username' in session:
+        return redirect(url_for('story'))
+    else:
+        return render_template("play.html", page_title="Play")
 
 # return redirect(url_for('index'))
 
+
 # story path
-@app.route('/story', methods=['GET', 'POST'])
+@app.route('/story', methods=['GET','POST'])
 def story():
     if 'username' in session:
-        username = session['username']
+        username =session.get('username')
+        color = session.get('color')
+        mystical_beast = session.get('mystical')
     else:
         username = request.form['username']
         session['username'] = username
-
-
-    if 'time_start' in session:
-        time_start = session['time_start']
-    else:
-        session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
-    color = request.form['color']
-    session['color'] = color
-    mystical_beast = request.form['mystical']
-    session['mystical'] = mystical_beast
+        color = request.form['color']
+        session['color'] = color
+        mystical_beast = request.form['mystical']
+        session['mystical'] = mystical_beast
+    session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     return render_template("story/story.html", page_title="story", username=username, color=color,
                            mystical=mystical_beast)
-
 
 @app.route('/part1')
 def part1():
