@@ -40,44 +40,45 @@ def game():
     return render_template("game.html", page_title="Game")
 
 
-@app.route('/leaderboard', methods=['GET', 'POST'])
+@app.route('/leaderboard', methods=['GET'])
 def leaderboard():
-    if request.method == 'GET':
-        username = session['username'] if 'username' in session else 'Potato'
-        color = session['color'] if 'color' in session else 'Magenta'
-        mystical_beast = session['mystical'] if 'mystical' in session else 'Porcupine'
-        riddle_solved = session['riddle_solved'] if 'riddle_solved' in session else 'Unsolved'
-        time_start = session['time_start'] if 'time_start' in session else '---'
-        time_stop = session['time_stop'] if 'time_stop' in session else '---'
-        return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
-                               mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
-                               time_stop=time_stop)
+    username = session.get('username', 'Potato')
+    color = session.get('color', 'purple')
+    mystical_beast = session.get('mystical', 'flying pig')
+    riddle_solved = session.get('riddle_solved', 'Unsolved')
+    time_start = session.get('time_start', '---')
+    time_stop = session.get('time_stop', '---')
+    return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
+                           mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
+                           time_stop=time_stop)
 
 
 @app.route('/play')
 def play():
     return render_template("play.html", page_title="Play")
 
+# return redirect(url_for('index'))
 
 # story path
 @app.route('/story', methods=['GET', 'POST'])
 def story():
-    if request.method == 'POST':
-        if 'username' in session:
-            username = session['username']
-        else:
-            username = request.form['username']
-            session['username'] = username
-        if 'time_start' in session:
-            time_start = session['time_start']
-        else:
-            session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
-        color = request.form['color']
-        session['color'] = color
-        mystical_beast = request.form['mystical']
-        session['mystical'] = mystical_beast
-        return render_template("story/story.html", page_title="story", username=username, color=color,
-                               mystical=mystical_beast)
+    if 'username' in session:
+        username = session['username']
+    else:
+        username = request.form['username']
+        session['username'] = username
+
+
+    if 'time_start' in session:
+        time_start = session['time_start']
+    else:
+        session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
+    color = request.form['color']
+    session['color'] = color
+    mystical_beast = request.form['mystical']
+    session['mystical'] = mystical_beast
+    return render_template("story/story.html", page_title="story", username=username, color=color,
+                           mystical=mystical_beast)
 
 
 @app.route('/part1')
