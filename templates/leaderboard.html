@@ -3,11 +3,8 @@
 
 
     <div class="wrap center lace">
-        <h2>Leaderboard</h2>
+        <h1>Leaderboard</h1>
 
-
-        {#        # username, umbrella color, has a secret tattoo of, riddle solved, timestamp in/out#}
-        {#        # username, color, mystical_beast, riddle_solved, (duration)#}
 
         <div id="player" class="leaderboard_entry">
             Game start: {{ time_start }}; game end: {{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.
@@ -15,7 +12,7 @@
                 <p>Our courageous <span id="leaderboard_check">{{ username }}</span>, who secretly favors
                     <span>{{ color }}</span> socks with a pattern of <span>{{ mystical }}s</span> attempted to solve the riddle.
                     {% if session['riddle_solved'] == 'Solved' %}
-                        <p> Well done! You have proven once again that you are wasted as a gardener. Go buy a fedora, you serve it.</p>
+                        <p> Well done! You have proven once again that you are wasted as a gardener. Go buy a fedora, you deserve it.</p>
                     {% elif session['riddle_solved'] == 'Unsolved' %}
                         <p>Don't quit your day job yet, friend.</p>
                     {% endif %}

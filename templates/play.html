@@ -3,22 +3,22 @@
 
 
     <div class="wrap center">
-        <p>Introduce yourself.</p>
+        <p>Please introduce yourself.</p>
         <form method="POST" action="{{ url_for('story') }}">
             {% if session['username'] %}
                 <h2> Username: {{ session['username'] }}</h2>
             {% else %}
                 <p><label for="username">Username: </label>
-                <input type="text" name="username">
+                <input type="text" name="username" required>
             {% endif %}
             </p>
             <p>
                 <label for="color">Favorite color: </label>
-                <input type="text" name="color"></p>
+                <input type="text" name="color" required></p>
             <p>
-                <label for="mystical">Name a mystical creature: </label>
-                <input type="text" name="mystical"></p>
-            <input type="submit" class="btns" value="Submit!">
+                <label for="mystical">What is your spirt animal?: </label>
+                <input type="text" name="mystical" required></p>
+            <input type="submit" class="btns" value="Let's get right to it!">
         </form>
 
     </div>
