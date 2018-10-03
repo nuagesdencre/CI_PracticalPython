@@ -4,6 +4,10 @@ For this project, I decided to combine my affection for games and novels. I am w
  
 - This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
 - User stories!!
+-  [Hypertext fiction](https://en.wikipedia.org/wiki/Hypertext_fiction)
+-  [Gamebook](https://en.wikipedia.org/wiki/Gamebook)
+    A gamebook is a work of printed fiction that allows the reader to participate in the story by making choices. The narrative branches along various paths, typically through the use of numbered paragraphs or pages. Gamebooks are sometimes called choose your own adventure books or CYOA after the influential Choose Your Own Adventure series originally published by US company Bantam Books. Gamebooks influenced hypertext fiction.[1]
+
 > Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
      - As a user type, I want to perform an action, so that I can achieve a goal.
@@ -11,8 +15,8 @@ This section is also where you would share links to any wireframes, mockups, dia
 > ## Features
 > In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 - Story
-- Interactivity
-- Leaderboard
+- Interactivity [Interactive fiction](https://en.wikipedia.org/wiki/Interactive_fiction)
+- Leaderboard to display progress of the reader in the story
  
 #### Existing Features
 > - Feature 1 - allows users X to achieve Y, by having them fill out ...
