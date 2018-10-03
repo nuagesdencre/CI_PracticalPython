@@ -156,6 +156,11 @@
          display: inline-block;
          max-width: 30%;
     }
+     .room_view img {
+         display: inline-block;
+         max-width: 49%;
+         margin:auto;
+    }
 }
  @media only screen and (min-width: 992px) {
      .leaderboard_entry {
