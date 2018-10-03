@@ -83,6 +83,7 @@ def story():
     return render_template("story/story.html", page_title="story", username=username, color=color,
                            mystical=mystical_beast)
 
+
 @app.route('/part1')
 def part1():
     return render_template("story/part1.html", page_title="Entering the house")
@@ -101,12 +102,13 @@ def part3():
 
 @app.route('/final', methods=['GET', 'POST'])
 def final():
-    session['answer'] = 'chessboard table'
+    session['answer1'] = 'chessboard table'
+    session['answer2'] = 'chessboard drawer'
     session['time_stop'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     answer_to_riddle = str(request.form['answer_to_riddle']).lower() if 'answer_to_riddle' in request.form else None
     if request.method == 'POST':
         session['attempts'] += 1
-        if answer_to_riddle == session['answer']:
+        if answer_to_riddle == session['answer1'] or answer_to_riddle == session['answer2']:
             session['riddle_solved'] = 'Solved'
             return render_template('story/final.html', attempts=session['attempts'], answer_to_riddle=answer_to_riddle,
                                    status="Spot on.")
