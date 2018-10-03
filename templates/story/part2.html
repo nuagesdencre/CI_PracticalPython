@@ -7,38 +7,40 @@
 
         <h2> 2</h2>
         <hr>
-        <p>You have a cursory look around at the kitchen area. There is a narrow counter top under the windows and the
+        <p>By now, you examine your surrounding with a methodical eye. You observe the kitchen area where you currently stand. There is a narrow counter top under the windows and the
             dining room server, nothing out of the ordinary. You wonder how bothersome it was to take care of the dishes
             a century ago. You certainly are fond of the amenities offered by modern plumbing.</p>
 
         <p>Your eyes pick up an old clock on the wall closest to the dining table. Beside being a gardener,
             you are fond of antiques and this pendulum clock charms you immediately. It is a well-preserved timepiece
             from the Victorian Era. However, as you get closer to it, it does not seem to be ticking.
-        You know that clocks have a steady 'tick-tock' sounds not unlike a metronome when they are working properly.
+            You know that clocks have a steady 'tick-tock' sounds not unlike a metronome when they are working properly.
         </p>
 
-        <p> As you stand next to the clock, you take note across the room that above the dining room server is a wedding
-            portrait. It is so imposing actually, you wonder how it did not capture your attention when you came in.
+        <p> As you stand next to the clock, you take note that across the room above the dining room server, there is a
+            wedding
+            portrait. In fact, it is so imposing that you wonder how it did not capture your attention when you came in.
         </p>
+        <h3>What do you do next?</h3>
         <p>
 
-            <button data-toggle=".clock_view" class="btns">Try to fix the clock</button>
+            <button data-toggle=".clock_view" class="btns">You try to fix the clock</button>
         </p>
 
         <div class="clock_view">
             <img src="{{ url_for('static', filename='img/clock1.png') }}" alt="Approach the clock">
 
-            <p> As you like tinkering with broken things, you know from experience that, if a pendulum clock keeps
-                stopping, it could be due to its position leading to a weight imbalance.
+            <p> As you like tinkering with broken things, you know from experience that, if a pendulum clock has
+                stopping, it could be due to its position.
                 You think the clock is not quite level, so you poke at it with enthusiasm. Once satisfied that the clock
-                is no longer leaning to the left or right, or at an angle, you start the pendulum swinging
+                is no longer leaning to the left or right, or at an angle, you expect the pendulum to start swinging again
                 and wait to see if the metronome-like ticking is triggered.</p>
             <ul>
                 <li>
                     <button data-toggle=".clock_inside" class="btns">The clock is still not ticking</button>
 
                     <div class="clock_inside">
-                        <p>Even if the clock is straightened, the pendulum still does not move. Confused, you open the
+                        <p>Even if the clock is straightened, the pendulum does not seem to move. Confused, you open the
                             clock's pendulum door to examine its innards.
                             You gasp! There is a sheet wedged against the pendulum. </p>
                         <p>As you unfold it, you see the sheet of paper is referring to some kind of maths problem (you
@@ -51,7 +53,7 @@
         </div>
 
         <p>
-            <button data-toggle=".picture_couple" class="btns">Look at the picture of the couple</button>
+            <button data-toggle=".picture_couple" class="btns">You are drawn by the massive picture</button>
         </p>
         <div class="picture_couple">
             <p><img src="{{ url_for('static', filename='img/couple.png') }}" alt="What a lovely picture"></p>
@@ -60,43 +62,46 @@
                 the man looks a bit stiff in his fancy outfit. The picture has aged well and is enclosed in an
                 elaborated wooden frame.
                 The frame is bulky and is hung securely on the wall.</p>
-                <ul>
+            <ul>
 
-                    <li>
-                        <button data-toggle=".painting_check" class="btns">Ask the McMillan's opinion on the picture</button>
+                <li>
+                    <button data-toggle=".painting_check" class="btns">You ask the McMillan's opinion on the picture</button>
 
-                        <div class="painting_check">
-                            <p>You call in the McMillans to ask if they know who is the couple in the portrait. Mrs McMillan
-                            confirms the couple was indeed her relatives on their wedding day. She does not remember much about
+                    <div class="painting_check">
+                        <p>You call in the McMillans to ask if they know who is the couple in the portrait. Mrs McMillan
+                            confirms the couple was indeed her relatives on their wedding day. She does not remember
+                            much about
                             them. </p>
-                            <p>Mr McMillan huffs and puffs in agreement. Montaguë barks.</p>
-                        </div>
-                    </li>
-                </ul>
+                        <p>Mr McMillan huffs and puffs in agreement. Montaguë barks.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
-            <form name="part2" action="{{ url_for('part3') }}">
-                <input type="submit" class="btns" name="part2_opt1" value="Walk further in the room">
-            </form>
+        <form name="part2" action="{{ url_for('part3') }}">
+            <input type="submit" class="btns" name="part2_opt1" value="You slowly look around">
+        </form>
 
 
         <hr>
-        <button id="btn_riddle" data-toggle=".riddle" class="btns">Toggle the riddle</button>
-            <div class="riddle">
+        <button id="btn_riddle" data-toggle=".riddle" class="btns">Read the riddle again</button>
+        <div class="riddle">
 
-                    I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
-                    from you too long, I dare hope. You will find a treasure where:
 
-                        <ul>
-                            <li>Time stops for our battles of wit.</li>
-                            <li>White clad or not, you are a queen.</li>
-                            <li>You inspire my every action.</li>
-                            <li>I move brazenly towards you.</li>
-                            <li>But you know how to stop my foolish plans.</li>
-                            <li>I kneel in front of your beauty.</li>
-                            <li>And carry the image of you with me.</li>
-                        </ul>
-            </div>
+            My obligations won't keep me away
+            from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is
+            hidden where:
+
+            <ul>
+                <li>Time stops for our battles of wit.</li>
+                <li>White clad or not, you are a queen.</li>
+                <li>You inspire my every action.</li>
+                <li>I move brazenly towards you.</li>
+                <li>But you know how to stop my foolish plans.</li>
+                <li>I kneel in front of your beauty.</li>
+                <li>And carry the image of you with me.</li>
+            </ul>
+        </div>
 
 
     </div>

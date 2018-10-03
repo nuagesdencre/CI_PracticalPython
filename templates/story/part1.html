@@ -7,7 +7,8 @@
         <hr>
         <img src="{{ url_for('static', filename='img/houseplan1.jpg') }}" alt="Approaching the cottage... it looks old">
         <p> You approach the house, led by the McMillans. They have told you on the way the cottage was home to
-            Mrs McMillan's great-grandparents (the Thomases) close to a century ago. She presumes the riddle was left by her
+            Mrs McMillan's great-grandparents (the Thomases) close to a century ago. She presumes the riddle was left by
+            her
             great-grandfather Mr Thomas, a journalist.
         <p> Apparently, he would have received an assignment requiring his presence in America, for which he left Europe
             and never
@@ -20,20 +21,15 @@
             of the hand is all that is needed to illuminate the room. The light is still a bit dim.</p>
         <p> You take in the cottage's antique charm. Its roof's wooden beams are exposed and are higher than you would
             have thought. The tiny windows are south-facing and allow for some natural light to shine in.
-            From your position by the entrance, you can see the only room of the house is divided in three sections.</p>
+            From your position by the entrance, you confirm there is only one big room in the house. To focus on each important feature of the house, you divide this room in three sections:</p>
         <ul>
-            <li> A kitchen area, closest to the entrance's wall, is set under a few
-                small windows with a narrow counter space. The dining table and its two chairs sit between the sections.
+            <li>The entrance of the house  - delimited by the kitchen area, where a dining table stands under a few
+                small windows on the left, and a dining server sits at the right.
             </li>
-            <li>A sitting area at the back of the room surrounds the kitchen stove and consists of bookshelves with a
-                few
-                couches and a low table.
+            <li>A sitting area - where, at the back of the room, bookshelves, two comfy chairs and a low table surround the kitchen stove.
             </li>
-            <li>Alongside it, farthest from the door is the sleeping
-                area, partially hidden behind a curtain and a chest of drawers.
-
+            <li>A sleeping area - farthest from the door, where a bed is partially hidden behind a curtain and a chest of drawers.
             </li>
-
 
         </ul>
         <p>You assume that the privy is adjacent to
@@ -41,6 +37,8 @@
             house
             considering the room's
             small size.</p>
+
+        <h3>What do you do next?</h3>
         <p>
             <button data-toggle=".dining" class="btns">You approach the dining table</button>
             <div class="dining">
@@ -62,39 +60,40 @@
 
 
     <p>
-        <button data-toggle=".room_view" class="btns">Take note of the room's main elements</button>
+        <button data-toggle=".room_view" class="btns">You openly appraise the room's layout</button>
         <div class="room_view">
             <img src="{{ url_for('static', filename='img/houseplan2.jpg') }}" alt="Having a gander inside">
             <img src="{{ url_for('static', filename='img/houseplan3.jpg') }}" alt="One last close glance">
     <p>
-        You are impressed by the well-organised room in front of you. Clearly, the inhabitants had set up their
-        sleeping and rest areas as to benefit from the heat of the stove. Everything within easy
+        You are impressed by the well-organised room in front of you. Reasonably, the Thomases had set up their
+        sleeping and rest areas to benefit from the heat of the stove. Everything within easy
         reach of the front door is related to the kitchen, and to the storage of goods and housewares. All items are
-        arranged impeccably under a layer of dust.
+        arranged impeccably under a layer of dust. There is no waste of space in the room.
     </p>
     </div>
 
     <form name="part1" action="{{ url_for('part2') }}">
-        <input type="submit" class="btns" name="part1_opt1" value="Walk further in">
+        <input type="submit" class="btns" name="part1_opt1" value="You take a few steps further">
     </form>
 
     <hr>
-    <button id="btn_riddle" data-toggle=".riddle" class="btns">Toggle the riddle</button>
-        <div class="riddle">
+    <button id="btn_riddle" data-toggle=".riddle" class="btns">Read the riddle again</button>
+    <div class="riddle">
 
-                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
-                from you too long, I dare hope. You will find a treasure where:
+        My obligations won't keep me away
+        from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is hidden
+        where:
 
-                    <ul>
-                        <li>Time stops for our battles of wit.</li>
-                        <li>White clad or not, you are a queen.</li>
-                        <li>You inspire my every action.</li>
-                        <li>I move brazenly towards you.</li>
-                        <li>But you know how to stop my foolish plans.</li>
-                        <li>I kneel in front of your beauty.</li>
-                        <li>And carry the image of you with me.</li>
-                    </ul>
-        </div>
+        <ul>
+            <li>Time stops for our battles of wit.</li>
+            <li>White clad or not, you are a queen.</li>
+            <li>You inspire my every action.</li>
+            <li>I move brazenly towards you.</li>
+            <li>But you know how to stop my foolish plans.</li>
+            <li>I kneel in front of your beauty.</li>
+            <li>And carry the image of you with me.</li>
+        </ul>
+    </div>
 
     </div>
 

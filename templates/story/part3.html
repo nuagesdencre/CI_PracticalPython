@@ -7,7 +7,7 @@
         <h2> 3</h2>
         <hr>
         <p>Happy with your observations so far, you walk to the side of the house closest to the kitchen stove. The only
-            bed of the house is isolated not only by a curtain, but by two tall chests of drawers.The curtain is heavy
+            bed of the house is isolated not only by a curtain, but by two tall chests of drawers. The curtain is heavy
             with dust and you make the mistake of opening it brusquely.
         </p>
         <p>
@@ -16,23 +16,24 @@
             A globe and an atlas are stored side by side on the bookshelf closest to the kitchen stove. The atlas pages
             are open on the American continent section. You assume that Mr Thomas must have kept track of his travels
             there.
-            The other bookshelf contains newspapers piled up neatly alongside various tomes. They seem particularly
+            The other bookshelf contains newspapers piled up neatly alongside various volumes. They seem particularly
             worn. </p>
         <p>Within hands' reach of the bookshelves, two comfortable-looking chairs show a lot of wear and tear. They
             are
             closely positioned to the low table. There are tracks on the floor showing the table and chairs were moved
             often.</p>
 
+        <h3>What do you do next?</h3>
         <p>
             <button data-toggle=".under_the_bed" class="btns">You look under the bed</button>
         </p>
         <div class="under_the_bed">Coughing heavily and cursing
-            your impatience, you look under the bed frame and spot a
+            your clumsiness, you look under the bed frame and spot a
             wooden chest. There are also some hat boxes and plenty of dust bunnies rolling about.
 
             <ul>
                 <li>
-                    <button data-toggle=".chest" class="btns">Open the chest</button>
+                    <button data-toggle=".chest" class="btns">You open the chest</button>
 
                     <div class="chest">
                         <p>A bouquet of dried up red roses is laid on a carefully folded wedding dress. Its
@@ -51,13 +52,13 @@
         </div>
 
         <p>
-            <button data-toggle=".paintings" class="btns">Observe the paintings</button>
+            <button data-toggle=".paintings" class="btns">You stare at the paintings</button>
         </p>
         <div class="paintings">
             <p><img src="{{ url_for('static', filename='img/picture2.png') }}" alt="Vera Menchik Club"> <img
                     src="{{ url_for('static', filename='img/picture1.png') }}" alt="My Queen"> <img
                     src="{{ url_for('static', filename='img/picture3.png') }}" alt="Battle in Black and White"></p>
-            <p>The picture frames each have little nameplate. The first one says "Vera Menchik Club"; the second one,
+            <p>The picture frames each have little nameplates. The first one says "Vera Menchik Club"; the second one,
                 "My Queen"; the last has "Battle in Black and White" inscribed.
                 You recognise that the two people
                 sitting in the last picture are the same as the ones on the wedding portrait, so more than likely, the
@@ -67,7 +68,7 @@
                 the picture as well.</p>
         </div>
         <p>
-            <button data-toggle=".chessboard" class="btns">Sit in a cushy chair</button>
+            <button data-toggle=".chessboard" class="btns">You sit in a comfy chair</button>
         </p>
         <div class="chessboard">
             <p><img src="{{ url_for('static', filename='img/chessboard.png') }}" alt="It is missing a piece?"></p>
@@ -89,12 +90,12 @@
 
     </div>
     <p>
-        <button data-toggle=".bookshelf" class="btns">Check the bookshelf</button>
+        <button data-toggle=".bookshelf" class="btns">You check the bookshelf</button>
     </p>
     <div class="bookshelf">
         <p><img src="{{ url_for('static', filename='img/library.png') }}" alt="So many books"></p>
-        <p>You kneel by the bookshelf to review the available titles. There are various chess-related books and a few
-            hourglasses. There are copies of the <strong>British Chess Magazine</strong>
+        <p>You kneel by the bookshelf to review the available titles. They are ordered alphabetically under the dust. There are various chess-related books and a few
+            hourglasses.  There are copies of the <strong>British Chess Magazine</strong>
             and an article clipping from the<strong> New York Times</strong> regarding the Carlsbad 1929 chess
             tournament. There are numerous articles piled up captioning interviews of famous chess masters.
         </p>
@@ -110,11 +111,13 @@
 
 
     <hr>
-    <button id="btn_riddle" data-toggle=".riddle" class="btns">Toggle the riddle</button>
+    <button id="btn_riddle" data-toggle=".riddle" class="btns">Read the riddle again</button>
         <div class="riddle">
 
-                I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
-                from you too long, I dare hope. You will find a treasure where:
+
+            My obligations won't keep me away
+            from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is
+            hidden where:
 
                     <ul>
                         <li>Time stops for our battles of wit.</li>
