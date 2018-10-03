@@ -15,7 +15,7 @@ $(function () {
             return $('#player').addClass('leaderboard_top');
         }
         $('#player').removeClass('leaderboard_top');
-        alert("Your progress is not being recorded yet, begin the story and introduce yourself.")
+        alert("Your progress is not being recorded yet, begin the story and introduce yourself.");
     }
     highlight_leaderboard();
-})
+});
