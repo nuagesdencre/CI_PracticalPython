@@ -68,8 +68,17 @@ In addition, if it is not obvious, you should also describe how to run your code
 FIDE - World Chess Federation: [(Source)](https://www.chess.com/article/view/fide-world-chess-federation-), [(Source)](https://www.fide.com/fide.html)
 - The general information about Victorian households: [(Source)](http://starcraftcustombuilders.com/Architectural.Styles.VictorianKitchen.htm), [(Source)](http://www.victorian-era.org/victorian-era-last-names2.html)
 - Private Investigator trivia: [(Source)](http://www.thrillingdetective.com/trivia/triv289.html)
-- Information about Vera Menchik: [(FIDE)](https://www.fide.com/fide.html), [(Mir Sultan Khan vs Vera Menchik Game)](http://www.chessgames.com/perl/chessgame?gid=1258409), [(Wiki Page)](https://en.wikipedia.org/wiki/Vera_Menchik), [(Internet Archive Wayback Machine)](https://web.archive.org/web/20091028034414/http://www.geocities.com/siliconvalley/lab/7378/menchik.htm)
+- Information about Vera Menchik:
+    - [(Review: Vera Menchik: A biography of the First Women’s World Chess Champion, with 350 games, By Robert B. Tanner)](http://georgiachessnews.com/2016/11/01/review-vera-menchik-a-biography-of-the-first-womens-world-chess-champion-with-350-games-by-robert-b-tanner/)
+     - [(FIDE)](https://www.fide.com/fide.html) 
+     - [(Mir Sultan Khan vs Vera Menchik Game)](http://www.chessgames.com/perl/chessgame?gid=1258409)
+     - [(Wiki Page)](https://en.wikipedia.org/wiki/Vera_Menchik)
+     - [(Internet Archive Wayback Machine)](https://web.archive.org/web/20091028034414/http://www.geocities.com/siliconvalley/lab/7378/menchik.htm)
 ### Media
->- The photos used in this site were obtained from ...
+- The pictures and patterns used in this site were all digitally drawn by Veronique Savard (nuagesdencre.com). They should not be used elsewhere.
+Three of the drawings were directly inspired from the following:
+    - [George Goodwin Kilburne's](https://en.wikipedia.org/wiki/George_Goodwin_Kilburne) [A Game of Chess](https://www.1st-art-gallery.com/George-Goodwin-Kilburne/A-Game-Of-Chess.html)
+    - [The wedding of Wedding Margaretha Zelle and Rudolph MacLeod](https://www.friesmuseum.nl/en/collection/blog-mata-hari/dont-think-that-im-bad/)
+    - This picture of [Vera Menchik](http://www.chesshistory.com/winter/pics/cn3433_menchik.jpg)
 ### Acknowledgements
 >- I received inspiration for this project from X
