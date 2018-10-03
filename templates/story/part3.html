@@ -14,7 +14,7 @@
             Against the northern wall are two bookshelves crammed with books and papers.Three annotated picture frames
             hang over the bookshelves.
             A globe and an atlas are stored side by side on the bookshelf closest to the kitchen stove. The atlas pages
-            are open on the American continent section.
+            are open on the American continent section. You assume that Mr Thomas must have kept track of his travels there.
             The other bookshelf contains newspapers piled up neatly alongside various tomes. They seem particularly
             worn. </p>
         <p>Within hands' reach of the bookshelves, two comfortable-looking chairs show a lot of wear and tear. They
@@ -23,7 +23,7 @@
             often.</p>
 
         <p>
-            <button id="btn_under_the_bed" class="btns">You look under the bed</button>
+            <button data-toggle=".under_the_bed" class="btns">You look under the bed</button>
         </p>
         <div class="under_the_bed">Coughing heavily and cursing
             your impatience, you look under the bed frame and spot a
@@ -31,18 +31,17 @@
 
             <ul>
                 <li>
-                    <button id="btn_chest" class="btns">Open the chest</button>
+                    <button data-toggle=".chest" class="btns">Open the chest</button>
 
                     <div class="chest">
                         <p>A bouquet of dried up red roses is laid on a carefully folded wedding dress. Its
                             white lace
                             has been yellowed over time.
-                            Under the dress, there is a pair of gloves and some fancy shoes. Being a down-to-earth,
-                            unprivileged
+                            Under the dress, there is a pair of gloves and some fancy shoes. Being a simple
                             gardener, you
                             do not know much
-                            about fashion, but you think this was a very respectable garment for a wedding a century
-                            ago.</p>
+                            about fashion, but you think this would have been a very respectable garment for a wedding a century
+                            ago. It does look like the wedding dress from the wedding portrait.</p>
                     </div>
                 </li>
             </ul>
@@ -50,21 +49,21 @@
         </div>
 
         <p>
-            <button id="btn_paintings" class="btns">Observe the paintings</button>
+            <button data-toggle=".paintings" class="btns">Observe the paintings</button>
         </p>
         <div class="paintings">
             <p><img src="{{ url_for('static', filename='img/picture2.png') }}" alt="Vera Menchik Club"> <img
                     src="{{ url_for('static', filename='img/picture1.png') }}" alt="My Queen"> <img
                     src="{{ url_for('static', filename='img/picture3.png') }}" alt="Battle in Black and White"></p>
-            <p>The picture frames are identified as follows: Vera Menchik Club; My Queen; Battle in Black and White.
+            <p>The picture frames each have little nameplate. The first one says "Vera Menchik Club"; the second one, "My Queen"; the last has "Battle in Black and White" inscribed.
                 You recognise that the two people
-                sitting in the last picture are the same as the ones on the wedding portrait. More accurately, the
+                sitting in the last picture are the same as the ones on the wedding portrait, so more than likely, the Thomases. More accurately, the
                 picture seems to have been taken in this very room, and you see the low table by the kitchen stove
                 matches
                 the picture as well.</p>
         </div>
         <p>
-            <button id="btn_chessboard" class="btns">Sit in a cushy chair</button>
+            <button data-toggle=".chessboard" class="btns">Sit in a cushy chair</button>
         </p>
         <div class="chessboard">
             <p><img src="{{ url_for('static', filename='img/chessboard.png') }}" alt="It is missing a piece?"></p>
@@ -75,7 +74,7 @@
                 but you recognize the basic pieces and you know how to set the board.
                 <ul>
                     <li>
-                        <button id="btn_missing" class="btns">Something is amiss</button>
+                        <button data-toggle=".missing" class="btns">Something is amiss</button>
 
                         <div class="missing">
             <p>The board is already set in this case. However, there is a piece missing on the white player' side -- a
@@ -86,14 +85,14 @@
 
     </div>
     <p>
-        <button id="btn_bookshelf" class="btns">Check the bookshelf</button>
+        <button data-toggle=".bookshelf" class="btns">Check the bookshelf</button>
     </p>
     <div class="bookshelf">
         <p><img src="{{ url_for('static', filename='img/library.png') }}" alt="So many books"></p>
         <p>You kneel by the bookshelf to review the available titles. There are various chess-related books and a few
             hourglasses. There are copies of the <strong>British Chess Magazine</strong>
             and an article clipping from the<strong> New York Times</strong> regarding the Carlsbad 1929 chess
-            tournament. There are numerous articles piled up captioning interviews of famous chessmasters.
+            tournament. There are numerous articles piled up captioning interviews of famous chess masters.
         </p>
         <p>There is also a white knight sitting atop a newspaper clipping. The clipping has been scribbled over. </p>
         <p><img src="{{ url_for('static', filename='img/note2.png') }}" alt="How tricky"></p>
@@ -107,7 +106,7 @@
 
 
     <hr>
-    <button id="btn_riddle" class="btns">Toggle the riddle</button>
+    <button data-toggle=".riddle" class="btns">Toggle the riddle</button>
     <div class="riddle">
         <h4>
             I left you a surprise, my love, to find when you miss me. My obligations won't keep me away

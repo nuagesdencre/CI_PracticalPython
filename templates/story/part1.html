@@ -7,12 +7,12 @@
         <hr>
         <img src="{{ url_for('static', filename='img/houseplan1.jpg') }}" alt="Approaching the cottage... it looks old">
         <p> You approach the house, led by the McMillans. They have told you on the way the cottage was home to
-            Mrs. McMillan's great-grandparents close to a century ago. She presumes the riddle was left by her
-            great-grandfather, a journalist.
+            Mrs McMillan's great-grandparents (the Thomases) close to a century ago. She presumes the riddle was left by her
+            great-grandfather Mr. Thomas, a journalist.
         <p> Apparently, he would have received an assignment requiring his presence in America, for which he left Europe
             and never
             returned.
-            His wife would have followed him not too long after.</p>
+            Mrs Thomas would have followed him not too long after.</p>
         <p> While the McMillans wait outside with their enthusiastic dog, you step into the house through the front
             door, which is quite low.
             To your surprise, the house has electric
@@ -42,13 +42,13 @@
             considering the room's
             small size.</p>
         <p>
-            <button id="btn_dining" class="btns">You approach the dining table</button>
+            <button data-toggle=".dining" class="btns">You approach the dining table</button>
             <div class="dining">
         <p>The dining table is covered by a tablecloth with an odd pattern. There is a slight bump under the cloth.</p>
 
         <ul>
             <li>
-                <button id="btn_tablecloth" class="btns">Lift the tablecloth</button>
+                <button data-toggle=".tablecloth" class="btns">Lift the tablecloth</button>
 
                 <div class="tablecloth">
                     <p>There is a bundle of sewing patterns. You can see one of them is meant for a wedding dress. There
@@ -62,14 +62,14 @@
 
 
     <p>
-        <button id="btn_room" class="btns">Take note of the room's main elements</button>
+        <button data-toggle=".room_view" class="btns">Take note of the room's main elements</button>
         <div class="room_view">
             <img src="{{ url_for('static', filename='img/houseplan2.jpg') }}" alt="Having a gander inside">
             <img src="{{ url_for('static', filename='img/houseplan3.jpg') }}" alt="One last close glance">
     <p>
         You are impressed by the well-organised room in front of you. Clearly, the inhabitants had set up their
         sleeping and rest areas as to benefit from the heat of the stove. Everything within easy
-        reach of the front door is related to the kitchen, and to the storage of goods and houseware. All items are
+        reach of the front door is related to the kitchen, and to the storage of goods and housewares. All items are
         arranged impeccably under a layer of dust.
     </p>
     </div>
@@ -79,7 +79,7 @@
     </form>
     </p>
     <hr>
-    <button id="btn_riddle" class="btns">Toggle the riddle</button>
+    <button data-toggle=".riddle" class="btns">Toggle the riddle</button>
     <div class="riddle">
         <h4>
             I left you a surprise, my love, to find when you miss me. My obligations won't keep me away

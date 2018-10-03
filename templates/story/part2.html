@@ -11,18 +11,18 @@
             dining room server, nothing out of the ordinary. You wonder how bothersome it was to take care of the dishes
             a century ago. You certainly are fond of the amenities offered by modern plumbing.</p>
 
-        <p>Your eyes notice an old clock on the wall closest to the dining table. Beside being a gardener,
+        <p>Your eyes pick up an old clock on the wall closest to the dining table. Beside being a gardener,
             you are fond of antiques and this pendulum clock charms you immediately. It is a well-preserved timepiece
-            from the Victorian Era, however it does not seem to be ticking.</p>
-        <p>You know that clocks have a steady 'tick-tock' sounds not unlike a metronome when they are working properly.
+            from the Victorian Era. However, as you get closer to it, it does not seem to be ticking.
+        You know that clocks have a steady 'tick-tock' sounds not unlike a metronome when they are working properly.
         </p>
 
-        <p> As you stand next to the clock, you take note across the room above the dining room server is a wedding
-            portrait. It is so big actually, you wonder how it did not jump to your attention when you came in.
+        <p> As you stand next to the clock, you take note across the room that above the dining room server is a wedding
+            portrait. It is so imposing actually, you wonder how it did not capture your attention when you came in.
         </p>
         <p>
 
-            <button id="btn_clock" class="btns">Try to fix the clock</button>
+            <button data-toggle=".clock_view" class="btns">Try to fix the clock</button>
         </p>
 
         <div class="clock_view">
@@ -35,7 +35,7 @@
                 and wait to see if the metronome-like ticking is triggered.</p>
             <ul>
                 <li>
-                    <button id="btn_clock_inside" class="btns">The clock is still not ticking</button>
+                    <button data-toggle=".clock_inside" class="btns">The clock is still not ticking</button>
 
                     <div class="clock_inside">
                         <p>Even if the clock is straightened, the pendulum still does not move. Confused, you open the
@@ -51,7 +51,7 @@
         </div>
 
         <p>
-            <button id="btn_picture_couple" class="btns">Look at the picture of the couple</button>
+            <button data-toggle=".picture_couple" class="btns">Look at the picture of the couple</button>
         </p>
         <div class="picture_couple">
             <p><img src="{{ url_for('static', filename='img/couple.png') }}" alt="What a lovely picture"></p>
@@ -62,7 +62,7 @@
                 <ul>
 
                     <li>
-                        <button id="btn_painting_check" class="btns">Ask the McMillan's opinion on the picture</button>
+                        <button data-toggle="painting_check" class="btns">Ask the McMillan's opinion on the picture</button>
 
                         <div class="painting_check">
             <p>You call in the McMillans to ask if they know who is the couple in the portrait. Greta McMillan
@@ -83,7 +83,7 @@
     </p>
 
     <hr>
-    <button id="btn_riddle" class="btns">Toggle the riddle</button>
+    <button data-toggle=".riddle" class="btns">Toggle the riddle</button>
     <div class="riddle">
         <h4>
             I left you a surprise, my love, to find when you miss me. My obligations won't keep me away
