@@ -62,11 +62,9 @@ def play():
     else:
         return render_template("play.html", page_title="Play")
 
-# return redirect(url_for('index'))
-
 
 # story path
-@app.route('/story', methods=['GET','POST'])
+@app.route('/story', methods=['GET', 'POST'])
 def story():
     if 'username' in session:
         username =session.get('username')
