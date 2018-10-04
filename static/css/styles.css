@@ -113,6 +113,12 @@
      display: none;
 }
 /* Buttons*/
+
+.start{
+    margin-bottom:15px;
+    border: 4px solid #DC143C;
+    text-transform: uppercase;
+}
  .wrap li button {
      background-color: #fff;
 }
