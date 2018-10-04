@@ -114,11 +114,7 @@
 }
 /* Buttons*/
 
-.start{
-    margin-bottom:15px;
-    border: 4px solid #DC143C;
-    text-transform: uppercase;
-}
+
  .wrap li button {
      background-color: #fff;
 }
@@ -134,6 +130,12 @@
 }
  .btns:hover {
      color: #DC143C;
+}
+
+.start{
+    margin-bottom:15px;
+    border: 4px solid #DC143C;
+    text-transform: uppercase;
 }
  #btn_riddle {
      background-color: #dc143c;
