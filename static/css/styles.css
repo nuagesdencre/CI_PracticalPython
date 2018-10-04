@@ -138,7 +138,11 @@ nav {
 }
 
 /* Buttons*/
-
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+}
 .wrap li button {
     background-color: #fff;
 }
@@ -174,10 +178,9 @@ nav {
 /* ENDButtons */
 /* Leaderboard */
 .leaderboard_entry {
-    color: #6f675e;
     background-color: #F5F5F5;
     text-align: center;
-    border: 3px solid #ccc5b3;
+    border: 3px double #ccc5b3;
     padding: 5px;
     margin-left: auto;
     margin-right: auto;

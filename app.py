@@ -5,20 +5,33 @@ from datetime import datetime
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+'''
+makes the session last unless requested otherwise
+'''
+
 
 @app.before_request
 def session_status():
-    # makes the session last unless requested otherwise
+
+
     session.permanent = True
+
+'''
+home page
+where the visitor is invited to start the game or to return to their current 'version' of the story
+'''
 
 
 @app.route('/')
-# home page
-# where the visitor is invited to start the game or to return to the current playthrough
 def index():
     if 'username' in session:
         return render_template("index.html", page_title="Home", username=session['username'])
     return render_template("index.html", page_title="Home", username="...whoever you are")
+
+
+'''
+a way to get rid of the information in memory to trigger a new version of the story
+'''
 
 
 @app.route('/drop')
@@ -32,14 +45,29 @@ def drop():
     return redirect(url_for('index'))
 
 
+'''
+ where information about the type of game, the rules of the game and the contact information can be found
+'''
+
+
 @app.route('/about')
 def about():
     return render_template("about.html", page_title="About")
 
 
+'''
+ where game information is offered via a drop-down menu, letting the reader play, access the leaderboard or access the about page
+'''
+
+
 @app.route('/game')
 def game():
     return render_template("game.html", page_title="Game")
+
+
+'''
+where the reader can track their details and progress in the story (i.e. session information and riddle status)
+'''
 
 
 @app.route('/leaderboard')
@@ -55,6 +83,11 @@ def leaderboard():
                            time_stop=time_stop)
 
 
+'''
+where the reader is invited to provide their information and begin the story or return to its current iteration
+'''
+
+
 @app.route('/play')
 def play():
     if 'username' in session:
@@ -63,11 +96,15 @@ def play():
         return render_template("play.html", page_title="Play")
 
 
-# story path
+'''
+where the reader begins the story and their details are included for a personalised experience
+'''
+
+
 @app.route('/story', methods=['GET', 'POST'])
 def story():
     if 'username' in session:
-        username =session.get('username')
+        username = session.get('username')
         color = session.get('color')
         mystical_beast = session.get('mystical')
     else:
@@ -82,10 +119,20 @@ def story():
                            mystical=mystical_beast)
 
 
+'''
+the first part of the story
+'''
+
+
 @app.route('/part1')
 def part1():
     session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     return render_template("story/part1.html", page_title="Entering the house")
+
+
+'''
+the second part of the story
+'''
 
 
 @app.route('/part2')
@@ -93,10 +140,20 @@ def part2():
     return render_template("story/part2.html", page_title="First glance")
 
 
+'''
+the third part of the story
+'''
+
+
 @app.route('/part3')
 def part3():
     session['attempts'] = 1
     return render_template("story/part3.html", page_title="Further in")
+
+
+'''
+where the reader has to provide an answer to the riddle
+'''
 
 
 @app.route('/final', methods=['GET', 'POST'])
