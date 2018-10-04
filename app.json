@@ -1,0 +1,7 @@
+{
+  "name": "A Curious Cottage Gamebook",
+  "description": "A Python & Flask Project by Veronique Savard",
+  "repository": "https://git.heroku.com/ci-vero-practicalpython.git",
+  "logo": "",
+  "keywords": ["cottage", "gamebook", "savard"]
+}

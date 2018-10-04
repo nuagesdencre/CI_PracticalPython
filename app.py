@@ -12,9 +12,8 @@ makes the session last unless requested otherwise
 
 @app.before_request
 def session_status():
-
-
     session.permanent = True
+
 
 '''
 home page

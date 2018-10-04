@@ -1,4 +1,5 @@
-# A century-old riddle
+# A Curious Cottage
+#### A century-old riddle
 For this project, I decided to combine my affection for games and novels. I am working on a little interactive short story set in an old, dusty cottage.
 ## UX
  
@@ -59,11 +60,21 @@ If this section grows too long, you may want to split it off into a separate fil
 </p>
 
 ## Deployment
+
+This project has been deployed using Heroku.
+#### [A Curious Cottage](https://ci-vero-practicalpython.herokuapp.com/)
+
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+    - The ‘Deploy to Heroku’ button enables users to deploy apps to Heroku without leaving the web browser, and with little or no configuration. The button is ideal for customers, open-source project maintainers or add-on providers who wish to provide their customers with a quick and easy way to deploy and configure a Heroku app.
+The button is well-suited for use in README files, and is intended to serve as a replacement to a list of manual steps typically required to configure an app.
+
+
+
 >This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+>- Different values for environment variables (Heroku Config Vars)?
+>- Different configuration files?
+>- Separate git branch?
 In addition, if it is not obvious, you should also describe how to run your code locally.
 ## Credits
 ### Disclosure
