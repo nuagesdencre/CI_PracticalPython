@@ -1,21 +1,23 @@
 # A Curious Cottage
 #### A century-old riddle
 For this project, I decided to combine my affection for games and novels. I am working on a little interactive short story set in an old, dusty cottage.
-## UX
- 
-- This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
-- User stories!!
+
 -  [Hypertext fiction](https://en.wikipedia.org/wiki/Hypertext_fiction)
 -  [Gamebook](https://en.wikipedia.org/wiki/Gamebook)
     A gamebook is a work of printed fiction that allows the reader to participate in the story by making choices. The narrative branches along various paths, typically through the use of numbered paragraphs or pages. Gamebooks are sometimes called choose your own adventure books or CYOA after the influential Choose Your Own Adventure series originally published by US company Bantam Books. Gamebooks influenced hypertext fiction.[1]
 
+## UX
+ 
+- This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
+- User stories!!
+- Wireframes: [main story]() and [leaderboard]().
 > Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
      - As a user type, I want to perform an action, so that I can achieve a goal.
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 > ## Features
 > In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-- Story
+- Original Story
 - Interactivity [Interactive fiction](https://en.wikipedia.org/wiki/Interactive_fiction)
 - Leaderboard to display progress of the reader in the story
  
