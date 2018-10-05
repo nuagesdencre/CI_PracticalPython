@@ -141,7 +141,6 @@ nav {
 input{
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance:none;
 }
 .wrap li button {
     background-color: #fff;
