@@ -10,27 +10,35 @@
             Game start: {{ time_start }} | Game end: {{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.
             <div class="leaderboard_content">
                 <p>Our courageous <span id="leaderboard_check">{{ username }}</span>, who secretly favors
-                    <span>{{ color }}</span> socks with a pattern of <span>{{ mystical }}s</span> attempted to solve the riddle.
+                    <span>{{ color }}</span> socks with a pattern of <span>{{ mystical }}s</span> attempted to solve the
+                    riddle.
                     {% if session['riddle_solved'] == 'Solved' %}
-                        <p> Well done! You have proven once again that you are wasted as a gardener. Go buy a fedora, you deserve it.</p>
+                        <p> Well done! You have proven once again that you are wasted as a gardener. Go buy a fedora,
+                            you deserve it.</p>
                     {% elif session['riddle_solved'] == 'Unsolved' %}
                         <p>Don't quit your day job yet, friend.</p>
                     {% endif %}
 
             </div>
         </div>
-     {% for player in leaderboard[:3] %}
-   <div class="leaderboard_entry">
-            Game start:{{ player.time_start }} | Game end: {{ player.time_stop }}. Riddle status: <span>{{ player.riddle_status}}</span>.
-            <div class="leaderboard_content">
-                <p>Our courageous <span>{{ player.username }}</span>, who secretly favors <span>{{ player.color }}</span> socks with a pattern of <span>
+        {% for player in leaderboard[:4] %}
+            <div class="leaderboard_entry">
+                Game start: {{ player.time_start }} | Game end:  {{ player.time_stop }}. Riddle status:
+                {% if player.riddle_status == 'Solved' %}
+                    <span style="background-color:#acff93;">{{ player.riddle_status }}</span>.
+                {% elif player.riddle_status == 'Unsolved' %}
+                    <span>{{ player.riddle_status }}</span>.
+                {% else %}
+                    <span>Unsolved.</span>
+                {% endif %}
+                <div class="leaderboard_content">
+                    <p>Our courageous <span>{{ player.username }}</span>, who secretly favors
+                        <span>{{ player.color }}</span> socks with a pattern of <span>
                 {{ player.mystical }}</span> attempted to solve the riddle.</p>
+                </div>
             </div>
-        </div>
 
-            {% endfor %}
-
-
+        {% endfor %}
 
 
     </div>

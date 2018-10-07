@@ -31,7 +31,7 @@ def index():
 
 '''
 a way to get rid of the information in memory to trigger a new version of the story, while registering 
-the current user information for the leaderboard. The leaderboard will display maximum 4 records at a time.
+the current user information for the leaderboard. The leaderboard will display maximum 5 records at a time.
 '''
 
 
