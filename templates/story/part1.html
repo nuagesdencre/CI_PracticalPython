@@ -39,42 +39,38 @@
             small size.</p>
 
         <h3>What do you do next?</h3>
-        <p>
+
             <button data-toggle=".dining" class="btns">You approach the dining table</button>
-            <div class="dining">
-        <p>The dining table is covered by a tablecloth with an odd pattern. There is a slight bump under the cloth.</p>
+                <div class="dining">
+                <p>The dining table is covered by a tablecloth with an odd pattern. There is a slight bump under the cloth.</p>
 
-        <ul>
-            <li>
-                <button data-toggle=".tablecloth" class="btns">Lift the tablecloth</button>
+                <ul>
+                    <li>
+                        <button data-toggle=".tablecloth" class="btns">Lift the tablecloth</button>
 
-                <div class="tablecloth">
-                    <p>There is a bundle of sewing patterns. You can see one of them is meant for a wedding dress. There
-                        is an
-                        handwritten note on it: 'must be red, not white'.</p>
+                        <div class="tablecloth">
+                            <p>There is a bundle of sewing patterns. You can see one of them is meant for a wedding dress. There
+                                is an
+                                handwritten note on it: 'must be red, not white'.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button data-toggle=".room_view" class="btns">You openly appraise the room's layout</button>
+                <div class="room_view">
+                        <img src="{{ url_for('static', filename='img/houseplan2.jpg') }}" alt="Having a gander inside">
+                        <img src="{{ url_for('static', filename='img/houseplan3.jpg') }}" alt="One last close glance">
+                <p>
+                    You are impressed by the well-organised room in front of you. Reasonably, the Thomases had set up their
+                    sleeping and rest areas to benefit from the heat of the stove. Everything within easy
+                    reach of the front door is related to the kitchen, and to the storage of goods and housewares. All items are
+                    arranged impeccably under a layer of dust. There is no waste of space in the room.
+                </p>
                 </div>
-            </li>
-        </ul>
 
-    </div>
-
-
-    <p>
-        <button data-toggle=".room_view" class="btns">You openly appraise the room's layout</button>
-        <div class="room_view">
-            <img src="{{ url_for('static', filename='img/houseplan2.jpg') }}" alt="Having a gander inside">
-            <img src="{{ url_for('static', filename='img/houseplan3.jpg') }}" alt="One last close glance">
-    <p>
-        You are impressed by the well-organised room in front of you. Reasonably, the Thomases had set up their
-        sleeping and rest areas to benefit from the heat of the stove. Everything within easy
-        reach of the front door is related to the kitchen, and to the storage of goods and housewares. All items are
-        arranged impeccably under a layer of dust. There is no waste of space in the room.
-    </p>
-    </div>
-
-    <form name="part1" action="{{ url_for('part2') }}">
-        <input type="submit" class="btns" name="part1_opt1" value="You take a few steps further">
-    </form>
+            <form name="part1" action="{{ url_for('part2') }}">
+                <input type="submit" class="btns" name="part1_opt1" value="You take a few steps further">
+            </form>
 
     <hr>
 <button id="btn_riddle" data-toggle=".riddle" class="btns">Read the riddle again</button>
