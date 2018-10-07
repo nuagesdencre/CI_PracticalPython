@@ -147,15 +147,19 @@ input{
     background-color: #fff;
 }
 
-.btns {
-    margin: 2px;
-    display: inline-block;
+.btns, input {
+    margin: 10px auto;
     border: 1px solid #6f675e;
     padding: 0 15px;
     line-height: 34px;
     word-wrap: normal;
     font-weight: bold;
     white-space: pre-wrap;
+    display: block;
+}
+
+.game_info {
+    max-width: 200px;
 }
 
 .btns:hover {

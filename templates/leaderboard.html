@@ -19,41 +19,19 @@
 
             </div>
         </div>
-
-        <div class="leaderboard_entry">
-            Game start: 2018/09/26, 21:06:34 | Game end:  2018/09/26, 21:46:34. Riddle status: <span>Unsolved</span>.
+     {% for player in leaderboard[:3] %}
+   <div class="leaderboard_entry">
+            Game start:{{ player.time_start }} | Game end: {{ player.time_stop }}. Riddle status: <span>{{ player.riddle_status}}</span>.
             <div class="leaderboard_content">
-                <p>Our courageous <span>Alphonso</span>, who secretly favors <span>blue</span> socks with a pattern of <span>
-                toads</span> attempted to solve the riddle.</p>
+                <p>Our courageous <span>{{ player.username }}</span>, who secretly favors <span>{{ player.color }}</span> socks with a pattern of <span>
+                {{ player.mystical }}</span> attempted to solve the riddle.</p>
             </div>
         </div>
 
-        <div class="leaderboard_entry">
-            Game start: 2018/09/16, 20:06:34 | Game end:  2018/09/16, 21:12:34. Riddle status: <span>Unsolved</span>.
-            <div class="leaderboard_content">
-                <p>
-                    Our courageous <span>Butterfly</span>, who secretly favors <span>polkadot</span> socks with a pattern of
-                    <span>unicorns</span> attempted to solve the riddle.</p>
-            </div>
-        </div>
+            {% endfor %}
 
-        <div class="leaderboard_entry">
-            Game start: 2018/09/22, 20:06:34 | Game end:  2018/09/26, 22:34:13. Riddle status: <span>Unsolved</span>.
-            <div class="leaderboard_content">
-                <p>
-                    Our courageous <span>Carmen</span>, who secretly favors <span>silver</span> socks with a pattern of <span>
-                giant chickens</span> attempted to solve the riddle.</p>
-            </div>
-        </div>
 
-        <div class="leaderboard_entry">
-            Game start: 2018/09/24, 10:06:34 | Game end:  2018/09/24, 12:04:44. Riddle status: <span>Unsolved</span>.
-            <div class="leaderboard_content">
-                <p>
-                    Our courageous <span>Delphine</span>, who secretly favors <span>yellow</span> socks with a pattern of <span>
-                selkies</span> attempted to solve the riddle.</p>
-            </div>
-        </div>
+
 
     </div>
 

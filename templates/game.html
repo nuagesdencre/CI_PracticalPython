@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="wrap center lace">
-    <h2>Game Information</h2>
-    <p>You are the <strong>PROTAGONIST</strong> of this gamebook! Decide what you want to do.</p>
-    <p>
-            <select name="options"
-                    onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option value="" disabled="disabled" selected="selected">Options</option>
-                <option value="{{ url_for('play') }}">Play</option>
-                <option value="{{ url_for('leaderboard') }}">Leaderboard</option>
-                <option value="{{ url_for('about') }}">Rules</option>
-            </select></p>
-</div>
+    <div class="wrap center lace">
+        <h2>Game Information</h2>
+        <p>You are the <strong>PROTAGONIST</strong> of this gamebook! Decide what you want to do.</p>
+
+            <a class="btns game_info" href="{{ url_for('play') }}">Begin the story</a>
+            <a class="btns game_info" href="{{ url_for('leaderboard') }}">Leaderboard</a>
+            <a class="btns game_info" href="{{ url_for('about') }}">About</a>
+
+    </div>
 {% endblock %}
