@@ -30,7 +30,8 @@ def index():
 
 
 '''
-a way to get rid of the information in memory to trigger a new version of the story
+a way to get rid of the information in memory to trigger a new version of the story, while registering 
+the current user information for the leaderboard. The leaderboard will display maximum 4 records at a time.
 '''
 
 
@@ -83,14 +84,10 @@ def leaderboard():
     riddle_solved = session.get('riddle_solved', 'Unsolved')
     time_start = session.get('time_start', '---')
     time_stop = session.get('time_stop', '---')
-    return render_template("leaderboard.html", page_title="Leaderboard", leaderboard=LEADERBOARD, username=username, color=color,
+    return render_template("leaderboard.html", page_title="Leaderboard", leaderboard=LEADERBOARD, username=username,
+                           color=color,
                            mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
                            time_stop=time_stop)
-
-
-# global variable for players
-# single list updated over time replacing hardcoded values
-# add new player info to top of list
 
 
 '''
