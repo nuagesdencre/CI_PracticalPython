@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect, session, url_for
+from leaderboard import LEADERBOARD, add_player
 from datetime import datetime
 
 app = Flask(__name__)
@@ -29,12 +30,18 @@ def index():
 
 
 '''
-a way to get rid of the information in memory to trigger a new version of the story
+a way to get rid of the information in memory to trigger a new version of the story, while registering 
+the current user information for the leaderboard. The leaderboard will display maximum 4 records at a time.
 '''
 
 
 @app.route('/drop')
 def drop():
+    current_player = {"username": session.get('username'),
+                      "riddle_status": session.get('riddle_solved'), 'color': session.get('color'),
+                      'mystical': session.get('mystical'),
+                      "time_start": session.get('time_start'), "time_stop": session.get('time_stop')}
+    add_player(current_player)
     session.pop('username', None)
     session.pop('color', None)
     session.pop('mystical', None)
@@ -77,7 +84,8 @@ def leaderboard():
     riddle_solved = session.get('riddle_solved', 'Unsolved')
     time_start = session.get('time_start', '---')
     time_stop = session.get('time_stop', '---')
-    return render_template("leaderboard.html", page_title="Leaderboard", username=username, color=color,
+    return render_template("leaderboard.html", page_title="Leaderboard", leaderboard=LEADERBOARD, username=username,
+                           color=color,
                            mystical=mystical_beast, riddle_solved=riddle_solved, time_start=time_start,
                            time_stop=time_stop)
 
@@ -113,7 +121,6 @@ def story():
         session['color'] = color
         mystical_beast = request.form['mystical']
         session['mystical'] = mystical_beast
-
     return render_template("story/story.html", page_title="story", username=username, color=color,
                            mystical=mystical_beast)
 
