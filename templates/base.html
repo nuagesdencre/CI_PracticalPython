@@ -9,19 +9,16 @@
     <title>CI Practical Python</title>
 </head>
 <nav class="navigation">
-    <ul>
-        <li><a href="{{ url_for('index') }}">Home</a>
-        </li>
-        <li>
-            <a href="{{ url_for('game') }}">Game</a>
-        <li>
-            <a href="{{ url_for('about') }}">About</a>
-        </li>
-    </ul>
+
+    <a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('game') }}">Game</a>
+<a href="{{ url_for('about') }}">About</a>
+
+
 </nav>
 <body>
 <!-- Main Content -->
-<main class="container">
+<main class="container lace">
     {% block content %}
     {% endblock %}
 
