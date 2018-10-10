@@ -18,7 +18,8 @@
         <h1>{{ status }}</h1>
 
         {% if session['riddle_solved'] == 'Solved' %}
-            <p> Your instinct was right. Looking in the drawers from the chessboard table reveals a little paper packet
+            <p><img src="{{ url_for('static', filename='img/battle-black-blur-260024.jpg') }}" alt="Well done"></p>
+            <p> Your instinct was right. Looking in the drawers from the chessboard table reveals the missing white queen and a little paper packet
                 - in which there is a pendant. The pendant
                 has a
                 picture of the man on the left, and the woman on the right. </p>
@@ -37,6 +38,7 @@
             <p> Your help is no longer needed here and you feel confident you will be called again, when a new puzzle is
                 found.</p>
             <h1>Thank you for playing!</h1>
+            <p><h3><a href="{{ url_for('leaderboard') }}">Have a look at your progress.</a></h3></p>
         {% elif session['riddle_solved'] == 'Unsolved' %}
             <p>You frantically look in all the nooks and cracks of the house, but you only move dust around. Montaguë
                 looks disappointed and barks sadly.</p>

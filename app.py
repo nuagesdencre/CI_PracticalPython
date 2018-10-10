@@ -117,9 +117,9 @@ def story():
     else:
         username = request.form['username']
         session['username'] = username
-        color = request.form['color']
+        color = request.form['color'].lower()
         session['color'] = color
-        mystical_beast = request.form['mystical']
+        mystical_beast = request.form['mystical'].lower()
         session['mystical'] = mystical_beast
     return render_template("story/story.html", page_title="story", username=username, color=color,
                            mystical=mystical_beast)
