@@ -6,9 +6,8 @@
         {% if session['username'] %}
             <h4> Click <a href="{{ url_for('story') }}">here</a> to continue to play.</h4>
 
-            <p> Oh, you're someone else?</p>
             <form action="{{ url_for('drop') }}">
-                <input type="submit" class="btns" value="Let's start from the top.">
+                <input type="submit" class="btns" value="Oh, you're someone else?">
             </form>
         {% else %}
             <form action="{{ url_for('play') }}">

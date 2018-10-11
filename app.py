@@ -71,13 +71,12 @@ def game():
     return render_template("game.html", page_title="Game")
 
 
-'''
-where the reader can track their details and progress in the story (i.e. session information and riddle status)
-'''
-
 
 @app.route('/leaderboard')
 def leaderboard():
+    '''
+    where the reader can track their details and progress in the story (i.e. session information and riddle status)
+    '''
     username = session.get('username', 'Potato')
     color = session.get('color', 'purple')
     mystical_beast = session.get('mystical', 'flying pig')
@@ -93,8 +92,6 @@ def leaderboard():
 '''
 where the reader is invited to provide their information and begin the story or return to its current iteration
 '''
-
-
 @app.route('/play')
 def play():
     if 'username' in session:

@@ -92,10 +92,14 @@ FIDE - World Chess Federation: [(Source)](https://www.chess.com/article/view/fid
      - [(Wiki Page)](https://en.wikipedia.org/wiki/Vera_Menchik)
      - [(Internet Archive Wayback Machine)](https://web.archive.org/web/20091028034414/http://www.geocities.com/siliconvalley/lab/7378/menchik.htm)
 ### Media
-- The pictures and patterns used in this site were all digitally drawn by Veronique Savard (nuagesdencre.com). They should not be used elsewhere.
+- Most of pictures and patterns used in this site were all digitally drawn by Veronique Savard (nuagesdencre.com). They should not be used elsewhere.
 Three of the drawings were directly inspired from the following:
     - [George Goodwin Kilburne's](https://en.wikipedia.org/wiki/George_Goodwin_Kilburne) [A Game of Chess](https://www.1st-art-gallery.com/George-Goodwin-Kilburne/A-Game-Of-Chess.html)
     - [The wedding of Wedding Margaretha Zelle and Rudolph MacLeod](https://www.friesmuseum.nl/en/collection/blog-mata-hari/dont-think-that-im-bad/)
     - This picture of [Vera Menchik](http://www.chesshistory.com/winter/pics/cn3433_menchik.jpg)
+- The pattern used in the background was found on [Subtle Patterns]()
+- The photographs displayed on the websites were found on Pexel.
+
+    - [Cottage](https://www.pexels.com/photo/architecture-barn-bungalow-cabin-277672/)
 ### Acknowledgements
 >- I received inspiration for this project from X
