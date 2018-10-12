@@ -6,37 +6,40 @@ from datetime import datetime
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-'''
-makes the session last unless requested otherwise
-'''
+
 
 
 @app.before_request
 def session_status():
+    """
+    makes the session last unless requested otherwise
+    """
     session.permanent = True
 
 
-'''
-home page
-where the visitor is invited to start the game or to return to their current 'version' of the story
-'''
+
 
 
 @app.route('/')
 def index():
+    """
+    home page
+    where the visitor is invited to start the game or to return to their current 'version' of the story
+    """
     if 'username' in session:
         return render_template("index.html", page_title="Home", username=session['username'])
     return render_template("index.html", page_title="Home", username="...whoever you are")
 
 
-'''
-a way to get rid of the information in memory to trigger a new version of the story, while registering 
-the current user information for the leaderboard. The leaderboard will display maximum 5 records at a time.
-'''
+
 
 
 @app.route('/drop')
 def drop():
+    """
+    a way to get rid of the information in memory to trigger a new version of the story, while registering
+    the current user information for the leaderboard. The leaderboard will display maximum 5 records at a time.
+    """
     current_player = {"username": session.get('username'),
                       "riddle_status": session.get('riddle_solved'), 'color': session.get('color'),
                       'mystical': session.get('mystical'),
@@ -51,32 +54,34 @@ def drop():
     return redirect(url_for('index'))
 
 
-'''
- where information about the type of game, the rules of the game and the contact information can be found
-'''
+
 
 
 @app.route('/about')
 def about():
+    """
+     where information about the type of game, the rules of the game and the contact information can be found
+    """
     return render_template("about.html", page_title="About")
 
 
-'''
- where game information is offered via a drop-down menu, letting the reader play, access the leaderboard or access the about page
-'''
+
 
 
 @app.route('/game')
 def game():
+    """
+     where game information is offered via a drop-down menu, letting the reader play, access the leaderboard or access the about page
+    """
     return render_template("game.html", page_title="Game")
 
 
 
 @app.route('/leaderboard')
 def leaderboard():
-    '''
+    """
     where the reader can track their details and progress in the story (i.e. session information and riddle status)
-    '''
+    """
     username = session.get('username', 'Potato')
     color = session.get('color', 'purple')
     mystical_beast = session.get('mystical', 'flying pig')
@@ -89,24 +94,26 @@ def leaderboard():
                            time_stop=time_stop)
 
 
-'''
-where the reader is invited to provide their information and begin the story or return to its current iteration
-'''
+
 @app.route('/play')
 def play():
+    """
+    where the reader is invited to provide their information and begin the story or return to its current iteration
+    """
     if 'username' in session:
         return redirect(url_for('story'))
     else:
         return render_template("play.html", page_title="Play")
 
 
-'''
-where the reader begins the story and their details are included for a personalised experience
-'''
+
 
 
 @app.route('/story', methods=['GET', 'POST'])
 def story():
+    """
+    where the reader begins the story and their details are included for a personalised experience
+    """
     if 'username' in session:
         username = session.get('username')
         color = session.get('color')
@@ -122,45 +129,49 @@ def story():
                            mystical=mystical_beast)
 
 
-'''
-the first part of the story
-'''
+
 
 
 @app.route('/part1')
 def part1():
+    """
+    the first part of the story
+    """
     session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     return render_template("story/part1.html", page_title="Entering the house")
 
 
-'''
-the second part of the story
-'''
+
 
 
 @app.route('/part2')
 def part2():
+    """
+    the second part of the story
+    """
     return render_template("story/part2.html", page_title="First glance")
 
 
-'''
-the third part of the story
-'''
+
 
 
 @app.route('/part3')
 def part3():
+    """
+    the third part of the story
+    """
     session['attempts'] = 1
     return render_template("story/part3.html", page_title="Further in")
 
 
-'''
-where the reader has to provide an answer to the riddle
-'''
+
 
 
 @app.route('/final', methods=['GET', 'POST'])
 def final():
+    """
+    where the reader has to provide an answer to the riddle
+    """
     session['answer1'] = 'chessboard table'
     session['answer2'] = 'chessboard drawer'
     session['answer3'] = 'chess table'
