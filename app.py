@@ -7,17 +7,12 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 
-
-
 @app.before_request
 def session_status():
     """
     makes the session last unless requested otherwise
     """
     session.permanent = True
-
-
-
 
 
 @app.route('/')
@@ -31,14 +26,12 @@ def index():
     return render_template("index.html", page_title="Home", username="...whoever you are")
 
 
-
-
-
 @app.route('/drop')
 def drop():
     """
     a way to get rid of the information in memory to trigger a new version of the story, while registering
     the current user information for the leaderboard. The leaderboard will display maximum 5 records at a time.
+    The leaderboard's logic is in the leaderboard.py file.
     """
     current_player = {"username": session.get('username'),
                       "riddle_status": session.get('riddle_solved'), 'color': session.get('color'),
@@ -54,9 +47,6 @@ def drop():
     return redirect(url_for('index'))
 
 
-
-
-
 @app.route('/about')
 def about():
     """
@@ -65,16 +55,13 @@ def about():
     return render_template("about.html", page_title="About")
 
 
-
-
-
 @app.route('/game')
 def game():
     """
-     where game information is offered via a drop-down menu, letting the reader play, access the leaderboard or access the about page
+     where game information is offered via a drop-down menu, letting the reader play, access the leaderboard
+     or access the about page
     """
     return render_template("game.html", page_title="Game")
-
 
 
 @app.route('/leaderboard')
@@ -94,7 +81,6 @@ def leaderboard():
                            time_stop=time_stop)
 
 
-
 @app.route('/play')
 def play():
     """
@@ -104,9 +90,6 @@ def play():
         return redirect(url_for('story'))
     else:
         return render_template("play.html", page_title="Play")
-
-
-
 
 
 @app.route('/story', methods=['GET', 'POST'])
@@ -129,9 +112,6 @@ def story():
                            mystical=mystical_beast)
 
 
-
-
-
 @app.route('/part1')
 def part1():
     """
@@ -139,9 +119,6 @@ def part1():
     """
     session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     return render_template("story/part1.html", page_title="Entering the house")
-
-
-
 
 
 @app.route('/part2')
@@ -152,9 +129,6 @@ def part2():
     return render_template("story/part2.html", page_title="First glance")
 
 
-
-
-
 @app.route('/part3')
 def part3():
     """
@@ -162,9 +136,6 @@ def part3():
     """
     session['attempts'] = 1
     return render_template("story/part3.html", page_title="Further in")
-
-
-
 
 
 @app.route('/final', methods=['GET', 'POST'])
