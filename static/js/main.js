@@ -5,7 +5,7 @@ $(function () {
     $('.btns').click(function () {
         let selector = $(this).data('toggle');
         $(selector).toggle();
-        $(this).toggleClass('lace');
+        $(this).toggleClass('selected');
     });
 
     // LEADERBOARD
