@@ -10,9 +10,14 @@
 </head>
 <nav class="navigation">
 
-    <a href="{{ url_for('index') }}">Home</a>
-    <a href="{{ url_for('game') }}">Game</a>
-    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('index') }}" class="big-screen">Home</a>
+    <a href="{{ url_for('game') }}" class="big-screen">Game Info</a>
+    <a href="{{ url_for('about') }}" class="big-screen">About</a>
+
+
+    <a href="{{ url_for('index') }}" class="sm-screen"><i class="fas fa-home"></i></a>
+    <a href="{{ url_for('game') }}" class="sm-screen"><i class="fas fa-trophy"></i> </a>
+    <a href="{{ url_for('about') }}" class="sm-screen"><i class="fas fa-info-circle"></i></a>
 
 
 </nav>
