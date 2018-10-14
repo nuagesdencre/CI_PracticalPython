@@ -3,11 +3,12 @@
         <h1>A Curious Cottage</h1>
 
         <h3> Welcome, {{ username }}!</h3>
+        <p>Can you find the answer to the riddle?</p> <p>Read the story to find clues!</p>
         {% if session['username'] %}
             <h4> Click <a href="{{ url_for('story') }}">here</a> to continue to play.</h4>
 
             <form action="{{ url_for('drop') }}">
-                <input type="submit" class="btns" value="Oh, you're someone else?">
+                <input type="submit" class="btns" value="Click here if you are someone else!">
             </form>
         {% else %}
             <form action="{{ url_for('play') }}">

@@ -20,6 +20,7 @@ h4 {
 }
 
 h6 {
+    letter-spacing: 0.4em;
     color: rgb(121, 184, 255);
     margin-top: 7px;
 }
@@ -71,7 +72,75 @@ nav {
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
+/* Buttons*/
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.wrap li button {
+    background-color: #fff;
+    color:#000064;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+.btns, input {
+    display: block;
+    width: 70%;
+    padding: 0 15px;
+    margin: 10px auto;
+    line-height: 34px;
+    word-wrap: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+
+}
+.btns{
+    color: #F5F5F5;
+    background-color: #609c59;
+    border-bottom: 2px solid #0e7149;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+
+.btns:hover {
+    letter-spacing: 0.1em;
+    color:#000064;
+    background: linear-gradient(rgba(223, 220, 211, 0.047), rgba(223, 220, 211, 0.047));
+}
+/*to do: fix the buttons in the game screen*/
+.game_info {
+    max-width: 200px;
+}
+
+.game_info:hover {
+    text-decoration: none;
+}
+
+.game_info--last {
+    margin-bottom: 20px;
+}
+
+.start {
+    margin-bottom: 15px;
+    border: 6px double #f5f5f5;
+}
+
+#btn_riddle {
+    background-color: #5599ff;
+    color: white;
+    margin-bottom: 10px;
+    font-weight:700;
+    text-shadow: -1px 0 2px #000064, 0 1px 2px #000064, 1px 0  2px #000064, 0 -1px 2px #000064;
+    border-bottom: 4px solid #79b8ff;
+}
+
+/* ENDButtons */
 /* General body styling */
 body {
     margin: 0;
@@ -102,7 +171,7 @@ body {
 }
 
 .selected {
-    background: radial-gradient(circle, rgba(192, 158, 121, 0.07) 50%, rgba(14, 113, 73, 0.4));
+    background: radial-gradient(circle, rgba(192, 158, 121, 0.48) 50%, rgba(14, 113, 73, 0.75));
 }
 
 .border {
@@ -160,72 +229,7 @@ body {
 
 
 /* ENDRiddle */
-/* Buttons*/
 
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-}
-
-.wrap li button {
-    background-color: #fff;
-}
-
-.btns, input {
-
-    display: block;
-    width: 70%;
-    padding: 0 15px;
-    margin: 10px auto;
-    line-height: 34px;
-    word-wrap: normal;
-    font-weight: bold;
-    text-transform: uppercase;
-    white-space: pre-wrap;
-
-}
-.btns{
-    background-color: #aed09d;
-    border-bottom: 2px solid #778866;
-    border-top:none;
-    border-left:none;
-    border-right:none;
-}
-
-.btns:hover {
-    letter-spacing: 0.1em;
-    background: linear-gradient(rgba(223, 220, 211, 0.047), rgba(223, 220, 211, 0.047));
-}
-
-.game_info {
-    max-width: 200px;
-}
-
-.game-info:hover{
-    text-decoration: none;
-}
-
-.game_info--last {
-    margin-bottom: 20px;
-}
-
-.start {
-    margin-bottom: 15px;
-    border: 4px double #778866;
-}
-
-#btn_riddle {
-    background-color: #5599ff;
-    color: white;
-    margin-bottom: 10px;
-    font-weight:700;
-    text-shadow: -1px 0 2px #000064, 0 1px 2px #000064, 1px 0  2px #000064, 0 -1px 2px #000064;
-    border-bottom: 4px solid #79b8ff;
-}
-
-/* ENDButtons */
 
 /* Leaderboard */
 .leaderboard_entry {
