@@ -17,14 +17,7 @@ $(function () {
         $('#player').removeClass('leaderboard_top');
         alert("Your progress is not being recorded yet, begin the story and introduce yourself.");
     }
+
     highlight_leaderboard();
 
-    // allow reader to increase font size
-    $('.bigger').click(function () {
-    $('*').each(function(){
-       var text =  parseInt($(this).css('font-size'));
-       var changeSize = ((text*120)/100) ;
-           $(this).css('font-size',changeSize);
-
-       })});
 });
