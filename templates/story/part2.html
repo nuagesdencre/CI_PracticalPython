@@ -7,8 +7,11 @@
 
         <h2> 2</h2>
         <hr>
-        <p>By now, you examine your surrounding with a methodical eye. You observe the kitchen area where you currently stand. There is a narrow counter top under the windows on the left wall and a
-            dining room server at the right, nothing out of the ordinary. A massive buffet with a painting of fruits stands next to it, filled with pots, porcelain and silver. You wonder how bothersome it was to take care of the dishes
+        <p>By now, you examine your surrounding with a methodical eye. You observe the kitchen area where you currently
+            stand. There is a narrow counter top under the windows on the left wall and a
+            dining room server at the right, nothing out of the ordinary. A massive buffet with a painting of fruits
+            stands next to it, filled with pots, porcelain and silver. You wonder how bothersome it was to take care of
+            the dishes
             a century ago. You certainly are fond of the amenities offered by modern plumbing.</p>
 
         <p>Your eyes pick up an old clock on the wall closest to the dining table. Beside being a gardener,
@@ -27,19 +30,20 @@
             <button data-toggle=".clock_view" class="btns">You try to fix the clock</button>
         </p>
 
-        <div class="clock_view">
+        <div class="clock_view border">
             <img src="{{ url_for('static', filename='img/clock1.png') }}" alt="Approach the clock">
 
             <p> As you like tinkering with broken things, you know from experience that, if a pendulum clock has
                 stopping, it could be due to its position.
                 You think the clock is not quite level, so you poke at it with enthusiasm. Once satisfied that the clock
-                is no longer leaning to the left or right, or at an angle, you expect the pendulum to start swinging again
+                is no longer leaning to the left or right, or at an angle, you expect the pendulum to start swinging
+                again
                 and wait to see if the metronome-like ticking is triggered.</p>
             <ul>
                 <li>
                     <button data-toggle=".clock_inside" class="btns">The clock is still not ticking</button>
 
-                    <div class="clock_inside">
+                    <div class="clock_inside ">
                         <p>Even if the clock is straightened, the pendulum does not seem to move. Confused, you open the
                             clock's pendulum door to examine its innards.
                             You gasp! There is a sheet wedged against the pendulum. </p>
@@ -55,13 +59,15 @@
         <p>
             <button data-toggle=".picture_couple" class="btns">You are drawn by the massive picture</button>
         </p>
-        <div class="picture_couple">
+        <div class="picture_couple border">
             <p><img src="{{ url_for('static', filename='img/couple.png') }}" alt="What a lovely picture"></p>
 
-            <p>You have a close look at the wedding picture. The lady on the left has a beautiful white dress and
+            <p>
+                You have a close look at the wedding picture. The lady on the left has a beautiful white dress and
                 the man looks a bit stiff in his fancy outfit. The picture has aged well and is enclosed in an
                 elaborated wooden frame.
-                The frame is bulky and is hung securely on the wall.</p>
+                The frame is bulky and is hung securely on the wall.
+            </p>
             <ul>
 
                 <li>
@@ -73,6 +79,7 @@
                             much about
                             them. </p>
                         <p>Mr McMillan huffs and puffs in agreement. Montaguë barks.</p>
+                        <h6>HINT! Take a close look at the newspapers clipping you find lying around.</h6>
                     </div>
                 </li>
             </ul>
@@ -86,11 +93,7 @@
         <hr>
         <button id="btn_riddle" data-toggle=".riddle" class="btns">Read the riddle again</button>
         <div class="riddle">
-
-
-            My obligations won't keep me away
-            from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is
-            hidden where:
+            <span>My obligations won't keep me away from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is hidden where:</span>
 
             <ul>
                 <li>Time stops for our battles of wit.</li>

@@ -5,7 +5,7 @@ $(function () {
     $('.btns').click(function () {
         let selector = $(this).data('toggle');
         $(selector).toggle();
-        $(this).toggleClass('lace');
+        $(this).toggleClass('selected');
     });
 
     // LEADERBOARD
@@ -17,5 +17,7 @@ $(function () {
         $('#player').removeClass('leaderboard_top');
         alert("Your progress is not being recorded yet, begin the story and introduce yourself.");
     }
+
     highlight_leaderboard();
+
 });
