@@ -1,42 +1,43 @@
-/* typography */
+/* general typography */
 @import url('https://fonts.googleapis.com/css?family=Alegreya:700,900|Open+Sans:400,700');
 
-h1, h2, h3, h4, a, .btns, .riddle {
-    font-family: 'Alegreya';
-    font-weight:900;
+* {
+    font-family: 'Open Sans';
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
+    font-weight: 900;
     letter-spacing: 0.1em;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    margin-bottom: 0;
 }
 
-h2, h4, h6 {
-    margin-bottom: 0;
+h1, h2, h3, h4, a, .btns, .riddle, label {
+    font-family: 'Alegreya';
 }
 
 h4 {
     display: inline-block;
 }
 
-h6 {
-    letter-spacing: 0.4em;
-    color: rgb(121, 184, 255);
-    margin-top: 7px;
+label {
+    display: block;
 }
 
-a, a:visited, a:focus {
-    color: #778866;
+
+a, a:visited, a:focus, .btns, .game_info:hover {
+    color: #0e7149;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 a:hover {
-color:#000064;
-    text-decoration: underline wavy #7599C4;
+    color: #000064;
+    text-decoration: underline wavy #aed09d;
 }
 
-p, li {
+p, div > p, span {
     font-size: 1.125em;
     line-height: calc(1.5em + .2vw);
     margin: 22px auto;
@@ -47,14 +48,17 @@ nav {
     font-size: 1.2em;
 }
 
-.leaderboard_entry span {
-    padding: 0;
-    margin: 0;
-    font-weight: bold;
-}
-
 .center {
     text-align: center;
+}
+
+#comments {
+    width: 70%;
+    margin:10px;
+}
+.riddle>p, .riddle>span, .riddle> ul li {
+    font-size: 1.07em;
+    font-weight: bold;
 }
 
 /* overall page styling */
@@ -72,6 +76,7 @@ nav {
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
+
 /* Buttons*/
 
 input {
@@ -83,7 +88,7 @@ input {
 
 .wrap li button {
     background-color: #fff;
-    color:#000064;
+    color: #000064;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
@@ -94,39 +99,34 @@ input {
     margin: 10px auto;
     line-height: 34px;
     word-wrap: normal;
-    font-weight: bold;
-    text-transform: uppercase;
     white-space: pre-wrap;
+    font-size: 1em;
 
 }
-.btns{
-    color: #F5F5F5;
-    background-color: #609c59;
+
+.btns {
+    background-color: #aed09d;
     border-bottom: 2px solid #0e7149;
-    border-top:none;
-    border-left:none;
-    border-right:none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .btns:hover {
     letter-spacing: 0.1em;
-    color:#000064;
+    color: #000064;
     background: linear-gradient(rgba(223, 220, 211, 0.047), rgba(223, 220, 211, 0.047));
 }
-/*to do: fix the buttons in the game screen*/
+
 .game_info {
     max-width: 200px;
-}
-
-.game_info:hover {
-    text-decoration: none;
 }
 
 .game_info--last {
     margin-bottom: 20px;
 }
 
-.start {
+.story_begins {
     margin-bottom: 15px;
     border: 6px double #f5f5f5;
 }
@@ -135,8 +135,8 @@ input {
     background-color: #5599ff;
     color: white;
     margin-bottom: 10px;
-    font-weight:700;
-    text-shadow: -1px 0 2px #000064, 0 1px 2px #000064, 1px 0  2px #000064, 0 -1px 2px #000064;
+    font-weight: 700;
+    text-shadow: -1px 0 2px #000064, 0 1px 2px #000064, 1px 0 2px #000064, 0 -1px 2px #000064;
     border-bottom: 4px solid #79b8ff;
 }
 
@@ -145,12 +145,11 @@ input {
 body {
     margin: 0;
     background: radial-gradient(circle, rgba(192, 158, 121, 0.07) 70%, rgba(192, 158, 121, 0.4)), url("/static/img/pexel_cottage.jpg") fixed bottom;
-    font-family: 'Open Sans';
 }
 
 .container {
 
-    max-width:700px;
+    max-width: 700px;
     height: 88vh;
     display: flex;
     flex-direction: column;
@@ -162,7 +161,7 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     margin: auto;
-    background: radial-gradient(circle, rgb(245, 245, 245) 90%, rgba(192, 158, 121, 0.02))
+    background: radial-gradient(circle, rgb(245, 245, 245) 89%, rgba(192, 158, 121, 0.02))
 }
 
 .wrap ul, .wrap ul li, .navigation ul, .navigation ul li {
@@ -185,17 +184,35 @@ body {
 .navigation {
     display: flex;
     background-color: #F5F5F5;
+    border-bottom: 4px double #aed09d;
 }
 
 .navigation > a {
-    width: 100px;
-    margin: 10px auto;
+    width: 110px;
+    margin: 15px auto;
     font-weight: bold;
 }
 
-.big-screen{
-    display:none;
+.navigation a:hover {
+    color: #000064;
 }
+
+.navigation a > i::before, .navigation a > i::after {
+    padding: 10px;
+    background-color: #aed09d;
+    border-radius: 50%;
+}
+
+.navigation a > i:hover::before, .navigation a > i:hover::after {
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    border: 2px solid #000064;
+}
+
+.big-screen {
+    display: none;
+}
+
 /* ENDNavigation */
 
 /* images */
@@ -210,8 +227,6 @@ body {
 /* ENDimages */
 /* Riddle */
 .riddle {
-    font-size: 1.07em;
-    font-weight: bold;
     margin-bottom: 30px;
     padding-top: 30px;
     padding-left: 10%;
@@ -227,9 +242,7 @@ body {
     display: none;
 }
 
-
 /* ENDRiddle */
-
 
 /* Leaderboard */
 .leaderboard_entry {
@@ -242,8 +255,14 @@ body {
     width: 95%;
 }
 
+.leaderboard_entry span {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
 .leaderboard_top {
-    background-color: rgba(187, 153, 170, 0.27);
+    background-color: rgba(85, 141, 78, 0.27);
 }
 
 /* ENDLeaderboard */
@@ -260,12 +279,15 @@ body {
         max-width: 49%;
         margin: auto;
     }
-    .sm-screen{
-        display:none;
+
+    .sm-screen {
+        display: none;
     }
-    .big-screen{
-        display:block;
+
+    .big-screen {
+        display: block;
     }
+
     .wrap {
         max-width: 700px;
     }
