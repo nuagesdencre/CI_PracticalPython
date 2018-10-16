@@ -1,13 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div class="wrap center">
+    <div class="wrap">
+    <div class="center">
         <h2>Game Information</h2>
         <p>You are the <strong>PROTAGONIST</strong> of this gamebook! Decide what you want to do.</p>
 
-            <a class="btns game_info" href="{{ url_for('play') }}">Begin the story</a>
+            <a class="btns game_info" href="{{ url_for('play') }}">Begin the story </a>
             <a class="btns game_info" href="{{ url_for('leaderboard') }}">Leaderboard</a>
-            <a class="btns game_info game_info--last" href="{{ url_for('about') }}">About</a>
 
+    </div>
+    <div id="rules"><h2>Rules</h2>
+
+            <p>The story has three 'chapters' in which you, the <strong>INVESTIGATOR</strong>, can look around an old
+                cottage.</p>
+               <p> You can click the buttons to reveal further paragraphs and read the story up until the last page, where your answer to the <strong>RIDDLE</strong>
+                will be requested.</p>
+            <p>When prompted for input, provide only alphanumeric characters (letters and numbers, ABC... 123...) to answer the questions. Avoid emojis or gifs,
+                they won't be recorded.</p>
+            <p>Your progress will be displayed in the Leaderboard page.</p>
+
+
+    </div>
     </div>
 {% endblock %}

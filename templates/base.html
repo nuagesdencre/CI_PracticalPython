@@ -5,28 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_3AuwuMmJ74uD02b8NXmqe");
+        })();
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css"/>
     <title>CI Practical Python</title>
 </head>
 <nav class="navigation">
 
-    <a href="{{ url_for('index') }}">Home</a>
-<a href="{{ url_for('game') }}">Game</a>
-<a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('index') }}" class="big-screen">Home</a>
+    <a href="{{ url_for('game') }}" class="big-screen">Game Info</a>
+    <a href="{{ url_for('about') }}" class="big-screen">About</a>
+
+
+    <a href="{{ url_for('index') }}" alt="Home" class="sm-screen"><i class="fas fa-home"></i></a>
+    <a href="{{ url_for('game') }}" alt="Game info" class="sm-screen"><i class="fas fa-info-circle"></i></a>
+    <a href="{{ url_for('about') }}" alt="About" class="sm-screen"><i class="fas fa-book"></i></a>
 
 
 </nav>
 <body>
 <!-- Main Content -->
-<main class="container lace">
+<main class="container">
     {% block content %}
     {% endblock %}
 
 </main>
-<div class="center"><h6> 2018 - Veronique Savard</h6></div>
 </body>
 <!-- JQuery -->
 <script src="{{ url_for('static', filename='js/vendors/jquery-3.3.1.min.js') }}"></script>
 <!-- Custom JS -->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </html>

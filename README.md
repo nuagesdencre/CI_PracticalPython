@@ -100,6 +100,6 @@ Three of the drawings were directly inspired from the following:
 - The pattern used in the background was found on [Subtle Patterns]()
 - The photographs displayed on the websites were found on Pexel.
 
-    - [Cottage](https://www.pexels.com/photo/architecture-barn-bungalow-cabin-277672/)
+    - [Cottage (or cabin)](https://www.pexels.com/photo/clouds-country-countryside-daylight-542382/)
 ### Acknowledgements
 >- I received inspiration for this project from X

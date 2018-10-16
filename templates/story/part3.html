@@ -27,10 +27,12 @@
         <p>
             <button data-toggle=".under_the_bed" class="btns">You look under the bed</button>
         </p>
-        <div class="under_the_bed">Coughing heavily and cursing
+        <div class="under_the_bed border">
+            <p>
+            Coughing heavily and cursing
             your clumsiness, you look under the bed frame and spot a
             wooden chest. There are also some hat boxes and plenty of dust bunnies rolling about.
-
+            </p>
             <ul>
                 <li>
                     <button data-toggle=".chest" class="btns">You open the chest</button>
@@ -54,7 +56,7 @@
         <p>
             <button data-toggle=".paintings" class="btns">You stare at the paintings</button>
         </p>
-        <div class="paintings">
+        <div class="paintings border">
             <p><img src="{{ url_for('static', filename='img/picture2.png') }}" alt="Vera Menchik Club"> <img
                     src="{{ url_for('static', filename='img/picture1.png') }}" alt="My Queen"> <img
                     src="{{ url_for('static', filename='img/picture3.png') }}" alt="Battle in Black and White"></p>
@@ -70,7 +72,7 @@
         <p>
             <button data-toggle=".chessboard" class="btns">You sit in a comfy chair</button>
         </p>
-        <div class="chessboard">
+        <div class="chessboard border">
             <p><img src="{{ url_for('static', filename='img/chessboard.png') }}" alt="It is missing a piece?"></p>
             <p>Carefully in case the chair's cushions are filled with dust, you sit down by the stove. You quickly
                 identify the pattern on the low table in front of you. Of course! It is a chessboard table, with drawers
@@ -92,10 +94,11 @@
     <p>
         <button data-toggle=".bookshelf" class="btns">You check the bookshelf</button>
     </p>
-    <div class="bookshelf">
+    <div class="bookshelf border">
         <p><img src="{{ url_for('static', filename='img/library.png') }}" alt="So many books"></p>
-        <p>You kneel by the bookshelf to review the available titles. They are ordered alphabetically under the dust. There are various chess-related books and a few
-            hourglasses.  There are copies of the <strong>British Chess Magazine</strong>
+        <p>You kneel by the bookshelf to review the available titles. They are ordered alphabetically under the dust.
+            There are various chess-related books and a few
+            hourglasses. There are copies of the <strong>British Chess Magazine</strong>
             and an article clipping from the<strong> New York Times</strong> regarding the Carlsbad 1929 chess
             tournament. There are numerous articles piled up captioning interviews of famous chess masters.
         </p>
@@ -112,23 +115,20 @@
 
     <hr>
     <button id="btn_riddle" data-toggle=".riddle" class="btns">Read the riddle again</button>
-        <div class="riddle">
+    <div class="riddle">
 
+            <span>My obligations won't keep me away from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is hidden where:</span>
 
-            My obligations won't keep me away
-            from you too long, I dare hope. I left a treasure for you to find, my love, if you come to miss me. It is
-            hidden where:
-
-                    <ul>
-                        <li>Time stops for our battles of wit.</li>
-                        <li>White clad or not, you are a queen.</li>
-                        <li>You inspire my every action.</li>
-                        <li>I move brazenly towards you.</li>
-                        <li>But you know how to stop my foolish plans.</li>
-                        <li>I kneel in front of your beauty.</li>
-                        <li>And carry the image of you with me.</li>
-                    </ul>
-        </div>
+            <ul>
+                <li>Time stops for our battles of wit.</li>
+                <li>White clad or not, you are a queen.</li>
+                <li>You inspire my every action.</li>
+                <li>I move brazenly towards you.</li>
+                <li>But you know how to stop my foolish plans.</li>
+                <li>I kneel in front of your beauty.</li>
+                <li>And carry the image of you with me.</li>
+            </ul>
+    </div>
     </div>
 
 {% endblock %}
