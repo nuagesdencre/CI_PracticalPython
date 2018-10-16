@@ -9,7 +9,7 @@
         <div id="player" class="leaderboard_entry">
            <p>Game start: {{ time_start }} | Game end: {{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.</p>
             <div class="leaderboard_content">
-                <p>Our courageous <span id="leaderboard_check">{{ username }}</span>, who secretly favors
+                <p>Our wonderful <span id="leaderboard_check">{{ username }}</span>, who secretly favors
                     <span>{{ color }}</span> socks with a pattern of <span>{{ mystical }}s</span> attempted to solve the
                     riddle.
                     {% if session['riddle_solved'] == 'Solved' %}
@@ -35,7 +35,7 @@
                 <div class="leaderboard_content">
                     <p>Our courageous <span>{{ player.username }}</span>, who secretly favors
                         <span>{{ player.color }}</span> socks with a pattern of <span>
-                {{ player.mystical }}</span>s attempted to solve the riddle.</p>
+                {{ player.mystical }}s</span>s attempted to solve the riddle.</p>
                 </div>
             </div>
 
