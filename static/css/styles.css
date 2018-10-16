@@ -5,7 +5,7 @@
     font-family: 'Open Sans';
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, label {
     font-weight: 900;
     letter-spacing: 0.1em;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
@@ -52,10 +52,7 @@ nav {
     text-align: center;
 }
 
-#comments {
-    width: 70%;
-    margin:10px;
-}
+
 .riddle>p, .riddle>span, .riddle> ul li {
     font-size: 1.07em;
     font-weight: bold;
@@ -92,7 +89,7 @@ input {
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-.btns, input {
+.btns, input, #comments {
     display: block;
     width: 70%;
     padding: 0 15px;
@@ -144,7 +141,7 @@ input {
 /* General body styling */
 body {
     margin: 0;
-    background: radial-gradient(circle, rgba(192, 158, 121, 0.07) 70%, rgba(192, 158, 121, 0.4)), url("/static/img/pexel_cottage.jpg") fixed bottom;
+    background: radial-gradient(circle, rgba(192, 158, 121, 0.07) 70%, rgba(186, 208, 176, 0.4)), url("/static/img/pexel_cottage.jpg") fixed bottom;
 }
 
 .container {
@@ -160,8 +157,9 @@ body {
 .wrap {
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 40px;
     margin: auto;
-    background: radial-gradient(circle, rgb(245, 245, 245) 89%, rgba(192, 158, 121, 0.02))
+    background: radial-gradient(circle, rgba(245, 245, 245, 0.95) 89%, rgba(186, 208, 176, 0.02))
 }
 
 .wrap ul, .wrap ul li, .navigation ul, .navigation ul li {
@@ -225,7 +223,7 @@ body {
 }
 
 /* ENDimages */
-/* Riddle */
+/* Riddle and collapsible paragraphs*/
 .riddle {
     margin-bottom: 30px;
     padding-top: 30px;
