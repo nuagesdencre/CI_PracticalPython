@@ -58,21 +58,6 @@ nav {
     font-weight: bold;
 }
 
-/* overall page styling */
-
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-* {
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-}
 
 /* Buttons*/
 
@@ -138,7 +123,27 @@ input {
 }
 
 /* ENDButtons */
+
 /* General body styling */
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+:root {
+  --vh: 1vh;
+}
+
 body {
     margin: 0;
     background: radial-gradient(circle, rgba(192, 158, 121, 0.07) 70%, rgba(186, 208, 176, 0.4)), url("/static/img/pexel_cottage.jpg") fixed bottom;
@@ -147,7 +152,7 @@ body {
 .container {
 
     max-width: 700px;
-    height: 88vh;
+    height: calc(var(--vh, 1vh) * 88);
     display: flex;
     flex-direction: column;
     margin: auto;
