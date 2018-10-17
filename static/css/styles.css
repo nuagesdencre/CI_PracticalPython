@@ -155,9 +155,7 @@ body {
 }
 
 .wrap {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 40px;
+    padding: 10px 5% 40px 5%;
     margin: auto;
     background: radial-gradient(circle, rgba(245, 245, 245, 0.95) 89%, rgba(186, 208, 176, 0.02))
 }
@@ -226,9 +224,7 @@ body {
 /* Riddle and collapsible paragraphs*/
 .riddle {
     margin-bottom: 30px;
-    padding-top: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 30px 10% 10px 10%;
     border: 2px dotted #7599C4;
     background-color: rgba(174, 208, 157, 0.11);
 }
