@@ -26,48 +26,49 @@
             </p>
             <div class="center">
 
-                        <form id="contact_form" method="post">
+                <form id="contact_form" method="post">
 
-                            <label for="fullname">Your Name</label>
-                            <input type="text" class="form-control" id="from_name" name="from_name" autocomplete="shipping name" placeholder="Your name"
-                                required>
+                    <label for="fullname">Your Name</label>
+                    <input type="text" class="form-control" id="from_name" name="from_name" autocomplete="shipping name"
+                           placeholder="Your name"
+                           required>
 
-                            <label for="whereat">Where are you from?</label>
-                            <input type="text" class="form-control" autocomplete="shipping organization" id="where_at" name="where_at" placeholder="Citizen of the world!">
+                    <label for="whereat">Where are you from?</label>
+                    <input type="text" class="form-control" autocomplete="shipping organization" id="where_at"
+                           name="where_at" placeholder="Citizen of the world!">
 
-                            <label for="email">Email</label>
-                            <input type="email" autocomplete="shipping email" id="from_email" name="from_email" class="form-control"  placeholder="Example: 123@email.com"
-                                required>
+                    <label for="email">Email</label>
+                    <input type="email" autocomplete="shipping email" id="from_email" name="from_email"
+                           class="form-control" placeholder="Example: 123@email.com"
+                           required>
 
-                            <label for="message">Your Message</label>
-                            <textarea class="textarea form-control center" id="comments" name="comments" rows="6" placeholder="Let me know what you think"></textarea>
+                    <label for="message">Your Message</label>
+                    <textarea class="textarea form-control center" id="comments" name="comments" rows="6"
+                              placeholder="Let me know what you think"></textarea>
 
-                            <input id="#button" class="btns submit" type="submit" value="Send your message!">
+                    <input id="#button" class="btns submit" type="submit" value="Send your message!">
 
 
-                        </form>
-                    </div>
+                </form>
+            </div>
         </div>
 
     </div>
     <script>
-     // About - contact form
+        // About - contact form
         //emailjs
-        window.onload = function() { document.getElementById('contact_form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            emailjs.sendForm('gmail', 'ci_pp', this)
-                .then(function () {
-                    alert("Sent!");
-                    contactForm.find("#button").text("Send your message!");
-                    console.log("Success!");
-                }, function (err) {
-                    alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-                    contactForm.find("#button").val("Send your message!");
-                    console.log("Error!");
-                });
-            var c_form = document.getElementById('contact_form');
-            c_form.reset();
-            return false;
-        });}
+        window.onload = function () {
+            document.getElementById('contact_form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('gmail', 'ci_pp', this)
+                    .then(function () {
+                        alert("Your message has been sent!");
+                    }, function (err) {
+                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+                    });
+                document.getElementById('contact_form').reset();
+                return false;
+            });
+        }
     </script>
 {% endblock %}

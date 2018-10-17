@@ -1,4 +1,4 @@
-/* general typography */
+/* General typography */
 @import url('https://fonts.googleapis.com/css?family=Alegreya:700,900|Open+Sans:400,700');
 
 * {
@@ -37,7 +37,7 @@ a:hover {
     text-decoration: underline wavy #aed09d;
 }
 
-p, div > p, span {
+p, div > p, span, ul li {
     font-size: 1.125em;
     line-height: calc(1.5em + .2vw);
     margin: 22px auto;
@@ -211,7 +211,7 @@ body {
 
 /* ENDNavigation */
 
-/* images */
+/* Images */
 .wrap img {
     max-width: 60%;
     max-height: 400px;
@@ -221,6 +221,7 @@ body {
 }
 
 /* ENDimages */
+
 /* Riddle and collapsible paragraphs*/
 .riddle {
     margin-bottom: 30px;

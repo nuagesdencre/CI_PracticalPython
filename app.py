@@ -10,7 +10,7 @@ app.secret_key = os.urandom(24)
 @app.before_request
 def session_status():
     """
-    makes the session last unless requested otherwise
+    makes the session last until the visitor decides otherwise ( via 'drop' option)
     """
     session.permanent = True
 
@@ -85,7 +85,7 @@ def leaderboard():
 @app.route('/play')
 def play():
     """
-    where the reader is invited to provide their information and begin the story or return to its current iteration
+    where the reader is invited to provide their information and begin the story or return to its current playthrough
     """
     if 'username' in session:
         return redirect(url_for('story'))
@@ -116,7 +116,7 @@ def story():
 @app.route('/part1')
 def part1():
     """
-    the first part of the story
+    the first part of the story, where the first timestamp is recorded
     """
     session['time_start'] = datetime.now().strftime('%Y/%m/%d, %H:%M:%S')
     return render_template("story/part1.html", page_title="Entering the house")
@@ -142,7 +142,9 @@ def part3():
 @app.route('/final', methods=['GET', 'POST'])
 def final():
     """
-    where the reader has to provide an answer to the riddle
+    where the reader has to provide an answer to the riddle and the second timestamp is recorded
+    - multiple answers are possible and the reader is either invited to start again or go to the leaderboard
+    following their input
     """
     session['answer1'] = 'chessboard table'
     session['answer2'] = 'chessboard drawer'
@@ -167,6 +169,9 @@ def final():
 
 @app.errorhandler(404)
 def page_not_found(err):
+    """
+    Custom error page
+    """
     return render_template("404.html"), 404
 
 
