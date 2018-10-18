@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, label {
     font-weight: 900;
     letter-spacing: 0.1em;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    line-height: calc(1.6em + .2vw);
     margin-bottom: 0;
 }
 
@@ -37,7 +38,8 @@ a:hover {
     text-decoration: underline wavy #aed09d;
 }
 
-p, div > p, span, ul li {
+p, div > p, span,
+ul li, td, th {
     font-size: 1.125em;
     line-height: calc(1.5em + .2vw);
     margin: 22px auto;
@@ -264,6 +266,9 @@ body {
     background-color: rgba(85, 141, 78, 0.27);
 }
 
+table{
+    width:100%;
+}
 /* ENDLeaderboard */
 
 /* Media Queries*/

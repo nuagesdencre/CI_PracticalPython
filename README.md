@@ -34,7 +34,6 @@ In addition, you may also use this section to discuss plans for additional featu
 - [Python version 3]()
     - Lorem.
 - [Flask]()
-    - [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/)
     - Flask plugins? (requirements...)
 - [Jinja2]()
     - Lorem.

@@ -7,10 +7,18 @@
 
 
         <div id="player" class="leaderboard_entry">
-           <p>Game start: {{ time_start }} | Game end: {{ time_stop }}. Riddle status: <span>{{ riddle_solved }}</span>.</p>
-            <div class="leaderboard_content">
-                <p>Our wonderful <span id="leaderboard_check">{{ username }}</span>, who secretly favors
-                    <span>{{ color }}</span> socks with a pattern of <span>{{ mystical }}s</span> attempted to solve the
+            <table>
+                <th>Game start</th>
+                <th>Game end</th>
+                <tr>
+                    <td>{{ time_start }} </td>
+                    <td>{{ time_stop }}</td>
+                </tr>
+            </table>
+            <p> Riddle status: <span>{{ riddle_solved }}</span>.</p>
+
+                <p>Our wonderful <span id="leaderboard_check">{{ username }}</span>, who secretly collects
+                    <span>{{ color }}</span> socks and figurines of <span>{{ mystical }}-like creatures</span> attempted to solve the
                     riddle.
                     {% if session['riddle_solved'] == 'Solved' %}
                         <p> Well done! You have proven once again that you are wasted as a gardener. Go buy a fedora,
@@ -19,24 +27,31 @@
                         <p>Don't quit your day job yet, friend.</p>
                     {% endif %}
 
-            </div>
+
         </div>
-        {% for player in leaderboard[:4] %}
+        {% for leader in leaders %}
             <div class="leaderboard_entry">
-                <p>Game start: {{ player.time_start }} | Game end:  {{ player.time_stop }}. Riddle status:
-                {% if player.riddle_status == 'Solved' %}
-                    <span style="background-color:#acff93;">{{ player.riddle_status }}</span>.
-                {% elif player.riddle_status == 'Unsolved' %}
-                    <span>{{ player.riddle_status }}</span>.
-                {% else %}
-                    <span>Unsolved.</span>
-                {% endif %}
+                <table>
+                    <th>Game start</th>
+                    <th>Game end</th>
+                    <tr>
+                        <td>{{ leader.time_start }} </td>
+                        <td>{{ leader.time_stop }}</td>
+                    </tr>
+                </table>
+                <p>Riddle status:
+                    {% if leader.riddle_status == 'Solved' %}
+                        <span style="background-color:#acff93;">{{ leader.riddle_status }}</span>.
+                    {% elif leader.riddle_status == 'Unsolved' %}
+                        <span>{{ leader.riddle_status }}</span>.
+                    {% else %}
+                        <span>Unsolved.</span>
+                    {% endif %}
                 </p>
-                <div class="leaderboard_content">
-                    <p>Our courageous <span>{{ player.username }}</span>, who secretly favors
-                        <span>{{ player.color }}</span> socks with a pattern of <span>
-                {{ player.mystical }}s</span> attempted to solve the riddle.</p>
-                </div>
+                    <p>Our courageous <span>{{ leader.username }}</span>, who secretly collects
+                        <span>{{ leader.color }}</span> socks and figurines of <span>
+                {{ leader.mystical }}-like creatures</span> attempted to solve the riddle.</p>
+
             </div>
 
         {% endfor %}
