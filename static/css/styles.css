@@ -38,8 +38,7 @@ a:hover {
     text-decoration: underline wavy #aed09d;
 }
 
-p, div > p, span,
-ul li, td, th {
+p, div>p, span, td, th {
     font-size: 1.125em;
     line-height: calc(1.5em + .2vw);
     margin: 22px auto;
@@ -57,9 +56,18 @@ nav {
 
 .riddle>p, .riddle>span, .riddle> ul li {
     font-size: 1.07em;
+    line-height: calc(1.4em + .2vw);
     font-weight: bold;
 }
 
+.wrap ul, .wrap ul li, .navigation ul, .navigation ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+.li--part1{
+    padding:0;
+}
 
 /* Buttons*/
 
@@ -166,10 +174,6 @@ body {
     background: radial-gradient(circle, rgba(245, 245, 245, 0.95) 89%, rgba(186, 208, 176, 0.02))
 }
 
-.wrap ul, .wrap ul li, .navigation ul, .navigation ul li {
-    padding: 5px;
-    list-style: none;
-}
 
 .selected {
     background: radial-gradient(circle, rgba(192, 158, 121, 0.48) 50%, rgba(14, 113, 73, 0.75));
