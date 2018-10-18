@@ -4,39 +4,54 @@ For this project, I decided to combine my affection for games and novels. I am w
 
 -  [Hypertext fiction](https://en.wikipedia.org/wiki/Hypertext_fiction)
 -  [Gamebook](https://en.wikipedia.org/wiki/Gamebook)
-    A gamebook is a work of printed fiction that allows the reader to participate in the story by making choices. The narrative branches along various paths, typically through the use of numbered paragraphs or pages. Gamebooks are sometimes called choose your own adventure books or CYOA after the influential Choose Your Own Adventure series originally published by US company Bantam Books. Gamebooks influenced hypertext fiction.[1]
+
+    A gamebook is a work of printed fiction that allows the reader to participate in the story by making choices. 
+    The narrative branches along various paths, typically through the use of numbered paragraphs or pages. 
+    Gamebooks are sometimes called choose your own adventure books or CYOA after the influential Choose Your Own Adventure series 
+    originally published by US company Bantam Books. Gamebooks influenced hypertext fiction.
 
 ## UX
  
 - This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
 - User stories!!
 - Wireframes: [main story]() and [leaderboard]().
-> Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-     - As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
-> ## Features
+ ## Features
 > In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-- Original Story
-- Interactivity [Interactive fiction](https://en.wikipedia.org/wiki/Interactive_fiction)
-- Leaderboard to display progress of the reader in the story
+- Original story surrounding the riddle to solve
+- Responsive design
+- Dynamic Leaderboard
+- Contact form
  
-#### Existing Features
-> - Feature 1 - allows users X to achieve Y, by having them fill out ...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-> #### Features Left to Implement
->- Another feature idea
+## Functionality
+- Story elements of the website 
+    - Inspired by the concept of [Interactive fiction](https://en.wikipedia.org/wiki/Interactive_fiction) 
+    - This is a short mystery story where the readers have to become pseudo-investigators. 
+    The readers are invited from their arrival on the home page to provide information and start reading the gamebook.
+    A riddle is given to the readers and their assistance is requested. Throughout the pages, the readers can reveal 
+    more aspects of the story by exploring 
+    the different options available via buttons. The story details lead the readers to solve the riddle. 
+- Game Information 
+   - Rules 
+        - The readers can review the guidelines of the experience proposed by the website. 
+   - Leaderboard 
+        - The readers can review their progress (i.e. time they started reading, status of the riddle, information they provided) 
+        via the leaderboard. This information is updated as the readers visit the web app and even when they let another person read the story on a same device.
+- About 
+    - The page provides information about the game concept itself and the inspiration behind the 'point and click' exploration of a story.
+    - Contact form 
+        - This allows the readers to reach out to the webmaster and give their comments.
+
 ## Technologies Used
 > In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
-- [Python version 3]()
-    - Lorem.
+- [Python 3.6.5](https://www.python.org/)
+    - Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java.
 - [Flask]()
-    - Flask plugins? (requirements...)
+    - Flask is a microframework for Python based on Werkzeug and Jinja 2.
 - [Jinja2]()
-    - Lorem.
+    - Jinja2 is a full featured template engine for Python. 
+     It has full unicode support, an optional integrated sandboxed execution environment, widely used and BSD licensed.
 - [Html & CSS]()
     - Lorem.
 ## Testing
