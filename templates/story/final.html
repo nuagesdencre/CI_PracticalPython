@@ -8,13 +8,7 @@
         <h2>Epilogue </h2>
         <hr>
         <p>
-        <h2>Where is the 'treasure' hidden?</h2>
-        </p>
-        <p>
-        <form method="POST" action="{{ url_for('final') }}" name="final_answer">
-            Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
-            <input type="submit" class="btns">
-        </form>
+
         <h1>{{ status }}</h1>
 
         {% if session['riddle_solved'] == 'Solved' %}
@@ -31,7 +25,8 @@
                 pile of newspapers on the bookshelves, you notice that Mr Thomas was a journalist who wrote primarily
                 about chess
                 events and
-                distinguished players, such as Mrs Vera Menchik. This passion of the game was certainly shared by his wife, as the picture on the
+                distinguished players, such as Mrs Vera Menchik. This passion of the game was certainly shared by his
+                wife, as the picture on the
                 wall show
                 them playing together.
             </p>
@@ -40,6 +35,13 @@
             <h1>Thank you for playing!</h1>
             <p><h3><a href="{{ url_for('leaderboard') }}">Have a look at your progress.</a></h3></p>
         {% elif session['riddle_solved'] == 'Unsolved' %}
+            <h2>Where is the 'treasure' hidden?</h2>
+            </p>
+            <p>
+            <form method="POST" action="{{ url_for('final') }}" name="final_answer">
+                Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
+                <input type="submit" class="btns">
+            </form>
             <p>You frantically look in all the nooks and cracks of the house, but you only move dust around. Montaguë
                 looks disappointed and barks sadly.</p>
             <p>Sorry, your answer : "{{ answer_to_riddle }}" is incorrect. Try again!
@@ -48,6 +50,14 @@
 
             <p>You should probably go back and have another look.</p>
             <p><h3><a href="{{ url_for('play') }}">Start over</a></h3></p>
+        {% else %}
+            <h2>Where is the 'treasure' hidden?</h2>
+            </p>
+            <p>
+            <form method="POST" action="{{ url_for('final') }}" name="final_answer">
+                Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
+                <input type="submit" class="btns">
+            </form>
         {% endif %}
 
 

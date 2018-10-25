@@ -120,7 +120,7 @@ def part1():
     """
     The first part of the story, where the first timestamp is recorded
     """
-    session['time_start'] = datetime.now().strftime('%d/%m/%Y, %H:%M%S')
+    session['time_start'] = datetime.now().strftime('%d/%m/%Y, %H:%M:%S')
     return render_template("story/part1.html", page_title="Entering the house")
 
 
