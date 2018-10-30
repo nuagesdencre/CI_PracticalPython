@@ -34,7 +34,9 @@
                 found.</p>
             <h1>Thank you for playing!</h1>
             <p><h3><a href="{{ url_for('leaderboard') }}">Have a look at your progress.</a></h3></p>
+
         {% elif session['riddle_solved'] == 'Unsolved' %}
+
             <h2>Where is the 'treasure' hidden?</h2>
             </p>
             <p>
@@ -50,7 +52,9 @@
 
             <p>You should probably go back and have another look.</p>
             <p><h3><a href="{{ url_for('play') }}">Start over</a></h3></p>
+
         {% else %}
+
             <h2>Where is the 'treasure' hidden?</h2>
             </p>
             <p>
