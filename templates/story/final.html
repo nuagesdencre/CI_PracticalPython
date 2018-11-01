@@ -33,13 +33,12 @@
             <p> Your help is no longer needed here and you feel confident you will be called again, when a new puzzle is
                 found.</p>
             <h1>Thank you for playing!</h1>
-            <p><h3><a href="{{ url_for('leaderboard') }}">Have a look at your progress.</a></h3></p>
+            <h3><a href="{{ url_for('leaderboard') }}">Have a look at your progress.</a></h3>
 
         {% elif session['riddle_solved'] == 'Unsolved' %}
 
             <h2>Where is the 'treasure' hidden?</h2>
-            </p>
-            <p>
+
             <form method="POST" action="{{ url_for('final') }}" name="final_answer">
                 Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
                 <input type="submit" class="btns">
@@ -51,13 +50,12 @@
                 alphabet - no special characters.</p>
 
             <p>You should probably go back and have another look.</p>
-            <p><h3><a href="{{ url_for('play') }}">Start over</a></h3></p>
+            <h3><a href="{{ url_for('play') }}">Start over</a></h3>
 
         {% else %}
 
             <h2>Where is the 'treasure' hidden?</h2>
-            </p>
-            <p>
+
             <form method="POST" action="{{ url_for('final') }}" name="final_answer">
                 Attempt #{{ attempts }}: <input type="text" name="answer_to_riddle">
                 <input type="submit" class="btns">

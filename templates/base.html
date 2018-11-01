@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css"/>
     <title>CI Practical Python</title>
 </head>
+<body>
 <nav class="navigation">
 
     <a href="{{ url_for('index') }}" class="big-screen">Home</a>
@@ -23,22 +24,23 @@
     <a href="{{ url_for('about') }}" class="big-screen">About</a>
 
 
-    <a href="{{ url_for('index') }}" alt="Home" class="sm-screen"><i class="fas fa-home"></i></a>
-    <a href="{{ url_for('game') }}" alt="Game info" class="sm-screen"><i class="fas fa-trophy"></i></a>
-    <a href="{{ url_for('about') }}" alt="About" class="sm-screen"><i class="fas fa-book"></i></a>
+    <a href="{{ url_for('index') }}" class="sm-screen"><i class="fas fa-home"></i></a>
+    <a href="{{ url_for('game') }}" class="sm-screen"><i class="fas fa-trophy"></i></a>
+    <a href="{{ url_for('about') }}" class="sm-screen"><i class="fas fa-book"></i></a>
 
 
 </nav>
-<body>
+
 <!-- Main Content -->
 <main class="container">
     {% block content %}
     {% endblock %}
 
 </main>
-</body>
 <!-- JQuery -->
 <script src="{{ url_for('static', filename='js/vendors/jquery-3.3.1.min.js') }}"></script>
 <!-- Custom JS -->
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
 </html>

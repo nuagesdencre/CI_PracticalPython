@@ -150,10 +150,6 @@ input {
     transition: all 1s ease-in-out;
 }
 
-:root {
-  --vh: 1vh;
-}
-
 body {
     margin: 0;
     background: radial-gradient(circle, rgba(192, 158, 121, 0.07) 70%, rgba(186, 208, 176, 0.4)), url("/static/img/pexel_cottage.jpg") fixed bottom;
@@ -161,7 +157,7 @@ body {
 
 .container {
     max-width: 700px;
-    height: calc(var(--vh, 1vh) * 88);
+    height: 88vh;
     display: flex;
     flex-direction: column;
     margin: auto;

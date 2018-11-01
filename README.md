@@ -1,6 +1,8 @@
-# A Curious Cottage
+# [A Curious Cottage](https://ci-vero-practicalpython.herokuapp.com/)
 #### A century-old riddle
 For this project, I decided to combine my affection for games and novels. I am working on a little interactive short story set in an old, dusty cottage.
+
+- This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
 
 -  [Hypertext fiction](https://en.wikipedia.org/wiki/Hypertext_fiction)
 -  [Gamebook](https://en.wikipedia.org/wiki/Gamebook)
@@ -13,7 +15,7 @@ For this project, I decided to combine my affection for games and novels. I am w
 ## UX
  ![](./static/stories/USERS_STORIES.jpg?raw=true)
  
-| User    | Purpose of visit                                                                                                                                                                                  | What the user wants                                                                                                                                                                                                                                                                                                                                                                                       | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| User    | Purpose of visit (User type: Visitor)                                                                                                                                                                                 | What the user wants                                                                                                                                                                                                                                                                                                                                                                                       | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Camille | Camille has a huge collection of gaming apps on her phone and she likes games that are not too long but keep her entertained. Camille likes to personalize her gaming experience through avatars or funny usernames. | As a site visitor, Camille wants to play a game that offers personalization. Camille also wants to learn more about the rules and the type of game she is playing. | Camille plays the game at the same time as her best friend, while they wait on their coffees. Camille has a lot of fun deciding on her favourite colour and her spirit animal. She is pleased to see her details in the story’s first page. She reads through the pages quickly and fails to answer the riddle. Her details are in the leaderboard however and she is happy nonetheless with her experience. She looks at the ‘About’ page to learn more about gamebooks.   |
 | Harry   | Harry and his son enjoy games of wit and challenging each other. They tend to look up things on the internet together to learn more about the subjects they encounter.| As a visitor, Harry wants to be able to solve the riddle presented in the game according to the hints and instructions give. Harry also expects that the game is ad-free, that there is no subscription or payment needed at least for a first experience. Harry likes to know he can reach the webmaster if he has any comments to make.                                                                                                                                                                           | Together with his son, Harry picks a username, a favourite colour and a spirit animal. He reads the story out loud and discuss possible answers to the riddle with his son. Harry’s wife gets involved as she quite enjoys the story. After a few incorrect attempts (mainly due to typos), Harry gets the answer right. He sends a message to the webmaster through the contact form to share his impressions. |
@@ -21,11 +23,10 @@ For this project, I decided to combine my affection for games and novels. I am w
 | Lou     | When Lou is not entertaining his daughters with cute videos and websites, he likes to read using the family iPad.| As a site visitor, Lou wants to play a game that is relaxing and requires his concentration. Lou wants to use the iPad to play the game online through a website since the app on the iPad are mainly for the girls. | Lou is able to access the website without having to download anything. The story interests him and he reviews all possible options to solve the riddle offered. Lou looks at every picture carefully and enters ‘chessboard’ as an answer. When he notices the error message saying the answer has two words, Lou is able to answer correctly.                                                                                                                                                                                                                                                                                                  |
 
 
-## The webpage's mockup
 * Main story [wireframe](./planning/dashboard.png)
 * Leaderboard [wireframe](./planning/leaderboard.png)
 
-- This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
+
 
  ## Features
 > In this section, you should go over the different parts of your project, and describe each in a sentence or so.
@@ -56,18 +57,29 @@ For this project, I decided to combine my affection for games and novels. I am w
 ## Technologies Used
 > In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+    - The project uses JQuery to simplify DOM manipulation. jQuery is a JavaScript library that was created to make it easier and simpler to write JavaScript and HTML.
+    
 - [Python 3.6.5](https://www.python.org/)
     - Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java.
 - [Flask]()
-    - Flask is a microframework for Python based on Werkzeug and Jinja 2.
+    - Flask is a microframework for Python based on Werkzeug and Jinja 2. This project uses Flask to structure the website and offer a better user experience.
 - [Jinja2]()
     - Jinja2 is a full featured template engine for Python. 
      It has full unicode support, an optional integrated sandboxed execution environment, widely used and BSD licensed.
-- [Html & CSS]()
-    - Lorem.
+- [CSS](https://simple.wikipedia.org/wiki/Cascading_Style_Sheets)
+    - Cascading Style Sheets, or CSS, are a way to change the look of HTML and XHTML web pages. CSS was designed by the W3C, and is supported well by most modern web browsers. The current version of CSS is CSS3. CSS4 is available, but is split into parts.
+- [HTML](https://simple.wikipedia.org/wiki/HTML)
+    - HyperText Markup Language (HTML) is a markup language[1] for creating a webpage. Webpages are usually viewed in a web browser. They can include writing, links, pictures, and even sound and video. HTML is used to mark and describe each of these kinds of content so the web browser can display them correctly. HTML can also be used to add meta information to a webpage.
+
+I used Git & GitHub for version control. Each new piece of functionality should be in a separate commit.
+I used branches for major changes, features and enhancement elements.
+
 ## Testing
 
+#### Javascript, CSS & HTML Validation
+
+- [CSS Validation Service](http://jigsaw.w3.org/css-validator/)
+I ensured my CSS had no typos, errors or incorrect uses using The CSS Validation service.
 <p>
 <a href="http://jigsaw.w3.org/css-validator/check/referer">
     <img style="border:0;width:88px;height:31px"
@@ -76,12 +88,16 @@ For this project, I decided to combine my affection for games and novels. I am w
     </a>
 </p>
 
->In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+- [JSHINT](https://jshint.com/about/)
+I used JSHINT to pinpoint any bug or typo in my scripts.
 
-- Complexity of leaderboard's view
-I have chosen push the complexity into my template, to allow for a simpler view.
+- [Nu Html Checker](https://validator.w3.org/nu/about.html)
+I used the Nu checker to catch unintended mistakes in my Html documents.
+
+- Responsiveness
+This website has been tested on multiple devices and browsers to ensure utmost responsiveness.
+The only major change to the user interface is the navigation bar, which contains icons for smaller viewports such as 
+phones, instead of the name of the pages presented on bigger viewports.
 
 
 > 1. Contact form:
@@ -94,11 +110,29 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 
+- Contact form:
+    1. Go to the "Contact Us" page
+    2. Try to submit the empty form and verify that an error message about the required fields appears
+    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
+    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
+
+## Hurdles
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+- Complexity of leaderboard's view
+I have chosen push the complexity into my template, to allow for a simpler view.
 ## Deployment
 
 This project has been deployed using Heroku.
-#### [A Curious Cottage](https://ci-vero-practicalpython.herokuapp.com/)
+
+- I realised the website using Pycharm, which is a Python IDE.
+- I prepare the Heroku required documents (Procfile and requirements.txt) according to the guidelines provided on Heroku.
+
+
+
+
+
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
     - The ‘Deploy to Heroku’ button enables users to deploy apps to Heroku without leaving the web browser, and with little or no configuration. The button is ideal for customers, open-source project maintainers or add-on providers who wish to provide their customers with a quick and easy way to deploy and configure a Heroku app.

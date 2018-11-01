@@ -7,9 +7,9 @@
 
 
         <div id="player" class="leaderboard_entry">
-            <table>
+            <table><tr>
                 <th>Game start</th>
-                <th>Game end</th>
+                <th>Game end</th></tr>
                 <tr>
                     <td>{{ time_start }} </td>
                     <td>{{ time_stop }}</td>
@@ -31,9 +31,9 @@
         </div>
         {% for leader in leaders %}
             <div class="leaderboard_entry">
-                <table>
+                <table><tr>
                     <th>Game start</th>
-                    <th>Game end</th>
+                    <th>Game end</th></tr>
                     <tr>
                         <td>{{ leader.time_start }} </td>
                         <td>{{ leader.time_stop }}</td>
