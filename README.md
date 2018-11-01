@@ -11,10 +11,22 @@ For this project, I decided to combine my affection for games and novels. I am w
     originally published by US company Bantam Books. Gamebooks influenced hypertext fiction.
 
 ## UX
+ ![](./static/stories/USERS_STORIES.jpg?raw=true)
  
+| User    | Purpose of visit                                                                                                                                                                                  | What the user wants                                                                                                                                                                                                                                                                                                                                                                                       | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Camille | Camille has a huge collection of gaming apps on her phone and she likes games that are not too long but keep her entertained. Camille likes to personalize her gaming experience through avatars or funny usernames. | As a site visitor, Camille wants to play a game that offers personalization. Camille also wants to learn more about the rules and the type of game she is playing. | Camille plays the game at the same time as her best friend, while they wait on their coffees. Camille has a lot of fun deciding on her favourite colour and her spirit animal. She is pleased to see her details in the story’s first page. She reads through the pages quickly and fails to answer the riddle. Her details are in the leaderboard however and she is happy nonetheless with her experience. She looks at the ‘About’ page to learn more about gamebooks.   |
+| Harry   | Harry and his son enjoy games of wit and challenging each other. They tend to look up things on the internet together to learn more about the subjects they encounter.| As a visitor, Harry wants to be able to solve the riddle presented in the game according to the hints and instructions give. Harry also expects that the game is ad-free, that there is no subscription or payment needed at least for a first experience. Harry likes to know he can reach the webmaster if he has any comments to make.                                                                                                                                                                           | Together with his son, Harry picks a username, a favourite colour and a spirit animal. He reads the story out loud and discuss possible answers to the riddle with his son. Harry’s wife gets involved as she quite enjoys the story. After a few incorrect attempts (mainly due to typos), Harry gets the answer right. He sends a message to the webmaster through the contact form to share his impressions. |
+| Mike    | Mike like to play games to offer puzzles and riddles. He enjoys pretending to be a detective.                                                                                                                   | As a site visitor, Mike wants to be able to play a game that offers various outcomes depending on his choices.  Mike also wants to see his progression in the game and measure his accomplishments against his friends’ results.                                                                                                                                                                               | Mike is introduced to ‘A Curious Cottage’ game by his girlfriend, who knows he likes puzzles. She managed to solve the riddle and shows him her entry in the leaderboard. Mike wants to do the same. He reads the story and spots a hint in one of the collapsible paragraphs. He is able to answer the riddle faster than his girlfriend, according to the time displayed on the leaderboard.|
+| Lou     | When Lou is not entertaining his daughters with cute videos and websites, he likes to read using the family iPad.| As a site visitor, Lou wants to play a game that is relaxing and requires his concentration. Lou wants to use the iPad to play the game online through a website since the app on the iPad are mainly for the girls. | Lou is able to access the website without having to download anything. The story interests him and he reviews all possible options to solve the riddle offered. Lou looks at every picture carefully and enters ‘chessboard’ as an answer. When he notices the error message saying the answer has two words, Lou is able to answer correctly.                                                                                                                                                                                                                                                                                                  |
+
+
+## The webpage's mockup
+* Main story [wireframe](./planning/dashboard.png)
+* Leaderboard [wireframe](./planning/leaderboard.png)
+
 - This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
-- User stories!!
-- Wireframes: [main story]() and [leaderboard]().
+
  ## Features
 > In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 - Original story surrounding the riddle to solve
@@ -55,6 +67,15 @@ For this project, I decided to combine my affection for games and novels. I am w
 - [Html & CSS]()
     - Lorem.
 ## Testing
+
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
+
 >In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
@@ -72,13 +93,7 @@ In addition, you should mention in this section how your project looks and works
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-<p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer">
-    <img style="border:0;width:88px;height:31px"
-        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!" />
-    </a>
-</p>
+
 
 ## Deployment
 

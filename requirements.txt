@@ -4,6 +4,6 @@ MarkupSafe==1.0
 Werkzeug==0.14.1
 itsdangerous==0.24
 python-dotenv==0.9.1
-requests==2.2.1
+requests>=2.20.0
 Flask-WTF==0.14.2
 WTForms==2.1
