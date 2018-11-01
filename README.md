@@ -1,6 +1,6 @@
 # [A Curious Cottage](https://ci-vero-practicalpython.herokuapp.com/)
 #### A century-old riddle
-For this project, I decided to combine my affection for games and novels. I am working on a little interactive short story set in an old, dusty cottage.
+For this third milestone project, I decided to combine my affection for games and novels. I am working on a little interactive short story set in an old, dusty cottage.
 
 - This website is for gamers, visual novel or choose-your-own story readers, mystery novels fans, people with 10 minutes to spare.
 
@@ -94,10 +94,12 @@ I used JSHINT to pinpoint any bug or typo in my scripts.
 - [Nu Html Checker](https://validator.w3.org/nu/about.html)
 I used the Nu checker to catch unintended mistakes in my Html documents.
 
-- Responsiveness
+- Responsiveness and browser compatibility
+[Browserling](www.browserling.com/)
 This website has been tested on multiple devices and browsers to ensure utmost responsiveness.
+I have also used the website 'Browserling' for that purpose.
 The only major change to the user interface is the navigation bar, which contains icons for smaller viewports such as 
-phones, instead of the name of the pages presented on bigger viewports.
+phones, instead of the name of the pages presented on bigger viewports. This change is deliberate to offer a better user experience.
 
 
 > 1. Contact form:
@@ -116,38 +118,39 @@ If this section grows too long, you may want to split it off into a separate fil
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-
 ## Hurdles
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
 - Complexity of leaderboard's view
 I have chosen push the complexity into my template, to allow for a simpler view.
 ## Deployment
-
 This project has been deployed using Heroku.
 
-- I realised the website using Pycharm, which is a Python IDE.
-- I prepare the Heroku required documents (Procfile and requirements.txt) according to the guidelines provided on Heroku.
+- I realised the website using [PyCharm](https://www.jetbrains.com/pycharm/), which is a Python IDE. The app was tested in a development environment with a debugging option.
+- I prepared the Heroku required documents (Procfile and requirements.txt) according to the guidelines provided on Heroku [(link here)](https://devcenter.heroku.com/articles/deploying-python).
+These documents indicate the language of the app to be deployed, along with its dependencies. I changed the app environment to production and removed the debugging option.
 
+- I then logged in my Heroku account and created an app (ci-vero-practicalpython). A Heroku-hosted remote that’s associated with my app was created at the same time (https://git.heroku.com/ci-vero-practicalpython.git).
+- On my PyCharm terminal, I provided my Heroku credentials, logged in and linked my existing github repository to the associated git remote hosted by Heroku.
+- I used the "git push heroku master" to bring my project into the Heroku remote git repository.
+- I entered the IP and PORT into the Heroku Config Vars fields (0.0.0.0 and 5000).
+- Once done, I opened the app to ensure everything was working properly.
 
+- This project can be deployed again using the below button.
 
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+    
+    This option is available since I provide an app.json file as per the guidelines found [here](https://devcenter.heroku.com/articles/heroku-button).
 
-
-
-- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-    - The ‘Deploy to Heroku’ button enables users to deploy apps to Heroku without leaving the web browser, and with little or no configuration. The button is ideal for customers, open-source project maintainers or add-on providers who wish to provide their customers with a quick and easy way to deploy and configure a Heroku app.
-The button is well-suited for use in README files, and is intended to serve as a replacement to a list of manual steps typically required to configure an app.
-
-
-
->This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
->- Different values for environment variables (Heroku Config Vars)?
->- Different configuration files?
->- Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
 ## Credits
-### Disclosure
+### Disclosure and Coding References
+- I learned a lot about Flask, Flask sessions and cookie-based sessions during this projects. These resources have been very useful and inspiring.
+    - [Flask Sessions](http://flask.pocoo.org/docs/1.0/quickstart/#sessions)
+    - [An Introduction to Sessions in Flask](https://www.youtube.com/watch?v=T1ZVyY1LWOg)
+    - [Flask – Sessions](https://www.tutorialspoint.com/flask/flask_sessions.htm)
+    - [How Secure Is The Flask User Session?](https://blog.miguelgrinberg.com/post/how-secure-is-the-flask-user-session)
+    - [Reddit r/flask](https://www.reddit.com/r/flask/)
+    - StackOverflow [Flask Frequent Questions](https://stackoverflow.com/questions/tagged/flask?sort=frequent&pageSize=15)
 ### Content
 - Information about 
 FIDE - World Chess Federation: [(Source)](https://www.chess.com/article/view/fide-world-chess-federation-), [(Source)](https://www.fide.com/fide.html)
@@ -160,14 +163,17 @@ FIDE - World Chess Federation: [(Source)](https://www.chess.com/article/view/fid
      - [(Wiki Page)](https://en.wikipedia.org/wiki/Vera_Menchik)
      - [(Internet Archive Wayback Machine)](https://web.archive.org/web/20091028034414/http://www.geocities.com/siliconvalley/lab/7378/menchik.htm)
 ### Media
-- Most of pictures and patterns used in this site were all digitally drawn by Veronique Savard (nuagesdencre.com). They should not be used elsewhere.
+- Most pictures and patterns used in this site were all digitally drawn by myself (credits to nuagesdencre.com). They should not be used elsewhere.
 Three of the drawings were directly inspired from the following:
     - [George Goodwin Kilburne's](https://en.wikipedia.org/wiki/George_Goodwin_Kilburne) [A Game of Chess](https://www.1st-art-gallery.com/George-Goodwin-Kilburne/A-Game-Of-Chess.html)
     - [The wedding of Wedding Margaretha Zelle and Rudolph MacLeod](https://www.friesmuseum.nl/en/collection/blog-mata-hari/dont-think-that-im-bad/)
     - This picture of [Vera Menchik](http://www.chesshistory.com/winter/pics/cn3433_menchik.jpg)
 - The pattern used in the background was found on [Subtle Patterns]()
-- The photographs displayed on the websites were found on Pexel.
+- The photograph displayed on the website was found on Pexel.
 
     - [Cottage (or cabin)](https://www.pexels.com/photo/clouds-country-countryside-daylight-542382/)
 ### Acknowledgements
->- I received inspiration for this project from X
+
+ I thank my friends and family who have taken time to play the game and give me feedback.
+ A huge thank you to my mentor for constructive criticism and an eagle eye for any typo and/or weak code.
+ 
