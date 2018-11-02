@@ -170,7 +170,7 @@ I used branches for major changes, features and enhancement elements.
     
     - Contact form:
         
-         I.Placeholders are in the input field to offer guidance as of how to fill them.
+         I. Placeholders are in the input fields to offer guidance as of how to fill them.
          
          II. When I submit an empty form, an error message about the required fields appears.
             
@@ -181,7 +181,7 @@ I used branches for major changes, features and enhancement elements.
 
 #### Python and Flask
    I ran the app in development mode by setting the FLASK_ENV=development environment variable in my evironment file.
-   I used the [Werkzeug Javascript's in-browser debugger](http://werkzeug.pocoo.org/) at length during this project and tackled the bugs them one by one.
+   I used the [Werkzeug Javascript's in-browser debugger](http://werkzeug.pocoo.org/) at length during this project and tackled the bugs uncovered one by one.
    It was most useful especially when I worked on the final page template.
    
    PyCharm was a wonderful tool to keep track of indentation and typos as well.
