@@ -137,7 +137,7 @@ I used branches for major changes, features and enhancement elements.
 
 5. Game Info page
 
-    I. There are two buttons at the top of the page: one leads to the story's introduction if details have been inputted already, other to the play page; the other guides me to the Leaderboard.
+    I. There are two buttons at the top of the page: one leads to the story's introduction if details have been inputted already, otherwise it leads me to the Play page; the other guides me to the Leaderboard.
     
     II. The rules of the game are listed under the buttons.
     
