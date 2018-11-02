@@ -68,6 +68,7 @@ Enjoy this interactive short story set in an old, dusty cottage.
     HTML was essential to this project as it builds up the views and DOM elements, structured by Flask.
     
 - [EmailJS](https://www.emailjs.com/)
+
     A Javascript library using client-side code to connect to supported email services. I used this service to generate the contact form template and connect to my existing Gmail account.
 
 I used Git & GitHub for version control. Each new piece of functionality should be in a separate commit.
@@ -76,17 +77,18 @@ I used branches for major changes, features and enhancement elements.
 ## Testing
 
 1. Responsiveness and browser compatibility
-    [Browserling](www.browserling.com/)
+
+    - [Browserling](www.browserling.com/)
     
-    This website has been tested on multiple devices and browsers to ensure utmost responsiveness.
-    I have also used the website 'Browserling' for that purpose.
+        This website has been tested on multiple devices and browsers to ensure utmost responsiveness.
+        I have also used the website 'Browserling' for that purpose.
     
     The navigation bar changes from small to big viewports. It displays icons for smaller viewports such as 
     phones, instead of the full name of the pages visible on bigger viewports. This change is deliberate to offer a better user experience.
 
 2. Index/Home page
 
-    I.Upon first visit, a welcome message displays "...whoever you are!" and a button shows the message "Come along please".
+    I. Upon my first visit, a welcome message displays "...whoever you are!" and a button shows the message "Come along please".
     
     II. Links are easily identified through the usage of button elements or underline upon hovering. For instance, the links within the navigation bar change color when the mouse hovers them and a squiggly underline appears upon mouse/finger presence.
     
@@ -101,7 +103,7 @@ I used branches for major changes, features and enhancement elements.
     
     III. When I input data using all capitals letters, the game session stores the colour input and animal input in lower case. They are displayed accordingly in the leaderboard and first part of the story.
     
-4. Play page
+4. Story section
 
     - Introduction
     
@@ -114,7 +116,7 @@ I used branches for major changes, features and enhancement elements.
         
     - Pages 1, 2, 3
         
-        I. Use the back arrow or backspace brings the following message "Confirm form submission" as moving along the story, I submit forms and store details in the session accordingly.
+        I. Using the back arrow or backspace brings the following message "Confirm form submission" as moving along the story, I submit forms and store details in the session accordingly.
         This discourages me to go back to the previous page and to try and read carefully before clicking on a button.
         
         II. I can review the riddle given at the beginning of the story at the bottom of all pages. 
@@ -185,6 +187,7 @@ To the best of my ability, I conducted and documented tests to ensure that all o
 - [CSS Validation Service](http://jigsaw.w3.org/css-validator/)
 
     - I ensured my CSS had no typos, errors or incorrect uses using The CSS Validation service.
+    - I made sure all DOM elements were readable and easily accessible (i.e. no small links or buttons) on all viewports.
 
 - [JSHINT](https://jshint.com/about/)
     
@@ -195,6 +198,10 @@ To the best of my ability, I conducted and documented tests to ensure that all o
     - I used the Nu checker to catch unintended mistakes in my Html documents.      
 
 ## Hurdles
+
+- Writing the story (the backbone of this project)
+    
+    I had to evaluate the length and complexity of the riddle to write an appropriate story. This turned out to be quite an exercise. I was lucky to receive input from friends and family members in that regard. This was a creative challenge that I hope I was able to deliver correctly.
 
 - Complexity of leaderboard's view
 
