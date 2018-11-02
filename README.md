@@ -219,6 +219,7 @@ To the best of my ability, I conducted and documented tests to ensure that all o
 This project has been deployed using Heroku.
 
 - I realised the website using [PyCharm](https://www.jetbrains.com/pycharm/), which is a Python IDE. The app was tested in a development environment with a debugging option.
+Due to the limited scope of this project, the secret key was randomised and left into the app.py file.
 - I prepared the Heroku required documents (Procfile and requirements.txt) according to the guidelines provided on Heroku [(link here)](https://devcenter.heroku.com/articles/deploying-python).
 These documents indicate the language of the app to be deployed, along with its dependencies. I changed the app environment to production and removed the debugging option.
 
