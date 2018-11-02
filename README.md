@@ -180,6 +180,13 @@ I used branches for major changes, features and enhancement elements.
          IV. When I submit the contact form with all inputs valid and requirements satisfied, an alert advising "The message has been sent!" pops on the screen. 
          An auto-reply message is issued to the email address I provided. As the webmaster, I receive the inputted information via EmailJS.
 
+#### Python and Flask
+   I ran the app in development mode by setting the FLASK_ENV=development environment variable in my evironment file.
+   I used the [Werkzeug Javascript's in-browser debugger](http://werkzeug.pocoo.org/) at length during this project and tackled the bugs them one by one.
+   It was most useful especially when I worked on the final page template.
+   
+   PyCharm was a wonderful tool to keep track of indentation and typos as well.
+
 #### Javascript, CSS & HTML Validation
 
 To the best of my ability, I conducted and documented tests to ensure that all of my website's functionality work well, while taking in account the user stories.
