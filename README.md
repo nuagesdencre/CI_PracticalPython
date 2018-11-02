@@ -162,7 +162,7 @@ I used branches for major changes, features and enhancement elements.
         I. I have enclosed my default entry values into the Leaderboard object. When I create an instance (game_leaderboard), the data is assigned accordingly.
         
         II. I use two instance methods: get_leaders() to selects first 3 dictionary entries as per the data list index, and add_player() to record the current visitor's inputted details to data.
-        The instance methods have been manually tested.
+        The instance methods have been manually tested in conjunction with the session data.
      
 7. About page
 
@@ -212,7 +212,7 @@ To the best of my ability, I conducted and documented tests to ensure that all o
 - Complexity of leaderboard's view
 
     I had trouble determining the best way to display the current user information. I have chosen push the complexity into my template, to allow for a simpler view. 
-    Setting up the leaderboard logic took me a little while but thanks to good advice, I ended up using a class and appropriated instance methods.
+    Setting up the leaderboard logic took me a little while but thanks to good advice, I ended up using a class and appropriate instance methods.
 
 ## Deployment
 This project has been deployed using Heroku.
