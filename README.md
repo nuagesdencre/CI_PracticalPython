@@ -61,11 +61,11 @@ Enjoy this interactive short story set in an old, dusty cottage.
     - Jinja2 is a full featured template engine for Python. 
      It has full unicode support, an optional integrated sandboxed execution environment, widely used and BSD licensed. This was used for the game logic and the dynamic elements of the website, along with the forms management.
 - [CSS](https://simple.wikipedia.org/wiki/Cascading_Style_Sheets)
-    - Cascading Style Sheets, or CSS, are a way to change the look of HTML and XHTML web pages. CSS was designed by the W3C, and is supported well by most modern web browsers. The current version of CSS is CSS3. CSS4 is available, but is split into parts.
+    - Cascading Style Sheets, or CSS, are a way to change the look of HTML and XHTML web pages. 
     CSS was used in this project for the user interface and overall website look - button sizing, background image, etc.
 - [HTML](https://simple.wikipedia.org/wiki/HTML)
-    - HyperText Markup Language (HTML) is a markup language for creating a webpage. Webpages are usually viewed in a web browser. They can include writing, links, pictures, and even sound and video. HTML is used to mark and describe each of these kinds of content so the web browser can display them correctly. HTML can also be used to add meta information to a webpage.
-    HTML was essential to this project as it builds up the views and DOM elements, structured by Flask.
+    - HyperText Markup Language (HTML) is a markup language for creating a webpage.  They can include writing, links, pictures, and even sound and video. HTML is used to mark and describe each of these kinds of content so the web browser can display them correctly.
+    HTML was essential to this project as it builds up the views and DOM elements of the web app, structured by Flask.
     
 - [EmailJS](https://www.emailjs.com/)
 
@@ -108,8 +108,7 @@ I used branches for major changes, features and enhancement elements.
     - Introduction
     
         I. The inputted data gathered on the Play page is displayed on the Introduction page. If data has not been provided yet, I am redirected to the Play page.
-         - Ia. If I manually try to access the '/story' URL and data has not been inputted yet, a bad request error is displayed.
-        
+
         II. I can use the back arrow or the navigation bar to check other pages without error messages. I can return to the introduction page via the Game Info page or the Home page.
         
         III. Once I click the submit button, the "game start" timestamp is stored in the session.
