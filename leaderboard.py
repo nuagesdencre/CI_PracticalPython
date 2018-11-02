@@ -16,7 +16,7 @@ class Leaderboard:
     def add_player(self, new_player_info):
         self.data.insert(0, new_player_info)
 
-# selects first 3 dictionaries as per the data list index
+# selects first 3 dict entries as per the data list index
     def get_leaders(self):
         leaders = self.data[:3]
         return leaders

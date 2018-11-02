@@ -30,21 +30,21 @@
 
                     <label id="fullname">Your Name</label>
                     <input type="text" class="form-control" id="from_name" name="from_name" autocomplete="shipping name"
-                           placeholder="Your name"
+                           placeholder="Your name" pattern=".{6,}" title="6 characters minimum"
                            required>
 
                     <label id="whereat">Where are you from?</label>
                     <input type="text" class="form-control" autocomplete="shipping organization" id="where_at"
-                           name="where_at" placeholder="Citizen of the world!">
+                           name="where_at" pattern=".{3,}" title="3 characters minimum" placeholder="Citizen of the world!">
 
                     <label id="email">Email</label>
                     <input type="email" autocomplete="shipping email" id="from_email" name="from_email"
-                           class="form-control" placeholder="Example: 123@email.com"
+                           class="form-control" pattern=".{6,}" title="This email address seems incomplete" placeholder="Example: 123@email.com"
                            required>
 
                     <label id="message">Your Message</label>
                     <textarea class="textarea form-control center" id="comments" name="comments" rows="6"
-                              placeholder="Let me know what you think"></textarea>
+                              placeholder="Let me know what you think" required></textarea>
 
                     <input id="#button" class="btns submit" type="submit" value="Send your message!">
 
